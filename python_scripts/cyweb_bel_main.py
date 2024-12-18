@@ -1,7 +1,12 @@
+#!/usr/bin/env python
+
+
 import sys
 import argparse
 import logging
 import json
+
+# TODO add sys.path to make this work
 from main import validate_pmc_id
 from ndex2.client import Ndex2
 from convert_to_cx2 import convert_to_cx2
