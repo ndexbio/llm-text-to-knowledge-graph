@@ -2,9 +2,15 @@
 
 
 import sys
+import os
 import argparse
 import logging
 import json
+
+# hack fix to add the directory where this scripts
+# resides to the path. This enables the imports below
+# to work
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # TODO add sys.path to make this work
 from main import validate_pmc_id
