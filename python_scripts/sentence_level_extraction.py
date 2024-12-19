@@ -1,6 +1,5 @@
 import json
 from get_interactions import extraction_chain, bel_extraction_chain
-from indra.sources import reach
 import time
 from grounding_genes import ground_genes
 
@@ -11,21 +10,8 @@ def load_json_data(filepath):
     return data
 
 
-def extract_sentences(data):
-    sentences = {}
-    index = 0  # Initialize a counter to keep track of the indices
-    for item in data:
-        if 'evidence' in item:
-            for evidence in item['evidence']:
-                if 'text' in evidence:
-                    sentences[str(index)] = evidence['text']
-                    index += 1  # Increment the index for each sentence
-    return sentences
-
-
 # Initialize dictionaries to store the results
 llm_results = {}
-indra_reach_results = {}
 
 
 #extracting interactions from sentences without annotations using llm
@@ -104,30 +90,6 @@ def llm_ann_processing(sentences):
     return llm_results
 
 
-# perform extraction using indra reach
-def indra_processing(sentences):
-    indra_reach_results = {"INDRA_REACH_extractions": []}
-    start_time = time.time()
-
-    # Loop through the sentences dictionary directly
-    for index, sentence_info in sentences.items():
-        sentence = sentence_info['text']
-        reach_processor = reach.process_text(sentence, url=reach.local_text_url)
-        stmts = reach_processor.statements
-        statements_json = [stmt.to_json() for stmt in stmts]
-        indra_reach_results["INDRA_REACH_extractions"].append({
-            "Index": index,
-            "Sentence": sentence,
-            "Results": statements_json
-        })
-
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    elapsed_minutes = elapsed_time / 60
-    print(f"Time taken for indra processing: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
-    return indra_reach_results
-
-
 #function to create sub-interaction type-obj
 def combine_interaction(interaction):
     if 'subject' in interaction and 'object' in interaction:
@@ -154,33 +116,6 @@ def create_combined_results(results):
         }
         combined_results.append(combined_entry)
     return combined_results
-
-
-#function to save both indra outputs and llm outputs in one file
-def combine_llm_and_indra_results(llm_filepath, indra_filepath):
-    llm_results = load_json_data(llm_filepath)
-    indra_results = load_json_data(indra_filepath)
-    combined_data = []
-
-    # Create a dictionary to match entries by index
-    llm_dict = {entry["Index"]: entry for entry in llm_results}
-    indra_dict = {entry["Index"]: entry for entry in indra_results}
-
-    # Get all unique indices from both LLM and INDRA results
-    all_indices = set(llm_dict.keys()).union(set(indra_dict.keys()))
-
-    for index in all_indices:
-        llm_entry = llm_dict.get(index, {"Sentence": "", "Combined_Results": []})
-        indra_entry = indra_dict.get(index, {"Sentence": "", "Combined_Results": []})
-
-        combined_entry = {
-            "index": index,
-            "sentence": llm_entry["Sentence"] or indra_entry["Sentence"],
-            "llm": llm_entry["Combined_Results"],
-            "indra": indra_entry["Combined_Results"]
-        }
-        combined_data.append(combined_entry)
-    return combined_data
 
 
 # Combine LLM and small corpus extractions

@@ -1,5 +1,5 @@
 import json
-from model import claude_model
+from model import model
 
 # Load INDRA and LLM extractions
 with open('results/pmid9813040/indra_combined_results.json', 'r') as f:
@@ -29,7 +29,7 @@ Ensure that each section starts on a new line for readability.
 """
 
 # Initialize LLM model
-llm_model = claude_model
+llm_model = model
 
 
 # Function to compare extractions
