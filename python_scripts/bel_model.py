@@ -1,15 +1,10 @@
-import os
 import warnings
 import time
-from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel, Field
 from langchain_core.utils.function_calling import convert_pydantic_to_openai_function
 from langchain_openai import ChatOpenAI
 warnings.filterwarnings("ignore")
-
-load_dotenv()
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 
 # Define a function that adds a delay to a Completion API call
@@ -43,12 +38,19 @@ bel_extraction_function = [
     convert_pydantic_to_openai_function(BELInteractions)
 ]
 
-# Define model for extraction
-model = delayed_completion(delay_in_seconds=delay, model="gpt-4o",
-                           temperature=0, openai_api_key=OPENAI_API_KEY)
+def initialize_model(api_key):
+    """Initialize the model with the provided API key."""
+    model = delayed_completion(
+        delay_in_seconds=delay, 
+        model="gpt-4o-mini",
+        temperature=0, 
+        openai_api_key=api_key
+    )
+    return model
 
-
-bel_extraction_model = model.bind(
-    functions=bel_extraction_function,
-    function_call={"name": "BELInteractions"}
-)
+# Ensure bel_extraction_model is initialized with the provided key
+def get_bel_extraction_model(api_key):
+    return initialize_model(api_key).bind(
+        functions=bel_extraction_function,
+        function_call={"name": "BELInteractions"}
+    )

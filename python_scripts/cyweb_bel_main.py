@@ -6,6 +6,8 @@ import os
 import argparse
 import logging
 import json
+import uuid
+import shutil
 
 # hack fix to add the directory where this scripts
 # resides to the path. This enables the imports below
@@ -14,27 +16,38 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # TODO add sys.path to make this work
 from bel_main import validate_pmc_id
-from ndex2.client import Ndex2
 from convert_to_cx2 import convert_to_cx2
 from pub import get_pubtator_paragraphs, download_pubtator_xml
 from sentence_level_extraction import llm_bel_processing
-from indra_download_extract import save_to_json, setup_output_directory
+from indra_download_extract import setup_output_directory
 from transform_bel_statements import process_llm_results
 
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
+def create_tmpdir(theargs):
+    """
+    Creates temp directory for hidef output with
+    a unique name of format cdhidef_<UUID>
 
-def process_paper(pmc_id, ndex_email, ndex_password, style_path=None):
+    :param theargs: Holds attributes from argparse
+    :type theargs: `:py:class:`argparse.Namespace`
+    :return: Path to temp directory
+    :rtype: str
+    """
+    tmpdir = os.path.join(theargs.tempdir, 'cdhidef_' + str(uuid.uuid4()))
+    os.makedirs(tmpdir, mode=0o755)
+    return tmpdir
+
+
+def process_paper(pmc_id, api_key):
     """
     Process a single PMC ID to generate BEL statements and CX2 network.
 
     Args:
         pmc_id (str): The PubMed Central ID of the article to process.
-        ndex_email (str): The NDEx email for authentication.
-        ndex_password (str): The NDEx password for authentication.
-        style_path (str, optional): Path to the style JSON file for network styling.
+        api_key (str): OpenAI API key for processing.
 
     Returns:
         bool: True if processing succeeds, False otherwise.
@@ -51,17 +64,16 @@ def process_paper(pmc_id, ndex_email, ndex_password, style_path=None):
 
         logging.info("Processing xml file to get text paragraphs")
         paragraphs = get_pubtator_paragraphs(file_path)
-        paragraphs_filename = f"{pmc_id}_pub_paragraphs.json"
-        save_to_json(paragraphs, paragraphs_filename, output_dir)
+        json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
+
 
         logging.info("Processing paragraphs with LLM-BEL model")
-        llm_results = llm_bel_processing(paragraphs)
-        llm_filename = 'llm_results.json'
-        save_to_json(llm_results, llm_filename, output_dir)
+        llm_results = llm_bel_processing(paragraphs, api_key)
+        json.dump({'action': 'llmResults', 'data': llm_results}, sys.stdout, indent=2)
 
         logging.info("Processing LLM results to generate CX2 network")
         extracted_results = process_llm_results(llm_results)
-        cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
+        cx2_network = convert_to_cx2(extracted_results)
 
         # data structure cytoscape web expects
         # for adding a new network
@@ -78,66 +90,70 @@ def process_paper(pmc_id, ndex_email, ndex_password, style_path=None):
         #client.save_new_cx2_network(cx2_network.to_cx2())
 
         logging.info(f"Processing completed successfully for {pmc_id}.")
+        return True
 
     except ValueError as ve:
         logging.error(ve)
         sys.exit(1)
+        return False
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
         sys.exit(1)
+        return False
 
 
-def main(pmc_ids, ndex_email, ndex_password, style_path=None):
+def main(pmc_ids, api_key, tempdir='/tmp'):
     """
     Main function to process a list of PMC IDs.
 
     Args:
         pmc_ids (list of str): A list of PubMed Central IDs to process.
-        ndex_email (str): The NDEx email for authentication.
-        ndex_password (str): The NDEx password for authentication.
-        style_path (str, optional): Path to the style JSON file for network styling.
+        api_key (str): OpenAI API key for processing.
+        tempdir (str): Directory to hold temporary files.
     """
-    success_count = 0
-    failure_count = 0
+    tmpdir = create_tmpdir(argparse.Namespace(tempdir=tempdir))
+    logging.info(f"Temporary directory created at {tmpdir}")
 
-    for pmc_id in pmc_ids:
-        logging.info(f"Starting processing for PMC ID: {pmc_id}")
-        if process_paper(pmc_id, ndex_email, ndex_password, style_path):
-            success_count += 1
-        else:
-            failure_count += 1
+    try:
+        success_count = 0
+        failure_count = 0
 
-    logging.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
+        for pmc_id in pmc_ids:
+            logging.info(f"Starting processing for PMC ID: {pmc_id}")
+            if process_paper(pmc_id, api_key):
+                success_count += 1
+            else:
+                failure_count += 1
+
+        logging.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
+    finally:
+        logging.info(f"Cleaning up temporary directory at {tmpdir}")
+        shutil.rmtree(tmpdir)
+
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process a list of PMC articles and extract interaction data.")
-    parser.add_argument('input',
-                        help='Expects a network as a file in CX2')
+    parser.add_argument(
+        "--api_key",
+        type=str,
+        required=True,  # Defaults to None if no key is provided
+        help="OpenAI API key for processing"
+    )
+    
+    # parser.add_argument('input',
+    #                     help='Expects a network as a file in CX2')
+    
     parser.add_argument(
         "--pmc_ids",
         type=str,
         nargs="+",  # Allows multiple arguments to be passed as a list
         help="PubMed Central IDs of the articles to process (space-separated)."
     )
-    parser.add_argument(
-        "--ndex_email",
-        type=str,
-        required=True,
-        help="NDEx account email for authentication."
-    )
-    parser.add_argument(
-        "--ndex_password",
-        type=str,
-        required=True,
-        help="NDEx account password for authentication."
-    )
-    parser.add_argument(
-        "--style_path",
-        type=str,
-        default=None,  # Default to None if not provided
-        help="Path to the JSON file containing the Cytoscape visual style (optional)."
-    )
+    
+    parser.add_argument('--tempdir', default='/tmp',
+                        help='Directory needed to hold files temporarily for processing')
+    
     args = parser.parse_args()
 
-    main(args.pmc_ids, args.ndex_email, args.ndex_password, args.style_path)
+    main(args.pmc_ids, args.api_key)
