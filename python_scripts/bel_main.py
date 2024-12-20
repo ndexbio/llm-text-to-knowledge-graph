@@ -1,7 +1,7 @@
 import sys
+import re
 import argparse
 import logging
-from main import validate_pmc_id
 from ndex2.client import Ndex2
 from convert_to_cx2 import convert_to_cx2
 from pub import get_pubtator_paragraphs, download_pubtator_xml
@@ -12,6 +12,12 @@ from transform_bel_statements import process_llm_results
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+
+def validate_pmc_id(pmc_id):
+    pattern = r'^PMC\d+$'
+    if not re.match(pattern, pmc_id):
+        raise ValueError("Invalid PMC ID format. It should start with 'PMC' followed by digits.")
 
 
 def process_paper(pmc_id, ndex_email, ndex_password, style_path=None):

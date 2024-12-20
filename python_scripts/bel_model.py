@@ -27,7 +27,10 @@ delay = 60.0 / rate_limit_per_minute
 class BELInteraction(BaseModel):
     """BEL interaction extracted from the sentence."""
     bel_statement: str = Field(..., description="A BEL formatted statement representing an interaction.")
-    evidence: str = Field(..., description="The exact sentence from which the interacting subject and object is taken from")
+    evidence: str = Field(
+        ..., 
+        description="The exact sentence from which the interacting subject and object is taken from"
+    )
 
 
 class BELInteractions(BaseModel):
