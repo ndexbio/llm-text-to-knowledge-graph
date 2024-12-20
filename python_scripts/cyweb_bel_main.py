@@ -24,7 +24,9 @@ from transform_bel_statements import process_llm_results
 
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s',
+                    stream=sys.stderr)
+logger = logging.getLogger(__name__)
 
 def create_tmpdir(theargs):
     """
@@ -36,12 +38,12 @@ def create_tmpdir(theargs):
     :return: Path to temp directory
     :rtype: str
     """
-    tmpdir = os.path.join(theargs.tempdir, 'cdhidef_' + str(uuid.uuid4()))
+    tmpdir = os.path.join(theargs.tempdir, 'llmknowledge_' + str(uuid.uuid4()))
     os.makedirs(tmpdir, mode=0o755)
     return tmpdir
 
 
-def process_paper(pmc_id, api_key):
+def process_paper(pmc_id, api_key, style_path=None):
     """
     Process a single PMC ID to generate BEL statements and CX2 network.
 
@@ -54,55 +56,40 @@ def process_paper(pmc_id, api_key):
     """
     try:
         validate_pmc_id(pmc_id)
-        logging.info(f"Setting up output directory for {pmc_id}")
+        logger.info(f"Setting up output directory for {pmc_id}")
         output_dir = setup_output_directory(pmc_id)
 
         file_path = download_pubtator_xml(pmc_id, output_dir)
         if not file_path:
-            logging.error("Aborting process due to download failure.")
-            return
+            logger.error("Aborting process due to download failure.")
+            return None
 
-        logging.info("Processing xml file to get text paragraphs")
+        logger.info("Processing xml file to get text paragraphs")
         paragraphs = get_pubtator_paragraphs(file_path)
-        json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
+        # json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
 
 
-        logging.info("Processing paragraphs with LLM-BEL model")
+        logger.info("Processing paragraphs with LLM-BEL model")
         llm_results = llm_bel_processing(paragraphs, api_key)
-        json.dump({'action': 'llmResults', 'data': llm_results}, sys.stdout, indent=2)
+        # json.dump({'action': 'llmResults', 'data': llm_results}, sys.stdout, indent=2)
 
-        logging.info("Processing LLM results to generate CX2 network")
+        logger.info("Processing LLM results to generate CX2 network")
         extracted_results = process_llm_results(llm_results)
-        cx2_network = convert_to_cx2(extracted_results)
+        cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
 
-        # data structure cytoscape web expects
-        # for adding a new network
-        # just write to standard out
-        newres = [{'action': 'addNetworks',
-                   'data': [cx2_network.to_cx2()]}]
-        json.dump(newres, sys.stdout, indent=2)
-
-        #cx2_filename = 'cx2_network.cx'
-        #save_to_json(cx2_network.to_cx2(), cx2_filename, output_dir)
-
-        #logging.info("Saving cx2 network to NDEx")
-        #client = Ndex2(username=ndex_email, password=ndex_password)
-        #client.save_new_cx2_network(cx2_network.to_cx2())
-
-        logging.info(f"Processing completed successfully for {pmc_id}.")
-        return True
-
+        # cytoscape web fails if network lacks network attributes so adding name
+        cx2_network.set_name('LLM Text to Knowledge Graph for publication: ' + str(pmc_id))
+        logger.info(f"Processing completed successfully for {pmc_id}.")
+        return cx2_network
     except ValueError as ve:
-        logging.error(ve)
-        sys.exit(1)
-        return False
+        logger.error(ve)
+        return None
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {e}")
-        sys.exit(1)
-        return False
+        logger.error(f"An unexpected error occurred: {e}")
+        return None
 
 
-def main(pmc_ids, api_key, tempdir='/tmp'):
+def main(pmc_ids, api_key, tempdir='/tmp', style_path=None):
     """
     Main function to process a list of PMC IDs.
 
@@ -112,38 +99,49 @@ def main(pmc_ids, api_key, tempdir='/tmp'):
         tempdir (str): Directory to hold temporary files.
     """
     tmpdir = create_tmpdir(argparse.Namespace(tempdir=tempdir))
-    logging.info(f"Temporary directory created at {tmpdir}")
-
+    logger.info(f"Temporary directory created at {tmpdir}")
+    logger.info('Style Path: ' + str(style_path))
     try:
         success_count = 0
         failure_count = 0
-
+        cx2nets = []
         for pmc_id in pmc_ids:
-            logging.info(f"Starting processing for PMC ID: {pmc_id}")
-            if process_paper(pmc_id, api_key):
+            logger.info(f"Starting processing for PMC ID: {pmc_id}")
+            res = process_paper(pmc_id, api_key, style_path=style_path)
+
+            if res is not None:
                 success_count += 1
+                cx2nets.append(res.to_cx2())
             else:
                 failure_count += 1
 
-        logging.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
+        # data structure cytoscape web expects
+        # for adding a new network
+        # just write to standard out
+        newres = [{'action': 'addNetworks',
+                   'data': cx2nets}]
+        json.dump(newres, sys.stdout, indent=2)
+
+        logger.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
+        if failure_count > 0:
+            return 1
+        return 0
     finally:
-        logging.info(f"Cleaning up temporary directory at {tmpdir}")
+        logger.info(f"Cleaning up temporary directory at {tmpdir}")
         shutil.rmtree(tmpdir)
 
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process a list of PMC articles and extract interaction data.")
+    parser.add_argument('input',
+                        help='Put the letter x here. it is temporarily needed for CytoscapeContainerService')
     parser.add_argument(
         "--api_key",
         type=str,
         required=True,  # Defaults to None if no key is provided
         help="OpenAI API key for processing"
     )
-    
-    # parser.add_argument('input',
-    #                     help='Expects a network as a file in CX2')
-    
     parser.add_argument(
         "--pmc_ids",
         type=str,
@@ -153,7 +151,9 @@ if __name__ == "__main__":
     
     parser.add_argument('--tempdir', default='/tmp',
                         help='Directory needed to hold files temporarily for processing')
+    parser.add_argument('--style_path',
+                        help='Path to cx_style.json file')
     
     args = parser.parse_args()
 
-    main(args.pmc_ids, args.api_key)
+    sys.exit(main(args.pmc_ids, args.api_key, style_path=args.style_path))

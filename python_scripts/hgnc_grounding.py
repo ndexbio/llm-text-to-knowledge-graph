@@ -2,7 +2,7 @@ import urllib.request
 import json
 import logging
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logger.INFO)
 logger = logging.getLogger(__name__)
 
 

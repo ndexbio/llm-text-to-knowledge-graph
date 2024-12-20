@@ -3,6 +3,7 @@ import requests
 import logging
 from lxml import etree
 
+logger = logging.getLogger(__name__)
 
 def download_pubtator_xml(pmc_id, output_dir):
     """
@@ -14,7 +15,7 @@ def download_pubtator_xml(pmc_id, output_dir):
     # Make the request
     response = requests.get(url)
     if response.status_code == 200:
-        logging.info(f"Successfully downloaded XML for PMCID {pmc_id}.")
+        logger.info(f"Successfully downloaded XML for PMCID {pmc_id}.")
         file_path = os.path.join(output_dir, f"pmc{pmc_id}.xml")
 
         # Save the file in the existing output directory
@@ -22,7 +23,7 @@ def download_pubtator_xml(pmc_id, output_dir):
             f.write(response.content)
         return file_path
     else:
-        logging.error(f"Failed to download XML for PMCID {pmc_id}. Status code: {response.status_code}")
+        logger.error(f"Failed to download XML for PMCID {pmc_id}. Status code: {response.status_code}")
         return None
 
 

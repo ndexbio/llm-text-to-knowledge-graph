@@ -13,6 +13,8 @@ from transform_bel_statements import process_llm_results
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
+logger = logging.getLogger(__name__)
+
 
 def validate_pmc_id(pmc_id):
     pattern = r'^PMC\d+$'
@@ -35,43 +37,43 @@ def process_paper(pmc_id, ndex_email, ndex_password, style_path=None):
     """
     try:
         validate_pmc_id(pmc_id)
-        logging.info(f"Setting up output directory for {pmc_id}")
+        logger.info(f"Setting up output directory for {pmc_id}")
         output_dir = setup_output_directory(pmc_id)
 
         file_path = download_pubtator_xml(pmc_id, output_dir)
         if not file_path:
-            logging.error("Aborting process due to download failure.")
+            logger.error("Aborting process due to download failure.")
             return
 
-        logging.info("Processing xml file to get text paragraphs")
+        logger.info("Processing xml file to get text paragraphs")
         paragraphs = get_pubtator_paragraphs(file_path)
         paragraphs_filename = f"{pmc_id}_pub_paragraphs.json"
         save_to_json(paragraphs, paragraphs_filename, output_dir)
 
-        logging.info("Processing paragraphs with LLM-BEL model")
+        logger.info("Processing paragraphs with LLM-BEL model")
         llm_results = llm_bel_processing(paragraphs)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
 
-        logging.info("Processing LLM results to generate CX2 network")
+        logger.info("Processing LLM results to generate CX2 network")
         extracted_results = process_llm_results(llm_results)
         cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
         cx2_filename = 'cx2_network.cx'
         save_to_json(cx2_network.to_cx2(), cx2_filename, output_dir)
 
-        logging.info("Saving cx2 network to NDEx")
+        logger.info("Saving cx2 network to NDEx")
         client = Ndex2(username=ndex_email, password=ndex_password)
         client.save_new_cx2_network(cx2_network.to_cx2())
 
-        logging.info(f"Processing completed successfully for {pmc_id}.")
+        logger.info(f"Processing completed successfully for {pmc_id}.")
         return True
 
     except ValueError as ve:
-        logging.error(ve)
+        logger.error(ve)
         sys.exit(1)
         return False
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {e}")
+        logger.error(f"An unexpected error occurred: {e}")
         sys.exit(1)
         return False
 
@@ -90,13 +92,13 @@ def main(pmc_ids, ndex_email, ndex_password, style_path=None):
     failure_count = 0
 
     for pmc_id in pmc_ids:
-        logging.info(f"Starting processing for PMC ID: {pmc_id}")
+        logger.info(f"Starting processing for PMC ID: {pmc_id}")
         if process_paper(pmc_id, ndex_email, ndex_password, style_path):
             success_count += 1
         else:
             failure_count += 1
 
-    logging.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
+    logger.info(f"Processing completed. Success: {success_count}, Failures: {failure_count}")
 
 
 if __name__ == "__main__":

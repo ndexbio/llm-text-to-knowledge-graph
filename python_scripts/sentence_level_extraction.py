@@ -2,6 +2,10 @@ import json
 from get_interactions import initialize_chains
 import time
 from grounding_genes import ground_genes
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 def load_json_data(filepath):
@@ -37,7 +41,7 @@ def llm_bel_processing(paragraphs, api_key):
     end_time = time.time()
     elapsed_time = end_time - start_time
     elapsed_minutes = elapsed_time / 60
-    print(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
+    logger.info(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
     return llm_results
 
 
