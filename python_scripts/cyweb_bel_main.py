@@ -157,4 +157,4 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
 
-    sys.exit(main(re.split('\s+', args.pmc_ids), args.api_key, style_path=args.style_path))
+    sys.exit(main(re.split(r'\s+', args.pmc_ids), args.api_key, style_path=args.style_path))
