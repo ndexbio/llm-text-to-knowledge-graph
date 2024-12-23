@@ -3,6 +3,7 @@
 
 import sys
 import os
+import re
 import argparse
 import logging
 import json
@@ -145,7 +146,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pmc_ids",
         type=str,
-        nargs="+",  # Allows multiple arguments to be passed as a list
+        required=True,
         help="PubMed Central IDs of the articles to process (space-separated)."
     )
     
@@ -156,4 +157,4 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
 
-    sys.exit(main(args.pmc_ids, args.api_key, style_path=args.style_path))
+    sys.exit(main(re.split('\s+', args.pmc_ids), args.api_key, style_path=args.style_path))
