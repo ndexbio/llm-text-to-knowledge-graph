@@ -9,7 +9,6 @@ import logging
 import json
 import uuid
 import shutil
-from bel_main import validate_pmc_id
 from convert_to_cx2 import convert_to_cx2
 from pub import get_pubtator_paragraphs, download_pubtator_xml
 from sentence_level_extraction import llm_bel_processing
@@ -26,6 +25,12 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s',
                     stream=sys.stderr)
 logger = logging.getLogger(__name__)
+
+
+def validate_pmc_id(pmc_id):
+    pattern = r'^PMC\d+$'
+    if not re.match(pattern, pmc_id):
+        raise ValueError("Invalid PMC ID format. It should start with 'PMC' followed by digits.")
 
 
 def create_tmpdir(theargs):

@@ -5,6 +5,7 @@ from lxml import etree
 
 logger = logging.getLogger(__name__)
 
+
 def download_pubtator_xml(pmc_id, output_dir):
     """
     Downloads the XML file from PubTator API using PMCID and saves it in the specified output directory.

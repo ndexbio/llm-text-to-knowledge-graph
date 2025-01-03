@@ -1,7 +1,6 @@
 import json
 from get_interactions import initialize_chains
 import time
-from grounding_genes import ground_genes
 import logging
 
 
@@ -21,7 +20,7 @@ llm_results = {}
 #extracting bel functions using llm
 def llm_bel_processing(paragraphs, api_key):
     bel_extraction_chain = initialize_chains(api_key)
-    
+
     llm_results = {"LLM_extractions": []}
     start_time = time.time()
 

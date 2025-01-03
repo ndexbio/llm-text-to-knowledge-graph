@@ -38,6 +38,7 @@ bel_extraction_function = [
     convert_pydantic_to_openai_function(BELInteractions)
 ]
 
+
 def initialize_model(api_key):
     """Initialize the model with the provided API key."""
     model = delayed_completion(
@@ -47,6 +48,7 @@ def initialize_model(api_key):
         openai_api_key=api_key
     )
     return model
+
 
 # Ensure bel_extraction_model is initialized with the provided key
 def get_bel_extraction_model(api_key):
