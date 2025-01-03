@@ -9,13 +9,6 @@ import logging
 import json
 import uuid
 import shutil
-
-# hack fix to add the directory where this scripts
-# resides to the path. This enables the imports below
-# to work
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-# TODO add sys.path to make this work
 from bel_main import validate_pmc_id
 from convert_to_cx2 import convert_to_cx2
 from pub import get_pubtator_paragraphs, download_pubtator_xml
@@ -23,11 +16,17 @@ from sentence_level_extraction import llm_bel_processing
 from indra_download_extract import setup_output_directory
 from transform_bel_statements import process_llm_results
 
+# hack fix to add the directory where this scripts
+# resides to the path. This enables the imports above
+# to work
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s',
                     stream=sys.stderr)
 logger = logging.getLogger(__name__)
+
 
 def create_tmpdir(theargs):
     """
@@ -68,7 +67,6 @@ def process_paper(pmc_id, api_key, style_path=None):
         logger.info("Processing xml file to get text paragraphs")
         paragraphs = get_pubtator_paragraphs(file_path)
         # json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
-
 
         logger.info("Processing paragraphs with LLM-BEL model")
         llm_results = llm_bel_processing(paragraphs, api_key)
@@ -132,7 +130,6 @@ def main(pmc_ids, api_key, tempdir='/tmp', style_path=None):
         shutil.rmtree(tmpdir)
 
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process a list of PMC articles and extract interaction data.")
     parser.add_argument('input',
@@ -149,12 +146,12 @@ if __name__ == "__main__":
         required=True,
         help="PubMed Central IDs of the articles to process (space-separated)."
     )
-    
+
     parser.add_argument('--tempdir', default='/tmp',
                         help='Directory needed to hold files temporarily for processing')
     parser.add_argument('--style_path',
                         help='Path to cx_style.json file')
-    
+
     args = parser.parse_args()
 
     sys.exit(main(re.split(r'\s+', args.pmc_ids), args.api_key, style_path=args.style_path))
