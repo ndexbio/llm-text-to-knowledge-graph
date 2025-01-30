@@ -154,8 +154,8 @@ if __name__ == "__main__":
 
     parser.add_argument('--tempdir', default='/tmp',
                         help='Directory needed to hold files temporarily for processing')
-    parser.add_argument('--style_path',
-                        help='Path to cx_style.json file')
+    parser.add_argument('--style_path', default='/opt/llm_text_to_knowledge_graph/data/style.cx2',
+                        help='Path to CX2 Network file with style to use')
 
     args = parser.parse_args()
 

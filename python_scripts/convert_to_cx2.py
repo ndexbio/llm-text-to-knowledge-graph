@@ -1,7 +1,13 @@
 import pandas as pd
+import os
 import re
 import json
+import logging
 from ndex2.cx2 import PandasDataFrameToCX2NetworkFactory
+from ndex2.cx2 import RawCX2NetworkFactory
+
+
+logger = logging.getLogger(__name__)
 
 
 def extract_label(bel_expression):
@@ -18,6 +24,18 @@ def extract_type(bel_expression):
     """
     match = re.match(r'([a-zA-Z]+)\(', bel_expression)
     return match.group(1) if match else "unknown"  # Default to "unknown" if no match
+
+
+def add_style_to_network(cx2_network=None, style_path=None):
+    """
+    Adds ctyle from CX2Network set in **style_path** to
+    **cx2network**
+    """
+    if style_path is not None and os.path.isfile(style_path):
+        logger.info('Setting visual style properties')
+        cx2netfac = RawCX2NetworkFactory()
+        style_cx_net = cx2netfac.get_cx2network(style_path)
+        cx2_network.set_visual_properties(style_cx_net.get_visual_properties())
 
 
 def convert_to_cx2(extracted_results, style_path=None):
@@ -79,21 +97,13 @@ def convert_to_cx2(extracted_results, style_path=None):
     cx2_network = factory.get_cx2network(df, source_field='source', 
                                          target_field='target', edge_interaction='interaction')
 
+    # Add visual properties style to network
+    add_style_to_network(cx2_network=cx2_network,
+                         style_path=style_path)
+
     # Retrieve nodes from the CX2 structure
     cx2_structure = cx2_network.to_cx2()
 
-    # Add style from JSON if provided
-    if style_path:
-        with open(style_path, 'r') as style_file:
-            style_data = json.load(style_file)
-
-        # Append the style aspects to the CX2 structure
-        cx2_structure.append({
-            "visualEditorProperties": style_data[0]["visualEditorProperties"]
-        })
-        cx2_structure.append({
-            "visualProperties": style_data[1]["visualProperties"]
-        })
 
     nodes_aspect = next((aspect for aspect in cx2_structure if isinstance(aspect, dict) and "nodes" in aspect), None)
     existing_node_ids = {node['id'] for node in nodes_aspect["nodes"]} if nodes_aspect else set()
@@ -119,7 +129,7 @@ def convert_to_cx2(extracted_results, style_path=None):
         cx2_network.set_node_attribute(node_id, 'type', node_type)
         cx2_network.set_node_attribute(node_id, 'text', text)
 
-    cx2_network._cx2 = cx2_structure
+    # cx2_network._cx2 = cx2_structure
 
     return cx2_network
 
