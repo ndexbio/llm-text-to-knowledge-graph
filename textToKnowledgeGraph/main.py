@@ -272,7 +272,8 @@ def main(
     return overall_success
 
 
-if __name__ == "__main__":
+def cli() -> None:
+    """Command-line interface for textToKnowledgeGraph."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
     # No need to go up one level if cx_style.json is right here
     default_style_path = os.path.join(script_dir, "cx_style.json")
@@ -412,3 +413,7 @@ if __name__ == "__main__":
         sys.exit(1)
     else:
         logging.info("Batch processing completed successfully.")
+
+
+if __name__ == "__main__":
+    cli()
