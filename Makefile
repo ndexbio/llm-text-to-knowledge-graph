@@ -48,9 +48,9 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 
 dockerbuild: ## build docker image and store in local repository
-	# @cv=`grep '__version__' python_scripts/__init__.py | sed "s/^.*= *'//" | sed "s/'.*//"`; \
-	docker build -t ndex/llmtexttoknowledgegraph:0.1.1 -f docker/Dockerfile .
+	@cv=`grep 'version' pyproject.toml | sed "s/^.*= *\"//" | sed "s/\".*//"`; \
+	docker build -t ndex/llmtexttoknowledgegraph:$$cv -f docker/Dockerfile .
 
 dockerpush: dockerbuild ## push image to dockerhub
-	# @cv=`grep '__version__' python_scripts/__init__.py | sed "s/^.*= *'//" | sed "s/'.*//"`; \
-	docker push ndex/llmtexttoknowledgegraph:0.1.1
+	@cv=`grep 'version' pyproject.toml | sed "s/^.*= *\"//" | sed "s/\".*//"`; \
+	docker push ndex/llmtexttoknowledgegraph:$cv
