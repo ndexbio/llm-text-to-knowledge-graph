@@ -74,9 +74,11 @@ def fetch_metadata_via_eutils(article_id):
         2. title
         3. authors (list of full-name strings)
         4. abstract
+        5. doi
+        6. journal
 
     :param article_id: A string like '12345678' (PMID) or 'PMC123456' (PMCID).
-    :return: dict with keys {'pmid', 'title', 'authors', 'abstract'}.
+    :return: dict with keys {'pmid', 'title', 'authors', 'abstract', 'doi', 'journal'}.
              Some may be None or empty if missing from the record.
     """
     # Detect whether input is PMCID or PMID
@@ -107,7 +109,9 @@ def fetch_metadata_via_eutils(article_id):
         'pmid': None,
         'title': None,
         'authors': [],
-        'abstract': None
+        'abstract': None,
+        'doi': None,
+        'journal': None
     }
 
     # If request fails, just return the empty structure
@@ -148,6 +152,16 @@ def fetch_metadata_via_eutils(article_id):
             combined = " ".join(elem.text for elem in abstract_texts if elem.text)
             metadata['abstract'] = combined.strip() if combined else None
 
+        # DOI
+        doi_elem = pubmed_article.find(".//ArticleId[@IdType='doi']")
+        if doi_elem is not None and doi_elem.text:
+            metadata['doi'] = doi_elem.text.strip()
+
+        # Journal
+        journal_elem = pubmed_article.find(".//Journal/Title")
+        if journal_elem is not None and journal_elem.text:
+            metadata['journal'] = journal_elem.text.strip()
+
     else:
         article_elem = tree.find(".//article")
         if article_elem is None:
@@ -158,6 +172,8 @@ def fetch_metadata_via_eutils(article_id):
             id_type = article_id_elem.get("pub-id-type")
             if id_type == "pmid":
                 metadata['pmid'] = article_id_elem.text.strip() if article_id_elem.text else None
+            elif id_type == "doi":  
+                metadata['doi'] = article_id_elem.text.strip() if article_id_elem.text else None
 
         # Title
         title_elem = article_elem.find(".//title-group/article-title")
@@ -184,5 +200,10 @@ def fetch_metadata_via_eutils(article_id):
                 # or a single text node if no <p> children
                 if abstract_elem.text:
                     metadata['abstract'] = abstract_elem.text.strip()
+
+        # Journal            
+        journal_title_elem = article_elem.find(".//journal-title")
+        if journal_title_elem is not None and journal_title_elem.text:
+            metadata['journal'] = journal_title_elem.text.strip()
 
     return metadata

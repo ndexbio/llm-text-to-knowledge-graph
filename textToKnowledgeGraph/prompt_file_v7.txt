@@ -4,13 +4,14 @@ Instructions:
 You will receive a scientific text with paragraphs along with a list of annotated molecular entities detailing biological interactions between the annotated molecular entities. Extract interactions strictly based on the information given in each paragraph and its corresponding annotations. Do not reuse entities or interactions from previous examples unless they are explicitly mentioned in the current paragraph. As an expert in bioinformatics with deep knowledge of genes, proteins, the Biological Expression Language, and biological terms, identify and resolve each molecular entity to standard identifiers (e.g., HGNC gene symbols, GO terms). Record interactions between pairs of entities, skipping sentences without interactions, and represent the interactions in the BEL (Biological Expression Language) format. Don't repeat the examples that are provided, they are just giving to you as guidance. 
 
 Important Guidelines to Note:
-1. Only Extract BEL Statements: Your task is to return the correct BEL statements based solely on the provided paragraph that is passed to you. 
+1. Only Extract BEL Statements: Your task is to return the correct BEL statements only when there is a REASONABLE statement to be extracted based solely on the provided paragraph that is passed to you.
 2. Process Only Valid Passages: Proceed only if there are at least two annotated entities to consider for potential interactions. Skip any sentence that does not have at least two valid annotated entities
-3. Use Provided Annotations: Extract only entities in the paragraph that are specifically listed under the annotations list. Do not extract any entity that is not listed as an annotation. Do not infer interactions involving entities not present in the paragraph. Use only the entity classes and namespaces provided in the markdown table below:
+3. Use Provided Annotations: Extract only entities in the paragraph that are specifically listed under the annotations list. Do not extract any entity that is not listed as an annotation. Do not generate new identifiers for namespaces in the annotations. Use the exact pairings of namespaces and identifiers listed in the annotations. Do not infer interactions involving entities not present in the paragraph. Omit any interaction in which one or both of the entities is not found in the provided annotations list.
+4. Use Consistent Namespace Identifiers: When an entity is annotated with a specific identifier, always use that exact identifier in the BEL statements. Do not substitute or mix identifiers from different namespaces—even if they refer to the same entity. Use only the entity classes and namespaces provided in the markdown table below:
 
 | Entity Class                                                   | Namespace | Definition                                                                                                  |
 |---------------------------------------------------------------|-----------|--------------------------------------------------------------------------------------------------------------|
-| Human genes/proteins                                               | HGNC      | Approved symbols/names for human genes.                                                                      |
+| Human genes/proteins                                          | HGNC      | Approved symbols/names for human genes.                                                                      |
 | Human and model organism proteins                             | UniProt   | Comprehensive resource of protein sequences and functional information for human and model organisms.        |
 | Human protein families and complexes                          | FPLX   | Ontology for grouping related proteins into families, complexes, and other higher-level categories.          |
 | Small molecules, metabolites, etc.                            | ChEBI     | Chemical Entities of Biological Interest, covering small molecules, metabolites, and related compounds.      |
@@ -18,8 +19,6 @@ Important Guidelines to Note:
 | Diseases                                                      | DOID      | Disease Ontology identifiers, representing various human diseases.                                           |
 | Experimental factors, cell lines, anatomical entities, etc.   | EFO       | Experimental Factor Ontology describing cell lines, cell types, anatomical entities, and experimental terms. |
 | Human phenotypes                                              | HP        | Human Phenotype Ontology for describing phenotypic features in human disease.                                |
-| General: diseases, proteins, small molecules, cell types, etc.| MeSH      | Medical Subject Headings for indexing and classifying biomedical concepts.                                   |
-
                                            |
 
 4. Skip Non-Interaction Sentences: If the sentence does not describe an interaction between molecular entities, do not generate a BEL statement for that sentence.
@@ -82,8 +81,7 @@ Example: p53 protein binds the CDKN1A gene is interpreted as complex(p(HGNC:TP53
 
 - location: Long form: location() Short form: loc()
 location() or loc() can be used as an argument within any abundance function except compositeAbundance() to represent a distinct subset of the abundance at that location. Location subsets of abundances have the general form: f(ns:v, loc(ns:v))
-Examples: Cytoplasmic pool of AKT1 protein is interpreted as p(HGNC:AKT1, loc(MESH:Cytoplasm)), 
-Endoplasmic Reticulum pool of Ca2+ is interpreted as a(CHEBI:"calcium(2+)", loc(GO:"endoplasmic reticulum"))
+Examples: Endoplasmic Reticulum pool of Ca2+ is interpreted as a(CHEBI:"calcium(2+)", loc(GO:"endoplasmic reticulum"))
 
 - microRNAAbundance: Long form: microRNAAbundance() Short form: m()
 microRNAAbundance(ns:v) or m(ns:v) denotes the abundance of the processed, functional microRNA designated by the value +v+ in the namespace +ns+.
@@ -95,7 +93,6 @@ Examples: act(p(HGNC:FOXO1), ma(GO:"nucleic acid binding transcription factor ac
 
 - pathology: Long form: pathology() Short form: path()
 pathology(ns:v) or path(ns:v) denotes the disease or pathology process designated by the value +v+ in the namespace +ns+. The +pathology()** function is included to facilitate the distinction of pathologies from other biological processes because of their importance in many potential applications in the life sciences.
-Examples: pathology(MESH:"Pulmonary Disease, Chronic Obstructive"), pathology(MESH:adenocarcinoma)
 
 - proteinAbundance: Long form: proteinAbundance() Short form: p()
 proteinAbundance(ns:v) or p(ns:v) denotes the abundance of the protein designated by the value +v+ in the namespace +ns+, where +v+ references a gene or a named protein family.
@@ -194,71 +191,72 @@ For each sentence provided, extract the relevant interactions and return them di
 
 Example Formats: Use these examples to understand the desired output format but do not replicate these examples unless explicitly required by the text.
 1. "text": "Arterial cells are highly susceptible to oxidative stress, which can induce both necrosis and apoptosis (programmed cell death)"
-    "bel_statements": [
-        [   "statement": "bp(GOBP:\"response to oxidative stress\") increases bp(GOBP:\"apoptotic process\")",
+    "Results": [
+        [   "bel_statement": "bp(GOBP:\"response to oxidative stress\") increases bp(GOBP:\"apoptotic process\")",
             "evidence":  "Arterial cells are highly susceptible to oxidative stress, which can induce both necrosis and apoptosis (programmed cell death)"
         ]
-        [   "statement": "bp(GOBP:\"response to oxidative stress\") increases bp(GOBP:necrosis)",
+        [   "bel_statement": "bp(GOBP:\"response to oxidative stress\") increases bp(GOBP:necrosis)",
             "evidence":  "Arterial cells are highly susceptible to oxidative stress, which can induce both necrosis and apoptosis (programmed cell death)"
         ]
     ]
 
-2. "text": "Oxidation and nitration of macromolecules, such as proteins, DNA and lipids, are prominent in atherosclerotic arteries."
-    "bel_statements": [
-        [   "statement": "path(MESHD:Atherosclerosis) positiveCorrelation bp(GOBP:\"lipid oxidation\")",
-            "evidence":  "Oxidation and nitration of macromolecules, such as proteins, DNA and lipids, are prominent in atherosclerotic arteries."
-        ]
-        [   "statement": "path(MESHD:Atherosclerosis) positiveCorrelation bp(GOBP:\"protein oxidation\")",
-            "evidence":  "Oxidation and nitration of macromolecules, such as proteins, DNA and lipids, are prominent in atherosclerotic arteries."
-        ]
-    ]
-
-3. "text": "TF works at the surface of cell membranes, and its activity is highly dependent on the presence of phosphatidylserine (PS), an anionic phospholipid that is redistributed on the cell surface during apoptotic death and confers a potent pro-coagulant activity to the apoptotic cell.",
-    "bel_statements": [
+2. "text": "In the third phase, gap filling, x-ray repair cross-complementing gene/protein 1 (XRCC1) appears to function as a platform for the assembly of DNA polymerase b (DPase b), DNA ligase III, and PARP. This assembly is held together, in part, via breast cancer protein 1 C-terminal module (BRCT) modules in the constituent proteins. The binding of PARP by XRCC1 may function to block the further action of PARP during this phase at a repair site. The assembly of XRCC1 with DPase b and DNA ligase III may also function in the single-nucleotide replacement pathway of base excision repair.",
+    "Results": [
         [
-            "statement": "a(CHEBI:\"phosphatidyl-L-serine\") increases pep(p(HGNC:F3))",
-            "evidence": "TF works at the surface of cell membranes, and its activity is highly dependent on the presence of phosphatidylserine (PS)."
+            "bel_statement": "complex(p(HGNC:XRCC1), p(HGNC:POLB), p(HGNC:LIG3), p(HGNC:PARP1))",
+            "evidence": "In the third phase, gap filling, x-ray repair cross-complementing gene/protein 1 (XRCC1) appears to function as a platform for the assembly of DNA polymerase b (DPase b), DNA ligase III, and PARP."
         ],
         [
-            "statement": "bp(GOBP:\"apoptotic process\") increases a(CHEBI:\"phosphatidyl-L-serine\")",
-            "evidence": "Phosphatidylserine (PS), an anionic phospholipid, is redistributed on the cell surface during apoptotic death."
-        ],
-        [
-            "statement": "a(CHEBI:\"phosphatidyl-L-serine\") increases bp(GOBP:coagulation)",
-            "evidence": "Phosphatidylserine (PS) confers a potent pro-coagulant activity to the apoptotic cell."
+            "bel_statement": "p(HGNC:XRCC1) directlyDecreases act(p(HGNC:PARP1))",
+            "evidence": "The binding of PARP by XRCC1 may function to block the further action of PARP during this phase at a repair site."
         ]
     ]
 
-
-4. "text": "The proto-oncogene c-myc can promote cell death (probably mediated through p53) or cell proliferation, depending on its expression level. It functions as a nuclear phosphoprotein with particular properties of a transcription factor. In serum-deprived cultures, cells overexpressing c-myc readily undergo apoptosis. In addition, deregulation of c-myc causes apoptosis of VSMCs deprived of growth factors or treated with cytokines such as interferon-g.",
-    "bel_statements": [
+3. "text": "It has been observed that a high percentage of BRCA1- associated hereditary and sporadic breast cancers are triple negative and express a high proportion of basal like cytokeratins (CK5,14,17), as well as P-Cadherin and HER1/EGFR. Gene expression studies support this association among patients with BRCA1 mutations that breast tumours tend to cluster within the basal like category.",
+    "Results": [
         [
-            "statement": "p(HGNC:MYC) increases bp(GOBP:\"apoptotic process\")",
-            "evidence": "In serum-deprived cultures, cells overexpressing c-myc readily undergo apoptosis."
+            "bel_statement": "g(HGNC:BRCA1) positiveCorrelation path(DOID:Triple-negative breast cancer)",
+            "evidence": "It has been observed that a high percentage of BRCA1- associated hereditary and sporadic breast cancers are triple negative."
         ],
         [
-            "statement": "p(HGNC:MYC) increases bp(GOBP:\"cell proliferation\")",
-            "evidence": "The proto-oncogene c-myc can promote cell death (probably mediated through p53) or cell proliferation, depending on its expression level."
+            "bel_statement": "g(HGNC:BRCA1) positiveCorrelation a(HGNC:EGFR)",
+            "evidence": "It has been observed that a high percentage of BRCA1- associated hereditary and sporadic breast cancers express a high proportion of HER1/EGFR."
         ]
     ]
 
-5. "text": "Additionally, several proteins integrally involved in DNA repair are aberrantly expressed in TNBC, which may have implications on sensitivity to chemotherapeutic agents like, platinum-based drugs. High p53 IHC expression is common in basal-like breast cancer. Several additional and targetable molecular pathways implicated in the pathogenesis of basal-like breast cancer include the mutagen activated protein (MAP) kinase pathway, the Akt pathway, and the poly ADP-ribose polymerase1 (PARP1) pathway.",
-    "bel_statements": [
+4. "text": "Dysregulation of HSF1 is associated with several disease phenotypes. Elevated HSF1 activity in multiple cancer types is a frequent occurrence. Loss of HSF1 delays or prevents formation of multiple cancer types. HSF1 appears to promote cancer by regulating genes distinct from its heat stress-induced gene targets but has multiple functions to support tumour growth and progression. Conversely, loss of HSF1 is associated with neurodegenerative diseases, such as Huntington's and Alzheimer's diseases among others. HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival.",
+    "Results": [
         [
-            "statement": "p(HGNC:TP53) increases path(MESHD:\"Basal-like breast cancer\")",
-            "evidence": "High p53 IHC expression is common in basal-like breast cancer."
+            "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0007269)",
+            "evidence": "HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival."
         ],
         [
-            "statement": "bp(GOBP:\"MAPK cascade\") increases path(MESHD:\"Basal-like breast cancer\")",
-            "evidence": "Several additional and targetable molecular pathways implicated in the pathogenesis of basal-like breast cancer include the mutagen activated protein (MAP) kinase pathway."
+            "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0045202)",
+            "evidence": "HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival."
+        ]
+    ]
+
+5. "text": "There are substantial shortcomings in the drugs currently available for treatment of type 2 diabetes mellitus. The global diabetic crisis has not abated despite the introduction of new types of drugs and targets. Persistent unaddressed patient needs remain a significant factor in the quest for new leads in routine studies. Drug discovery methods in this area have followed developments in the market, contributing to a recent rise in the number of molecules. Nevertheless, troubling developments and fresh challenges are still evident. Recently, metformin, the most widely used first-line drug for diabetes, was found to contain a carcinogenic contaminant known as N-nitroso dimethylamine (NDMA). Therefore, purity and toxicity are also a big challenge for drug discovery and development. Moreover, newer drug classes against SGLT-2 illustrate both progress and difficulties. The same was true previously in the case of glucagon-like peptide-1 receptor agonists and dipeptidyl peptidase-4 inhibitors. Furthermore, researchers must study the importance of mechanistic characteristics of novel compounds, as well as exposure-related hazardous aspects of current and newly identified protein targets, in order to identify new pharmacological molecules with improved selectivity and specificity.",
+    "Results": [
+        [
+            "bel_statement": "a(CHEBI:6801) hasComponent a(CHEBI:59990)",
+            "evidence": "Recently, metformin, the most widely used first-line drug for diabetes, was found to contain a carcinogenic contaminant known as N-nitroso dimethylamine (NDMA)."
         ],
         [
-            "statement": "bp(GOBP:\"Akt signaling pathway\") increases path(MESHD:\"Basal-like breast cancer\")",
-            "evidence": "Several additional and targetable molecular pathways implicated in the pathogenesis of basal-like breast cancer include the Akt pathway."
+            "bel_statement": "a(CHEBI:23888) increases a(EFO:0004368)",
+            "evidence": "Drug discovery methods in this area have followed developments in the market, contributing to a recent rise in the number of molecules."
         ],
         [
-            "statement": "p(HGNC:PARP1) increases path(MESHD:\"Basal-like breast cancer\")",
-            "evidence": "Several additional and targetable molecular pathways implicated in the pathogenesis of basal-like breast cancer include the poly ADP-ribose polymerase1 (PARP1) pathway."
+            "bel_statement": "a(CHEBI:23888) challenges a(EFO:0011061)",
+            "evidence": "Therefore, purity and toxicity are also a big challenge for drug discovery and development."
+        ],
+        [
+            "bel_statement": "p(HGNC:11037) hasActivity a(CHEBI:71196)",
+            "evidence": "Moreover, newer drug classes against SGLT-2 illustrate both progress and difficulties. The same was true previously in the case of glucagon-like peptide-1 receptor agonists and dipeptidyl peptidase-4 inhibitors."
+        ],
+        [
+            "bel_statement": "p(HGNC:11037) hasActivity a(CHEBI:68612)",
+            "evidence": "Moreover, newer drug classes against SGLT-2 illustrate both progress and difficulties. The same was true previously in the case of glucagon-like peptide-1 receptor agonists and dipeptidyl peptidase-4 inhibitors."
         ]
     ]
 """

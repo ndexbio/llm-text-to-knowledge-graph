@@ -5,36 +5,40 @@
             "text": "The heat stress response activates the transcription factor heat shock factor 1 (HSF1), which subsequently upregulates heat shock proteins to maintain the integrity of the proteome. HSF1 activation requires nuclear localization, trimerization, DNA binding, phosphorylation and gene transactivation. Phosphorylation at S326 is an important regulator of HSF1 transcriptional activity. Phosphorylation at S326 is mediated by AKT1, mTOR, p38, MEK1 and DYRK2. Here, we observed activation of HSF1 by AKT1 independently of mTOR. AKT2 also phosphorylated S326 of HSF1 but showed weak ability to activate HSF1. Similarly, mTOR, p38, MEK1 and DYRK2 all phosphorylated S326 but AKT1 was the most potent activator. Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326, whereas the other kinases did not. Subsequent investigation revealed that phosphorylation at T142 is necessary for HSF1 trimerization and that S230, S326 and T527 are required for HSF1 gene transactivation and recruitment of TFIIB and CDK9. Interestingly, T527 as a phosphorylated residue has not been previously shown and sits in the transactivation domain, further implying a role for this site in HSF1 gene transactivation. This study suggests that HSF1 hyperphosphorylation is targeted and these specific residues have direct function in regulating HSF1 transcriptional activity.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 is mediated by AKT1, mTOR, p38, MEK1 and DYRK2."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "Here, we observed activation of HSF1 by AKT1 independently of mTOR."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT2)) directlyIncreases act(p(HGNC:HSF1))",
                     "evidence": "AKT2 also phosphorylated S326 of HSF1 but showed weak ability to activate HSF1."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MTOR), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity pmod(Ph, S, 326)",
                     "evidence": "Phosphorylation at S326 is mediated by AKT1, mTOR, p38, MEK1 and DYRK2."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MAP2K1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 is mediated by AKT1, mTOR, p38, MEK1 and DYRK2."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity pmod(Ph, T, 142)",
+                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:DYRK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 is mediated by AKT1, mTOR, p38, MEK1 and DYRK2."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity pmod(Ph, S, 230)",
+                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326, whereas the other kinases did not."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity pmod(Ph, T, 527)",
+                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 230))",
-                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326, whereas the other kinases did not."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases bp(GO:2000144)",
+                    "evidence": "phosphorylation at S230, S326 and T527 are required for HSF1 gene transactivation and recruitment of TFIIB and CDK9."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "Mass spectrometry showed that AKT1 also phosphorylated HSF1 at T142, S230 and T527 in addition to S326, whereas the other kinases did not."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:CDK9))",
+                    "evidence": "phosphorylation at S230, S326 and T527 are required for HSF1 gene transactivation and recruitment of TFIIB and CDK9."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:GTF2B))",
+                    "evidence": "phosphorylation at S230, S326 and T527 are required for HSF1 gene transactivation and recruitment of TFIIB and CDK9."
                 }
             ],
             "annotations": [
@@ -260,32 +264,24 @@
             "text": "Activation of Heat shock factor 1 (HSF1), the master regulator of the heat shock response, requires phosphorylation at S326. AKT1 phosphorylated T142, S230 and T527 in addition to S326 and phosphorylation at these sites enhanced HSF1 transcriptional activity. T142 phosphorylation was necessary for HSF1 trimerization, whereas S230, S326 and T527 were necessary for HSF1 to interact with general transcription factor components CDK9 (pTEF-b) and TFIIB.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527 in addition to S326 and phosphorylation at these sites enhanced HSF1 transcriptional activity."
+                    "bel_statement": "act(p(HGNC:AKT1), ma(Ph, S, 326))",
+                    "evidence": "Activation of Heat shock factor 1 (HSF1), the master regulator of the heat shock response, requires phosphorylation at S326."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 230))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527 in addition to S326 and phosphorylation at these sites enhanced HSF1 transcriptional activity."
+                    "bel_statement": "act(p(HGNC:AKT1), ma(Ph, T, 142))",
+                    "evidence": "T142 phosphorylation was necessary for HSF1 trimerization."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527 in addition to S326 and phosphorylation at these sites enhanced HSF1 transcriptional activity."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527 in addition to S326 and phosphorylation at these sites enhanced HSF1 transcriptional activity."
-                },
-                {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 230)) directlyIncreases complex(p(HGNC:CDK9), p(HGNC:GTF2B))",
+                    "bel_statement": "act(p(HGNC:AKT1), ma(Ph, S, 230))",
                     "evidence": "S230, S326 and T527 were necessary for HSF1 to interact with general transcription factor components CDK9 (pTEF-b) and TFIIB."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326)) directlyIncreases complex(p(HGNC:CDK9), p(HGNC:GTF2B))",
+                    "bel_statement": "act(p(HGNC:AKT1), ma(Ph, T, 527))",
                     "evidence": "S230, S326 and T527 were necessary for HSF1 to interact with general transcription factor components CDK9 (pTEF-b) and TFIIB."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 527)) directlyIncreases complex(p(HGNC:CDK9), p(HGNC:GTF2B))",
-                    "evidence": "S230, S326 and T527 were necessary for HSF1 to interact with general transcription factor components CDK9 (pTEF-b) and TFIIB."
+                    "bel_statement": "act(p(HGNC:HSF1)) increases act(p(HGNC:CDK9))",
+                    "evidence": "phosphorylation at these sites enhanced HSF1 transcriptional activity."
                 }
             ],
             "annotations": [
@@ -384,12 +380,20 @@
             "text": "Attenuation of cellular stressors is necessary for cell viability in unicellular and multicellular organisms. The discovery of a cellular response to heat stress was first observed in 1962. Over two decades later, it was discovered that the protein heat shock factor 1 (HSF1) is the master regulator of the heat shock response. Prior to heat stress-induced activation, HSF1 is sequestered in the cytoplasm within an inhibitory protein complex comprised several molecular chaperone proteins. With the onset of heat stress, this complex dissociates and the HSF1 protein undergoes nuclear localization, trimerization and phosphorylation leading to DNA binding at heat shock elements (HSEs) and gene transactivation. HSF1 target genes in response to heat stress include a large panel of chaperone proteins that safeguard the proteome from heat-induced denaturation.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1) increases bp(GO:0009408)",
-                    "evidence": "Over two decades later, it was discovered that the protein heat shock factor 1 (HSF1) is the master regulator of the heat shock response."
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0034605)",
+                    "evidence": "With the onset of heat stress, this complex dissociates and the HSF1 protein undergoes nuclear localization, trimerization and phosphorylation leading to DNA binding at heat shock elements (HSEs) and gene transactivation."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1) increases bp(GO:2000144)",
+                    "bel_statement": "bp(GO:0009408) increases bp(GO:0034605)",
                     "evidence": "With the onset of heat stress, this complex dissociates and the HSF1 protein undergoes nuclear localization, trimerization and phosphorylation leading to DNA binding at heat shock elements (HSEs) and gene transactivation."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:2000144)",
+                    "evidence": "With the onset of heat stress, this complex dissociates and the HSF1 protein undergoes nuclear localization, trimerization and phosphorylation leading to DNA binding at heat shock elements (HSEs) and gene transactivation."
+                },
+                {
+                    "bel_statement": "bp(GO:0034605) hasMember p(HGNC:HSF1)",
+                    "evidence": "HSF1 target genes in response to heat stress include a large panel of chaperone proteins that safeguard the proteome from heat-induced denaturation."
                 }
             ],
             "annotations": [
@@ -490,11 +494,19 @@
             "text": "Dysregulation of HSF1 is associated with several disease phenotypes. Elevated HSF1 activity in multiple cancer types is a frequent occurrence. Loss of HSF1 delays or prevents formation of multiple cancer types. HSF1 appears to promote cancer by regulating genes distinct from its heat stress-induced gene targets but has multiple functions to support tumour growth and progression. Conversely, loss of HSF1 is associated with neurodegenerative diseases, such as Huntington's and Alzheimer's diseases among others. HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:\"neurotransmitter secretion\")",
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(MESH:D009369)",
+                    "evidence": "Elevated HSF1 activity in multiple cancer types is a frequent occurrence."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) directlyDecreases bp(MESH:D019636)",
+                    "evidence": "Conversely, loss of HSF1 is associated with neurodegenerative diseases, such as Huntington's and Alzheimer's diseases among others."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0007269)",
                     "evidence": "HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:\"synapse\")",
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0045202)",
                     "evidence": "HSF1 activity is impaired with ageing but is critical for neuronal protein folding, neurotransmitter release, synapse formation, energy metabolism and neuronal survival."
                 }
             ],
@@ -601,12 +613,24 @@
             "text": "The majority of the functions of HSF1, both physiological and pathological, require a transcriptionally active HSF1. Transcriptionally active HSF1 exists in a trimer complex in the nucleus that is capable of binding to HSEs. HSF1 phosphorylation appears to strongly regulate the transcriptional activity of HSF1, particularly at S326. Phosphorylation at S326 is routinely used as a marker of active HSF1. Since the initial observation that S326 phosphorylation affects heat stress-induced HSF1 activity, five kinases have been observed to phosphorylate S326, including mTORC1, MEK1, p38, DYRK2 and AKT1, which our work previously identified can phosphorylate S326 in breast cancer. However, the functional mechanism for how S326 phosphorylation promotes HSF1 transcriptional activity is not well understood. Furthermore, the relative contribution to HSF1 activity by these kinases remains unknown. Additionally, it is not known if AKT1 contributes to heat stress-induced HSF1 activity or whether other AKT family members can activate HSF1. Our results indicate that AKT1 activates HSF1 most potently due to the unique ability of AKT1 to phosphorylate three additional residues beyond S326 that all contribute to different steps in the process of HSF1-driven transcription, including trimerization and gene transactivation. Interestingly, mTOR, p38, DYRK2 and MEK1 did not phosphorylate these additional sites.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Since the initial observation that S326 phosphorylation affects heat stress-induced HSF1 activity, five kinases have been observed to phosphorylate S326, including mTORC1, MEK1, p38, DYRK2 and AKT1, which our work previously identified can phosphorylate S326 in breast cancer."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Our results indicate that AKT1 activates HSF1 most potently due to the unique ability of AKT1 to phosphorylate three additional residues beyond S326 that all contribute to different steps in the process of HSF1-driven transcription, including trimerization and gene transactivation."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "Our results indicate that AKT1 activates HSF1 most potently due to the unique ability of AKT1 to phosphorylate three additional residues beyond S326 that all contribute to different steps in the process of HSF1-driven transcription, including trimerization and gene transactivation."
+                    "bel_statement": "act(p(HGNC:mTORC1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, the functional mechanism for how S326 phosphorylation promotes HSF1 transcriptional activity is not well understood."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:MAP2K1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, the functional mechanism for how S326 phosphorylation promotes HSF1 transcriptional activity is not well understood."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:p38)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, the functional mechanism for how S326 phosphorylation promotes HSF1 transcriptional activity is not well understood."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:DYRK2)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, the functional mechanism for how S326 phosphorylation promotes HSF1 transcriptional activity is not well understood."
                 }
             ],
             "annotations": [
@@ -792,15 +816,11 @@
             "text": "AKT1 and AKT2 phosphorylate HSF1 at S326 but only AKT1 activates HSF1",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 and AKT2 phosphorylate HSF1 at S326 but only AKT1 activates HSF1"
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "AKT1 and AKT2 phosphorylate HSF1 at S326 but only AKT1 activates HSF1"
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT2)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 and AKT2 phosphorylate HSF1 at S326 but only AKT1 activates HSF1"
                 }
             ],
@@ -837,28 +857,40 @@
             "text": "We previously identified AKT1 as an upstream regulator of HSF1 activity via phosphorylation of HSF1 at S326. AKT1 has well-known oncogenic functions. AKT2 and AKT3 also have pro-tumour functions but whether HSF1 can be regulated by these isoforms remains unknown. To assess this possibility, either AKT1, AKT2 or AKT3 were introduced into multiple cell lines along with a luciferase reporter driven by the presence of two heat shock elements (HSEs). Consistent with our previous findings, AKT1 strongly induced HSF1 activity (Fig. 1A-C). AKT2 promoted a significant increase in HSF1 activity, but the effect was modest while AKT3 had no significant effect on HSF1 activity (Fig. 1A-C). To determine the ability of the AKT isoforms to phosphorylate HSF1 at S326, a key phosphorylation event critical for HSF1 activity, an in vitro kinase assay followed by immunoblotting was performed with each AKT isoform. Both AKT1 and AKT2 phosphorylated S326 of HSF1 at similar levels but AKT3 showed no capability for phosphorylating S326 (Fig. 1D). These results seem contradictory because AKT2 phosphorylated S326, but the level of phosphorylation far exceeded the HSF1 activity induced by AKT2 (Fig. 1A-D). However, we also observed that AKT2 did not phosphorylate S326 as strongly in cells (Fig. 1E), suggesting that AKT2 has the capability to phosphorylate HSF1 but this is more limited within living cells. AKT1 is also a well-known activator of mTOR and mTOR has been shown to phosphorylate HSF1 at S326 in response to proteotoxic stress. Therefore, to determine whether AKT1-driven HSF1 activity and S326 phosphorylation is mediated by mTOR, cells were treated with increasing concentrations of rapamycin and subjected to the HSE luciferase reporter assay or immunoblotting with p-HSF1 S326 antibodies. Results indicated that rapamycin had no effect on HSF1 activity (Fig. 1F) or on S326 phosphorylation (Fig. 1G) driven by AKT1. We further assessed whether the AKT isoforms affected downstream activation steps of HSF1, including trimerization and DNA binding. Introduction of AKT1 was observed to promote a significant increase in trimerization, although the AKT1-driven trimerization was not as much as heat stress (Fig. 2A-B). AKT2 and AKT3 promoted on minimal amounts of HSF1 trimerization (Fig. 2A-B). Similarly, introduction of AKT1 promoted a significant increase of HSF1 binding to putative targets HSPA1A (HSP70), HSPA8 (HSP73) and HSPD1 (HSP60), whereas AKT2 and AKT3 had no significant effect on HSF1 binding (Fig. 2C). To confirm whether DNA binding of HSF1 resulted in gene transactivation, we further assessed expression of HSP70 and HSP90, well-known HSF1 target genes, in response to expression of AKT1, AKT2 or AKT3. Both HSP70 and HSP70 expression were seen to increase more in response to AKT1 than other isoforms (Fig. 2D-E). We did not observe any effect of AKT1 on HSF1 protein half-life (Fig. S1). These results indicate that AKT1 is the primary AKT isoform capable of activating HSF1 with AKT2 having modest effects in cells.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "We previously identified AKT1 as an upstream regulator of HSF1 activity via phosphorylation of HSF1 at S326."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Both AKT1 and AKT2 phosphorylated S326 of HSF1 at similar levels but AKT3 showed no capability for phosphorylating S326 (Fig. 1D)."
-                },
-                {
                     "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "Consistent with our previous findings, AKT1 strongly induced HSF1 activity (Fig. 1A-C)."
+                    "evidence": "Consistent with our previous findings, AKT1 strongly induced HSF1 activity."
                 },
                 {
                     "bel_statement": "act(p(HGNC:AKT2)) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "AKT2 promoted a significant increase in HSF1 activity, but the effect was modest while AKT3 had no significant effect on HSF1 activity (Fig. 1A-C)."
+                    "evidence": "AKT2 promoted a significant increase in HSF1 activity, but the effect was modest."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases bp(GO:\"DNA binding\")",
-                    "evidence": "Similarly, introduction of AKT1 promoted a significant increase of HSF1 binding to putative targets HSPA1A (HSP70), HSPA8 (HSP73) and HSPD1 (HSP60), whereas AKT2 and AKT3 had no significant effect on HSF1 binding (Fig. 2C)."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "AKT1 is also a well-known activator of mTOR and mTOR has been shown to phosphorylate HSF1 at S326 in response to proteotoxic stress."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases bp(GO:\"positive regulation of DNA-templated transcription initiation\")",
-                    "evidence": "To confirm whether DNA binding of HSF1 resulted in gene transactivation, we further assessed expression of HSP70 and HSP90, well-known HSF1 target genes, in response to expression of AKT1, AKT2 or AKT3. Both HSP70 and HSP70 expression were seen to increase more in response to AKT1 than other isoforms (Fig. 2D-E)."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases bp(GO:2000144)",
+                    "evidence": "To confirm whether DNA binding of HSF1 resulted in gene transactivation, we further assessed expression of HSP70 and HSP90, well-known HSF1 target genes, in response to expression of AKT1, AKT2 or AKT3."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSPA1A))",
+                    "evidence": "Similarly, introduction of AKT1 promoted a significant increase of HSF1 binding to putative targets HSPA1A (HSP70), HSPA8 (HSP73) and HSPD1 (HSP60), whereas AKT2 and AKT3 had no significant effect on HSF1 binding."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSPA8))",
+                    "evidence": "Similarly, introduction of AKT1 promoted a significant increase of HSF1 binding to putative targets HSPA1A (HSP70), HSPA8 (HSP73) and HSPD1 (HSP60), whereas AKT2 and AKT3 had no significant effect on HSF1 binding."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSPD1))",
+                    "evidence": "Similarly, introduction of AKT1 promoted a significant increase of HSF1 binding to putative targets HSPA1A (HSP70), HSPA8 (HSP73) and HSPD1 (HSP60), whereas AKT2 and AKT3 had no significant effect on HSF1 binding."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases g(HGNC:HSP70)",
+                    "evidence": "Both HSP70 and HSP70 expression were seen to increase more in response to AKT1 than other isoforms."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases g(HGNC:HSP90)",
+                    "evidence": "Both HSP70 and HSP70 expression were seen to increase more in response to AKT1 than other isoforms."
                 }
             ],
             "annotations": [
@@ -1354,11 +1386,11 @@
             "text": "AKT1 Phosphorylates HSF1 on S326 and induces HSF1 activity independent of mTORC1. (A-C) Indicated cell lines were transfected with vector, AKT1, AKT2 or AKT3 along with the HSE luciferase reporter for 48 h. Firefly/Renilla ratios were compared across groups. (D) Recombinant proteins were incubated at 30  C for 2 h in the presence of ATP and subsequently subjected to SDS/PAGE and immunoblotting with indicated antibodies. (E) HEK-293 cells were transfected with vector, AKT1, AKT2 or AKT3 for 48 h. Cell lysates were subjected to SDS/PAGE and immunoblotting with indicated antibodies. (F-G) HEK-293 cells were transfected with vector, AKT1, AKT2 or AKT3 in the presence or absence of rapamycin (10-20 nm). Cell lysates were subjected to firefly reporter assay (F) or immunoblotting with indicated antibodies (G). Experiments were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"phosphorylation\"))",
                     "evidence": "AKT1 Phosphorylates HSF1 on S326 and induces HSF1 activity independent of mTORC1."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 Phosphorylates HSF1 on S326 and induces HSF1 activity independent of mTORC1."
                 }
             ],
@@ -1490,11 +1522,11 @@
             "text": "AKT1 promotes HSF1 trimerization and DNA binding. (A-B) HEK-293 cells were transfected with vector, AKT1, AKT2 or AKT3 for 48 h. Cells were fixed with 1 mm EGS for 30 min and lysates were subjected to SDS/PAGE and immunoblotting for HSF1 trimers (A) and AKT isoforms (B). (C) HEK-293 cells were transfected with vector, AKT1, AKT2 or AKT3 for 48 h. Cells were fixed with formaldehyde, lysed and sonicated prior to ChIP with either control IgG or HSF1 antibodies. ChIP product was subjected to qPCR for indicated gene promoters. (D-E) HEK-293 cells were transfected with either empty vector, AKT1, AKT2 or AKT3 for 48 h. Total RNA was collected from cells and subjected to RT-qPCR for the indicated genes. Experiments were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases complex(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 promotes HSF1 trimerization and DNA binding."
                 },
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases bp(GO:0003677)",
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity bp(GO:0003677)",
                     "evidence": "AKT1 promotes HSF1 trimerization and DNA binding."
                 }
             ],
@@ -1641,7 +1673,7 @@
             "text": "AKT1 is required for full activation of HSF1 in response to heat stress",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) increases act(p(HGNC:HSF1))",
+                    "bel_statement": "p(HGNC:AKT1) directlyIncreases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 is required for full activation of HSF1 in response to heat stress"
                 }
             ],
@@ -1673,20 +1705,20 @@
             "text": "Activation of the PI3K-AKT pathway in response to heat stress has previously been observed as far back as 2000. However, the precise role of this pathway in heat stress-induced activation of HSF1 has not been fully explored. Our previous work indicated that HSF1 can be activated by AKT1 via phosphorylation at S326 in breast cancer cells. To assess whether AKT signalling is crucial for heat-induced activity of HSF1, cells were subjected to heat stress in the presence or absence of the pan-AKT inhibitor MK-2206. Results indicated that blocking AKT activity suppressed HSF1 activity in response to heat stress (Fig. 3A). Heat stress was also observed to induce HSF1 phosphorylation and knockdown of AKT1 significantly reduced HSF1 phosphorylation in response to heat (Fig. 3B). Loss of AKT2 did not significantly affect HSF1 phosphorylation in response to heat stress (Fig. 3B). Similarly, loss of AKT1 reduced HSF1 reporter activity by more than 50% in response to heat stress (Fig. 3C). Interestingly, loss of AKT2 reduced HSF1 activity by a small percentage (~ 20%) but this was not statistically significant (Fig. 3C). In accordance with the phosphorylation results, loss of AKT1 significantly reduced levels of HSP70, a direct HSF1 gene target, in response to heat but loss of AKT2 had no significant effect (Fig. 3D). While previous investigations primarily focused on PI-3K inhibitors to determine the relevance of this pathway to heat stress responses, these data indicate that AKT1 is an important factor for the activation of HSF1 in response to heat stress.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "Our previous work indicated that HSF1 can be activated by AKT1 via phosphorylation at S326 in breast cancer cells."
                 },
                 {
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyDecreases act(p(HGNC:HSF1))",
+                    "evidence": "Results indicated that blocking AKT activity suppressed HSF1 activity in response to heat stress."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyDecreases act(p(HGNC:HSPA))",
+                    "evidence": "In accordance with the phosphorylation results, loss of AKT1 significantly reduced levels of HSP70, a direct HSF1 gene target, in response to heat but loss of AKT2 had no significant effect."
+                },
+                {
                     "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "Results indicated that blocking AKT activity suppressed HSF1 activity in response to heat stress (Fig. 3A)."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases p(HGNC:HSF1, pmod(Ph))",
-                    "evidence": "Heat stress was also observed to induce HSF1 phosphorylation and knockdown of AKT1 significantly reduced HSF1 phosphorylation in response to heat (Fig. 3B)."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases p(HGNC:HSPA)",
-                    "evidence": "In accordance with the phosphorylation results, loss of AKT1 significantly reduced levels of HSP70, a direct HSF1 gene target, in response to heat but loss of AKT2 had no significant effect (Fig. 3D)."
+                    "evidence": "These data indicate that AKT1 is an important factor for the activation of HSF1 in response to heat stress."
                 }
             ],
             "annotations": [
@@ -1907,12 +1939,12 @@
             "text": "AKT1 is required for full HSF1 activation in response to heat stress. (A) HEK-293 cells were transfected with the HSE luciferase reporter for 48 h and cells were then pre-treated with MK-2206 at the indicated concentrations for 1 h and cells were then incubated at 42  C for 1 h. Firefly/Renilla ratios were compared across groups. (B-D) HEK-293 cells were transfected with non-targeting (NT), AKT1 or AKT2 siRNA for 48 h followed by incubation at 42  C for 1 h. Cells were then collected and subjected to immunoblotting (B), luciferase reporter assay (C) or qPCR (D). Experiments were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) increases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 is required for full HSF1 activation in response to heat stress."
                 },
                 {
-                    "bel_statement": "a(CHEBI:MK-2206) directlyDecreases act(p(HGNC:AKT1))",
-                    "evidence": "HEK-293 cells were transfected with the HSE luciferase reporter for 48 h and cells were then pre-treated with MK-2206 at the indicated concentrations for 1 h and cells were then incubated at 42 C for 1 h."
+                    "bel_statement": "bp(GO:0009408) increases act(p(HGNC:HSF1))",
+                    "evidence": "AKT1 is required for full HSF1 activation in response to heat stress."
                 }
             ],
             "annotations": [
@@ -2008,7 +2040,7 @@
             "text": "AKT1 is a more potent activator of HSF1 than other known activator kinases",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 is a more potent activator of HSF1 than other known activator kinases"
                 }
             ],
@@ -2045,52 +2077,32 @@
             "text": "Our above results indicated that both AKT1 and AKT2 can phosphorylate HSF1 at S326, but AKT1 is capable of promoting a substantially higher transcriptional activity of HSF1 (Fig. 1, 2). To test the importance of S326 phosphorylation, the four other kinases mTORC1, MEK1, p38 and DYRK2 that have previously been shown to phosphorylate HSF1 at S326 were also tested using an in vitro kinase assay. Results were similar to that which was previously observed in that all of these kinases phosphorylated HSF1 at S326 (Fig. 4A). However, due to this being in vitro assay, it remains unclear whether this pattern is reflective of the relative phosphorylation of S326 by these kinases in cells. Therefore, all of these kinases were introduced into cells and all kinases were capable of S326 phosphorylation of HSF1 (Fig. 4B). Interestingly, AKT1 was more potent than any of these kinases in activating HSF1 transcriptional activity (Fig. 4C). Importantly, all of the kinases tested significantly increased HSF1 transcriptional activity in this assay but HSF1 activity in response to AKT1 was significantly higher than all of the other kinases (Fig. 4C). The pattern of S326 phosphorylation by these kinases (Fig. 4B) did not correlate to the HSF1 activity promoted by these kinases (Fig. 4C), suggesting that S326 phosphorylation may not be the only determinant of HSF1 activity. While all of these kinases can increase HSF1 transcriptional activity, it is less clear whether all of these kinases participate in heat stress-induced HSF1 activity. Figure 4D indicates that knockdown of AKT1, mTOR and DYRK2 is the only kinases to significantly reduce the heat stress-induced HSF1 activity (comparison of +HS results for these genes to +HS for siCTL). In addition, knockdown of mTOR and DYRK2 only partially decreased the induction of HSF1 activity in response to heat stress, whereas AKT1 knockdown completely prohibited HSF1 activity in response to heat stress (blue bars compared to orange bars for each gene). The level of knockdown for each of these siRNAs is presented in Figure 4E-I and indicates that AKT1 knockdown was more successful than mTOR knockdown. It is possible that more effective knockdown of mTOR could also completely prevent heat-induced HSF1 activity. Consequently, we conclude that both AKT1 and mTOR are likely necessary for heat-induced HSF1 activity.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Interestingly, AKT1 was more potent than any of these kinases in activating HSF1 transcriptional activity (Fig. 4C)."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT2)) increases act(p(HGNC:HSF1))",
                     "evidence": "Our above results indicated that both AKT1 and AKT2 can phosphorylate HSF1 at S326, but AKT1 is capable of promoting a substantially higher transcriptional activity of HSF1 (Fig. 1, 2)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Our above results indicated that both AKT1 and AKT2 can phosphorylate HSF1 at S326, but AKT1 is capable of promoting a substantially higher transcriptional activity of HSF1 (Fig. 1, 2)."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:MTOR), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "To test the importance of S326 phosphorylation, the four other kinases mTORC1, MEK1, p38 and DYRK2 that have previously been shown to phosphorylate HSF1 at S326 were also tested using an in vitro kinase assay."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:MAP2K1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "To test the importance of S326 phosphorylation, the four other kinases mTORC1, MEK1, p38 and DYRK2 that have previously been shown to phosphorylate HSF1 at S326 were also tested using an in vitro kinase assay."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:DYRK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "To test the importance of S326 phosphorylation, the four other kinases mTORC1, MEK1, p38 and DYRK2 that have previously been shown to phosphorylate HSF1 at S326 were also tested using an in vitro kinase assay."
-                },
-                {
-                    "bel_statement": "act(p(FPLX:p38), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "To test the importance of S326 phosphorylation, the four other kinases mTORC1, MEK1, p38 and DYRK2 that have previously been shown to phosphorylate HSF1 at S326 were also tested using an in vitro kinase assay."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases bp(GO:\"transcription, DNA-templated\")",
+                    "bel_statement": "act(p(HGNC:mTOR)) increases act(p(HGNC:HSF1))",
                     "evidence": "Importantly, all of the kinases tested significantly increased HSF1 transcriptional activity in this assay but HSF1 activity in response to AKT1 was significantly higher than all of the other kinases (Fig. 4C)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MTOR)) directlyIncreases bp(GO:\"transcription, DNA-templated\")",
+                    "bel_statement": "act(p(HGNC:DYRK2)) increases act(p(HGNC:HSF1))",
                     "evidence": "Importantly, all of the kinases tested significantly increased HSF1 transcriptional activity in this assay but HSF1 activity in response to AKT1 was significantly higher than all of the other kinases (Fig. 4C)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:DYRK2)) directlyIncreases bp(GO:\"transcription, DNA-templated\")",
-                    "evidence": "Importantly, all of the kinases tested significantly increased HSF1 transcriptional activity in this assay but HSF1 activity in response to AKT1 was significantly higher than all of the other kinases (Fig. 4C)."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases bp(GO:0009408)",
+                    "evidence": "Consequently, we conclude that both AKT1 and mTOR are likely necessary for heat-induced HSF1 activity."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases bp(GO:\"response to heat\")",
-                    "evidence": "Figure 4D indicates that knockdown of AKT1, mTOR and DYRK2 is the only kinases to significantly reduce the heat stress-induced HSF1 activity (comparison of +HS results for these genes to +HS for siCTL)."
+                    "bel_statement": "act(p(HGNC:mTOR)) increases bp(GO:0009408)",
+                    "evidence": "Consequently, we conclude that both AKT1 and mTOR are likely necessary for heat-induced HSF1 activity."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MTOR)) directlyIncreases bp(GO:\"response to heat\")",
-                    "evidence": "Figure 4D indicates that knockdown of AKT1, mTOR and DYRK2 is the only kinases to significantly reduce the heat stress-induced HSF1 activity (comparison of +HS results for these genes to +HS for siCTL)."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:DYRK2)) directlyIncreases bp(GO:\"response to heat\")",
-                    "evidence": "Figure 4D indicates that knockdown of AKT1, mTOR and DYRK2 is the only kinases to significantly reduce the heat stress-induced HSF1 activity (comparison of +HS results for these genes to +HS for siCTL)."
+                    "bel_statement": "act(p(HGNC:DYRK2)) increases bp(GO:0009408)",
+                    "evidence": "Consequently, we conclude that both AKT1 and mTOR are likely necessary for heat-induced HSF1 activity."
                 }
             ],
             "annotations": [
@@ -2381,7 +2393,7 @@
             "text": "AKT1 induced HSF1 activity stronger than other known activating kinases despite similar induction of S326 phosphorylation. (A) Recombinant proteins were incubated at 30  C for 2 h in the presence of ATP and subsequently subjected to SDS/PAGE and immunoblotting with indicated antibodies. (B-C) HEK-293 cells were transfected with vector, AKT1, mTOR, MEK1, p38 or DYRK2 for 48 h. Cells were collected and subjected to immunoblotting with indicated antibodies (B) or luciferase reporter assay (C). S326-phosphorylated bands in B were subjected to densitometry with relative differences normalized to GAPDH presented for each kinase transfected. (D) HEK-293 cells were transfected with non-targeting control siRNA or siRNA directed to AKT1, mTOR, MEK1, p38delta or DYRK2 along with an HSE luciferase reporter. Cells were then incubated at 42  C for 1 h and subsequently collected and subjected to the luciferase reporter assay. (E-I) HEK-293 cells were transfected with control siRNA or siRNA directed at the indicated genes. Total RNA was collected and subjected to RT-qPCR with the indicated primers. Experiments were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 induced HSF1 activity stronger than other known activating kinases despite similar induction of S326 phosphorylation."
                 }
             ],
@@ -2558,16 +2570,16 @@
             "text": "To further assess the correlation between these kinases and HSF1 activity, gene set enrichment analysis (GSEA) was performed. This analysis was performed using TCGA datasets for breast cancer (BRCA) and colorectal adenocarcinoma (COADREAD) wherein patients for each dataset were scored for HSF1 activity using the HSF1 CaSig. The patients in each dataset were then separated into high HSF1 activity (upper 50%) or low HSF1 activity (lower 50%) based on HSF1 signature score, and these two groups were set as the two phenotypes for GSEA. Enrichment in these two groups of HSF1 activity was performed using signatures for activity of AKT1, AKT2, p38, mTORC1, MEK1 and DYRK2. Results indicated that signatures for AKT1 and mTORC1 were significantly enriched in high HSF1 activity tumours (Fig. 5A-B), suggesting a strong correlation between the activity of these kinases and HSF1 activity. The signature for AKT2 was significantly enriched in the low HSF1 activity group in the COADREAD patients and borderline significant in the BRCA patients, suggesting a possible weak negative correlation between activity of AKT2 and HSF1 (Fig. 5C). There was no significant enrichment towards either high or low HSF1 activity for p38, MEK1 or DYRK2 signatures (Fig. 5D-F). Taken together, these data indicate a lack of consistency between HSF1 phosphorylation at S326 by this group of kinases and the resulting HSF1 transcriptional activity.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1)) pos act(p(HGNC:HSF1))",
-                    "evidence": "Results indicated that signatures for AKT1 and mTORC1 were significantly enriched in high HSF1 activity tumours (Fig. 5A-B), suggesting a strong correlation between the activity of these kinases and HSF1 activity."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Results indicated that signatures for AKT1 and mTORC1 were significantly enriched in high HSF1 activity tumours."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:mTORC1)) pos act(p(HGNC:HSF1))",
-                    "evidence": "Results indicated that signatures for AKT1 and mTORC1 were significantly enriched in high HSF1 activity tumours (Fig. 5A-B), suggesting a strong correlation between the activity of these kinases and HSF1 activity."
+                    "bel_statement": "act(p(HGNC:mTORC1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Results indicated that signatures for AKT1 and mTORC1 were significantly enriched in high HSF1 activity tumours."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2)) neg act(p(HGNC:HSF1))",
-                    "evidence": "The signature for AKT2 was significantly enriched in the low HSF1 activity group in the COADREAD patients and borderline significant in the BRCA patients, suggesting a possible weak negative correlation between activity of AKT2 and HSF1 (Fig. 5C)."
+                    "bel_statement": "act(p(HGNC:AKT2)) decreases act(p(HGNC:HSF1))",
+                    "evidence": "The signature for AKT2 was significantly enriched in the low HSF1 activity group in the COADREAD patients and borderline significant in the BRCA patients, suggesting a possible weak negative correlation between activity of AKT2 and HSF1."
                 }
             ],
             "annotations": [
@@ -2773,11 +2785,11 @@
             "text": "AKT1 and mTOR are most strongly associated with HSF1 activity in tumour tissues. (A-F) Gene set enrichment analysis (GSEA) was performed using data from TCGA for breast (left column) and colorectal cancers (right column). Patients from these datasets were separated into high and low HSF1 activity groups using a previously published gene signature for HSF1 activity. GSEA was then performed on these two groups using activity signatures for AKT1 (A), mTOR (B), AKT2 (C), p38 (D), MEK1 (E) or DYRK2 (F). Normalized enrichment score (NES) is reported and calculated GSEA P-value. Normalized enrichment score (NES) and the calculated GSEA P-value are reported.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) association act(p(HGNC:HSF1))",
+                    "bel_statement": "g(HGNC:AKT1) positiveCorrelation act(p(HGNC:HSF1))",
                     "evidence": "AKT1 and mTOR are most strongly associated with HSF1 activity in tumour tissues."
                 },
                 {
-                    "bel_statement": "p(HGNC:MTOR) association act(p(HGNC:HSF1))",
+                    "bel_statement": "g(HGNC:MTOR) positiveCorrelation act(p(HGNC:HSF1))",
                     "evidence": "AKT1 and mTOR are most strongly associated with HSF1 activity in tumour tissues."
                 }
             ],
@@ -2884,7 +2896,7 @@
             "text": "AKT1 phosphorylates additional residues aside from S326 that are critical for HSF1 activity",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "AKT1 phosphorylates additional residues aside from S326 that are critical for HSF1 activity"
                 }
             ],
@@ -2906,24 +2918,36 @@
             "text": "Data from Fig. 4 indicate that several kinases can phosphorylate HSF1 at S326, its canonical activating phosphorylation event. However, phosphorylation by these different kinases resulted in varying degrees of HSF1 transcriptional activity with AKT1 promoting higher activity than the other kinases. To resolve this apparent contradiction, we reasoned that AKT1 may be phosphorylating additional residues that support HSF1 activation. To test this hypothesis, recombinant HSF1 was subjected to a kinase assay with either AKT1, AKT2, p38, mTOR, MEK1 or DYRK2 as performed in Figures 1D and 4A, followed by mass spectrometry to identify novel phosphorylation sites (Fig. 6A). Results from this phosphorylation scan are summarized in Fig. 6B and Table S1, which illustrates the phosphorylation sites outside the known target of S326. AKT1 phosphorylated T142, S230 and T527. Interestingly, these sites were entirely unique to AKT1 as only MEK1 was seen to phosphorylate any of these sites by phosphorylating T527. All four of these sites, including S326, are conserved across several mammalian species (Fig. 6C). Phosphorylation at T142 has only been reported once and this was mediated by CK2. Phosphorylation at S230 has been previously reported and was shown to promote inducible HSF1 activity and has also previously been shown to be phosphorylated by AKT1. Phosphorylation at T527 has never been reported. Phospho-null mutations to alanine at each of these sites individually resulted in some variable effects with S326A and S230A having no significant effect of HSF1 activity in response to heat stress (Fig. 6D). T142A and T527A individually showed a small but significant decrease in HSF1 activity in response to heat stress (Fig. 6D). However, when all four of these sites were mutated to alanine, HSF1 no longer responded to heat stress (Fig. 6E). Phospho-mimic mutants for these residues showed highly variable results with little evidence that T/S->E/D mutations were sufficiently mimicking phosphorylation, thus rendering these mutants unusable as a reliable phospho-mimic (Fig. S2). These results indicate that AKT1 modifies HSF1 in a unique pattern by phosphorylating T142, S230 and T527 in addition to S326. This unique pattern of phosphorylation may mechanistically explain why AKT1 promotes HSF1 activity more potently than these other kinases. We next investigated how these sites impact HSF1 activation.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Data from Fig. 4 indicate that several kinases can phosphorylate HSF1 at S326, its canonical activating phosphorylation event."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, phosphorylation by these different kinases resulted in varying degrees of HSF1 transcriptional activity with AKT1 promoting higher activity than the other kinases."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "This unique pattern of phosphorylation may mechanistically explain why AKT1 promotes HSF1 activity more potently than these other kinases."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "To resolve this apparent contradiction, we reasoned that AKT1 may be phosphorylating additional residues that support HSF1 activation."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
                     "evidence": "AKT1 phosphorylated T142, S230 and T527."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 230))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "This unique pattern of phosphorylation may mechanistically explain why AKT1 promotes HSF1 activity more potently than these other kinases."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "AKT1 phosphorylated T142, S230 and T527."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "Phosphorylation at S230 has been previously reported and was shown to promote inducible HSF1 activity and has also previously been shown to be phosphorylated by AKT1."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MAP2K1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "Interestingly, these sites were entirely unique to AKT1 as only MEK1 was seen to phosphorylate any of these sites by phosphorylating T527."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "However, when all four of these sites were mutated to alanine, HSF1 no longer responded to heat stress."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "Phospho-null mutations to alanine at each of these sites individually resulted in some variable effects with S326A and S230A having no significant effect of HSF1 activity in response to heat stress."
                 }
             ],
             "annotations": [
@@ -3159,7 +3183,11 @@
             "text": "AKT1 phosphorylates four residues that regulate the HSF1 response to heat stress. (A) Workflow for identification of kinase-specific phosphorylation sites. (B) Pattern of HSF1 phosphorylation for each kinase tested by mass spectrometry. (C) Conservation of four sites phosphorylated by AKT1 across mammalian species. Alignment was completed using UniProt alignment using the following UniProt identification numbers: Human (Q00613), Mouse (P38532), Bovine (Q08DJ8), Rat (F1MAF1), Dog (F1PDU7), Pig (A0A286ZSP4), Macaque (F7GBE0). (D) HEK-293 cells were transfected with WT-HSF1 or single phospho-null HSF1 mutants for AKT1 phosphorylation sites along with the HSE reporter for 48 h followed by incubation at 42  C for 1 h. Firefly/Renilla ratios were compared across groups. (E) HEK-293 cells were transfected with WT-HSF1 or an HSF1 mutant with all four AKT1 phosphorylation sites with phospho-null mutations for 48 h followed by incubation at 42  C for 1 h. Firefly/Renilla ratios were compared across groups. Experiments were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "AKT1 phosphorylates four residues that regulate the HSF1 response to heat stress."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases bp(GO:0009408)",
                     "evidence": "AKT1 phosphorylates four residues that regulate the HSF1 response to heat stress."
                 }
             ],
@@ -3286,7 +3314,7 @@
             "text": "Phosphorylation at T142 enhances trimerization of HSF1",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 142)) increases complex(p(HGNC:HSF1), p(HGNC:HSF1), p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:5224), ma(Ph)) increases complex(p(HGNC:5224))",
                     "evidence": "Phosphorylation at T142 enhances trimerization of HSF1"
                 }
             ],
@@ -3303,20 +3331,20 @@
             "text": "AKT1 phosphorylates HSF1 at multiple residues in addition to S326 (Fig. 6). Should these additional phosphorylation sites mediate the additional HSF1 activity observed in the presence of AKT1, it stands to reason that these sites functionally participate in the activation process of HSF1. Therefore, the role of each of these four phosphorylation sites in the process of HSF1 activation was investigated. Threonine 142 sits in the first leucine-zipper domain, also referred to as the heptad repeat domain, and this domain is responsible for trimerization of HSF1. Considering T142 is located in this domain, it was tested whether phosphorylation at this site affected trimerization. Introduction of AKT1 with wild-type (WT)-HSF1 resulted in an increase in trimerization, which was lost in the presence of the T142A phospho-null mutant (Fig. 7A). To test whether T142 regulation of trimerization was AKT1 specific, HSF1 trimerization was also tested in the presence of CK2, which has previously been observed to phosphorylate T142. In the presence of CK2, WT-HSF1 also showed a significant increase in trimerization but T142A-HSF1 did not undergo trimerization in the presence of CK2 (Fig. 7B). These results likely indicate that phosphorylation at T142 is an important regulatory step of HSF1 trimerization and is not AKT1 specific. To further assess the oligomeric state of HSF1 and the role of T142, gel filtration chromatography was performed on lysates expressing either WT-HSF1 or T142A-HSF1 with or without the presence of AKT1. When fractions from WT-HSF1-expressing cells were blotted for HSF1, it was found to elute in the lower molecular weight range, consistent with the molecular weight that HSF1 monomers migrate at approximately 70-80 kDa (Fig. 7C). In the presence of AKT1, HSF1 was found in earlier-eluting fractions with a predicted molecular weight range indicative of trimers. However, T142A-HSF1 in the presence of AKT1 eluted at lower molecular weights, indicative of monomers. These results together indicate that phosphorylation at T142 is necessary for effective trimerization of HSF1.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
+                    "bel_statement": "act(p(HGNC:AKT1), ma(Ph)) increases act(p(HGNC:HSF1))",
+                    "evidence": "AKT1 phosphorylates HSF1 at multiple residues in addition to S326 (Fig. 6)."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) increases complex(p(HGNC:HSF1), p(HGNC:HSF1))",
                     "evidence": "Introduction of AKT1 with wild-type (WT)-HSF1 resulted in an increase in trimerization, which was lost in the presence of the T142A phospho-null mutant (Fig. 7A)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases bp(GO:\"protein trimerization\")",
-                    "evidence": "Introduction of AKT1 with wild-type (WT)-HSF1 resulted in an increase in trimerization, which was lost in the presence of the T142A phospho-null mutant (Fig. 7A)."
+                    "bel_statement": "act(p(HGNC:CK2), ma(Ph)) increases complex(p(HGNC:HSF1), p(HGNC:HSF1))",
+                    "evidence": "Considering T142 is located in this domain, it was tested whether phosphorylation at this site affected trimerization."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:CK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "To test whether T142 regulation of trimerization was AKT1 specific, HSF1 trimerization was also tested in the presence of CK2, which has previously been observed to phosphorylate T142."
-                },
-                {
-                    "bel_statement": "act(p(FPLX:CK2), ma(GO:\"kinase activity\")) directlyIncreases bp(GO:\"protein trimerization\")",
-                    "evidence": "In the presence of CK2, WT-HSF1 also showed a significant increase in trimerization but T142A-HSF1 did not undergo trimerization in the presence of CK2 (Fig. 7B)."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases bp(GO:\"trimerization of HSF1\")",
+                    "evidence": "These results together indicate that phosphorylation at T142 is necessary for effective trimerization of HSF1."
                 }
             ],
             "annotations": [
@@ -3497,12 +3525,12 @@
             "text": "Phosphorylation at T142 enhances HSF1 trimerization. (A-C) HEK-293 cells were transfected with WT-HSF1 or T142A-HSF1 in the presence or absence of AKT1 (A, C) or CK2 (B) for 48 h. Cells were fixed with 1 mm EGS for 30 min and lysates were subjected to SDS/PAGE and immunoblotting for HSF1 trimers. Samples in C were subjected to size exclusion chromatography and fractions underwent immunoblotting with HSF1 antibodies to identify HSF1 complex sizes according to the molecular weight of the extracted fractions. A and B were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "HEK-293 cells were transfected with WT-HSF1 or T142A-HSF1 in the presence or absence of AKT1 (A, C) or CK2 (B) for 48 h."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases complex(p(HGNC:HSF1))",
+                    "evidence": "Phosphorylation at T142 enhances HSF1 trimerization."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:CK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "HEK-293 cells were transfected with WT-HSF1 or T142A-HSF1 in the presence or absence of AKT1 (A, C) or CK2 (B) for 48 h."
+                    "bel_statement": "act(p(FPLX:CK2)) increases complex(p(HGNC:HSF1))",
+                    "evidence": "Phosphorylation at T142 enhances HSF1 trimerization."
                 }
             ],
             "annotations": [
@@ -3578,16 +3606,16 @@
             "text": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 230)) increases a(MESH:Association)",
-                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors."
+                    "bel_statement": "act(p(HGNC:HSF1), ma(Ph, S, 230)) increases association(MESH:D001244)",
+                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors"
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326)) increases a(MESH:Association)",
-                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors."
+                    "bel_statement": "act(p(HGNC:HSF1), ma(Ph, S, 326)) increases association(MESH:D001244)",
+                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors"
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 527)) increases a(MESH:Association)",
-                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors."
+                    "bel_statement": "act(p(HGNC:HSF1), ma(Ph, Thr, 527)) increases association(MESH:D001244)",
+                    "evidence": "Phosphorylation at S230, S326 and T527 enhances HSF1 association with general transcriptional factors"
                 }
             ],
             "annotations": [
@@ -3608,16 +3636,20 @@
             "text": "The human HSF1 protein has 529 residues, of which 103 are residues potentially capable of phosphorylation by being tyrosine (n = 8), serine (n = 70) or threonine (n = 25). A total of 39 of these residues have been previously shown to be phosphorylated either by non-biased screening using mass spectrometry or low-throughput methods. Our analysis identified T527 as a phosphorylated residue in the presence of AKT1 (Fig. 6), which is a novel site never before seen phosphorylated. Considering this residue has never been observed as phosphorylated, the role of this phosphorylation event in HSF1 activation remains unknown. Since this residue resides in the transactivation domain (TAD) of HSF1, it was hypothesized that it may contribute to the function of the TAD in recruiting transcriptional machinery for initiation of transcription. HSF1 has previously been shown to have physical association with CDK9 as part of the p-TEFb complex, TFIIB and TATA binding protein (TBP). To initially screen if phosphorylation at T527 affects HSF1 interaction with these proteins, either WT- or T527A-HSF1 were expressed in cells in the presence of CDK9, TFIIB or TBP followed by HSF1 activity assessed with an HSE reporter. HSF1 activity was significantly reduced with T527A phospho-null mutant in the presence of CDK9 and TFIIB but not TBP (Fig. 8A-C). We observed similar results with mRNA levels of HSP70, a direct transcriptional target of HSF1 (Fig. S3A-C), suggesting that this phosphorylation site may be involved in interaction with CDK9 and TFIIB. Co-immunoprecipitation revealed a loss of interaction between T527A-HSF1 with CDK9 and TFIIB (Fig. 8D-E), suggesting that phosphorylation at this site is critical for this protein complex formation.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "Our analysis identified T527 as a phosphorylated residue in the presence of AKT1 (Fig. 6), which is a novel site never before seen phosphorylated."
+                    "bel_statement": "act(p(HGNC:HSF1)) decreases act(p(HGNC:CDK9))",
+                    "evidence": "HSF1 activity was significantly reduced with T527A phospho-null mutant in the presence of CDK9 and TFIIB but not TBP."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 527)) increases complex(p(HGNC:HSF1), p(HGNC:CDK9))",
-                    "evidence": "Co-immunoprecipitation revealed a loss of interaction between T527A-HSF1 with CDK9 and TFIIB (Fig. 8D-E), suggesting that phosphorylation at this site is critical for this protein complex formation."
+                    "bel_statement": "act(p(HGNC:HSF1)) decreases act(p(HGNC:TFIIB))",
+                    "evidence": "HSF1 activity was significantly reduced with T527A phospho-null mutant in the presence of CDK9 and TFIIB but not TBP."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 527)) increases complex(p(HGNC:HSF1), p(HGNC:GTF2B))",
-                    "evidence": "Co-immunoprecipitation revealed a loss of interaction between T527A-HSF1 with CDK9 and TFIIB (Fig. 8D-E), suggesting that phosphorylation at this site is critical for this protein complex formation."
+                    "bel_statement": "complex(p(HGNC:HSF1), p(HGNC:CDK9), p(HGNC:TFIIB))",
+                    "evidence": "Co-immunoprecipitation revealed a loss of interaction between T527A-HSF1 with CDK9 and TFIIB."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:2000144)",
+                    "evidence": "it was hypothesized that it may contribute to the function of the TAD in recruiting transcriptional machinery for initiation of transcription."
                 }
             ],
             "annotations": [
@@ -3828,8 +3860,20 @@
             "text": "Phosphorylation at T527 enhances HSF1 association with general transcription factors. (A-C) HEK-293 cells were transfected with WT-HSF1 or T527A-HSF1 in the presence or absence of CDK9 (A), TFIIB (B) or TBP (C) along with the HSE luciferase reporter for 48 h. Firefly/Renilla ratios were compared across groups. (D-E) HEK-293 cells were transfected with FLAG-tagged WT-HSF1 or T527A-HSF1 for 48 h. Cell lysates were subjected to immunoprecipitation with control IgG or FLAG antibodies and subjected to immunoblotting with indicated antibodies. A-C were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Thr, 527)) increases a(MESH:\"Association\")",
+                    "bel_statement": "act(p(HGNC:HSF1)) increases a(MESH:D001244)",
                     "evidence": "Phosphorylation at T527 enhances HSF1 association with general transcription factors."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasMember p(HGNC:CDK9)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1 or T527A-HSF1 in the presence or absence of CDK9."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasMember p(HGNC:GTF2B)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1 or T527A-HSF1 in the presence or absence of TFIIB."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasMember p(HGNC:TBP)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1 or T527A-HSF1 in the presence or absence of TBP."
                 }
             ],
             "annotations": [
@@ -3920,16 +3964,28 @@
             "text": "Phosphorylation at S326 to upregulate HSF1 activity is well documented. Phosphorylation at S230 has also been observed to promote HSF1 transcriptional activity. However, the precise function of these phosphorylation events in HSF1 activation remains unclear. Both S230 and S326 sit in the regulatory domain of HSF1, which has previously been shown to be a region for many post-translational modifications. Additionally, it is apparent that the regulatory domain, and S326 specifically, do not regulate nuclear localization or DNA binding of HSF1. Since this domain also does not participate in trimerization, it was tested whether S230 and S326 regulate gene transactivation by interaction with transcriptional machinery. Similar to T527, phospho-null mutants of S230 and S326 had decreased transcriptional activity in the presence of CDK9 (Fig. 9A). However, only the S326 phospho-null, but not S230A, reduced HSF1 activity in the presence of TFIIB (Fig. 9B). Similar to T527, neither site had any effect on HSF1 activity in the presence of TBP (Fig. 9C). It was also observed that the S326A mutant had decreased protein association with CDK9 and TFIIB (Fig. 9D-E) and the S230A mutant had decreased interaction with CDK9 (Fig. 9F). Taken together, these results indicate that AKT1-phosphorylated sites functionally contribute to the activation of HSF1 by promoting trimerization and gene transactivation. Considering that these sites were exclusive to AKT1 compared to the other known activating kinases, phosphorylation at these sites and the promotion of these activating events likely contribute to the increased potency of HSF1 activation by AKT1.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "Phosphorylation at S326 to upregulate HSF1 activity is well documented."
-                },
-                {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "Phosphorylation at S230 has also been observed to promote HSF1 transcriptional activity."
-                },
-                {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "Taken together, these results indicate that AKT1-phosphorylated sites functionally contribute to the activation of HSF1 by promoting trimerization and gene transactivation."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:CDK9)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Similar to T527, phospho-null mutants of S230 and S326 had decreased transcriptional activity in the presence of CDK9."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:TFIIB)) increases act(p(HGNC:HSF1))",
+                    "evidence": "However, only the S326 phospho-null, but not S230A, reduced HSF1 activity in the presence of TFIIB."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:CDK9)) hasActivity act(p(HGNC:HSF1))",
+                    "evidence": "It was also observed that the S326A mutant had decreased protein association with CDK9 and TFIIB."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) hasActivity act(p(HGNC:TFIIB))",
+                    "evidence": "It was also observed that the S326A mutant had decreased protein association with CDK9 and TFIIB."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) hasActivity act(p(HGNC:TBP))",
+                    "evidence": "Similar to T527, neither site had any effect on HSF1 activity in the presence of TBP."
                 }
             ],
             "annotations": [
@@ -4075,12 +4131,20 @@
             "text": "Phosphorylation at S230 and S326 enhances HSF1 association with general transcription factors. (A-C) HEK-293 cells were transfected with WT-HSF1, S326A-HSF1 or S230A-HSF1 in the presence or absence of CDK9 (A), TFIIB (B) or TBP (C) along with the HSE luciferase reporter for 48 h. Firefly/Renilla ratios were compared across groups. (D-F) HEK-293 cells were transfected with FLAG-tagged WT-HSF1, S326A-HSF1 or S230A-HSF1 for 48 h. Cell lysates were subjected to immunoprecipitation with control IgG or FLAG antibodies and subjected to immunoblotting with indicated antibodies. A-C were completed in triplicate and analysed using one-way ANOVA and Tukey's post-hoc test. Data are presented as mean +- SEM. *P < 0.05.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 230)) increases a(MESH:\"Association\")",
+                    "bel_statement": "act(p(HGNC:HSF1)) increases a(MESH:D001244)",
                     "evidence": "Phosphorylation at S230 and S326 enhances HSF1 association with general transcription factors."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326)) increases a(MESH:\"Association\")",
-                    "evidence": "Phosphorylation at S230 and S326 enhances HSF1 association with general transcription factors."
+                    "bel_statement": "p(HGNC:HSF1) hasActivity p(HGNC:CDK9)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1, S326A-HSF1 or S230A-HSF1 in the presence or absence of CDK9."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasActivity p(HGNC:GTF2B)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1, S326A-HSF1 or S230A-HSF1 in the presence or absence of TFIIB."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasActivity p(HGNC:TBP)",
+                    "evidence": "HEK-293 cells were transfected with WT-HSF1, S326A-HSF1 or S230A-HSF1 in the presence or absence of TBP."
                 }
             ],
             "annotations": [
@@ -4176,32 +4240,36 @@
             "text": "The heat shock response is primarily regulated by increasing the transcriptional activity of HSF1 in response to heat stress. In order for HSF1 to become transcriptionally active, it must overcome cytoplasmic sequestration followed by nuclear localization, trimerization, DNA binding, phosphorylation and gene transactivation. The regulation of HSF1 activity by phosphorylation has been debated but what is generally accepted is that S326 phosphorylation is important for HSF1 activity, a site that was initially identified from an HSF1 phospho-null screen. Considering the importance of S326 phosphorylation, a better understanding of the mechanisms regulating phosphorylation at this residue would likely provide insight on how to manipulate HSF1 activity in disease conditions wherein HSF1 is dysregulated. Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2. The current study additionally indicates that AKT2 has the capability to phosphorylate S326 (Fig. 1). The involvement of these kinases appears to be context dependent. The current study indicated that the context-dependent nature of these kinases may stem from the unique pattern of residues phosphorylated by each kinase. This study indicates that mTORC1, MEK1, p38 and DYRK2 induce HSF1 activity to a similar level but phosphorylate HSF1 primarily at S326 as well as S363, a known inhibitory site, S221, also thought to be an inhibitory site, or at S241 and S344, which are two novel phosphorylation sites with unknown function. However, AKT1 appeared to be a more potent inducer of HSF1 activity that likely stems from its ability to phosphorylate an additional three residues identified here that all functionally promote HSF1 activation. The PI3K pathway has been linked to HSF1 activity as far back as 2000 but whether this was an indirect regulation or a direct regulation was unclear until our previous study indicating AKT1 directly activates HSF1. The current study indicates that AKT1 also participates in heat stress-induced activation of HSF1 (Fig. 2) and that AKT1-mediated activation is independent of mTORC1 (Fig. 1). The current study extends our previous findings to identify precisely how AKT1 regulates HSF1 activity through phosphorylation. Additionally, this study indicates for the first time the functional role in HSF1-induced transcription for each of these phosphorylation events by enhancing trimerization and gene transactivation.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2."
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:0009408)",
+                    "evidence": "The heat shock response is primarily regulated by increasing the transcriptional activity of HSF1 in response to heat stress."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "The current study additionally indicates that AKT2 has the capability to phosphorylate S326 (Fig. 1)."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "The current study indicates that AKT1 also participates in heat stress-induced activation of HSF1."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:mTORC1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2."
+                    "bel_statement": "act(p(HGNC:mTORC1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "This study indicates that mTORC1, MEK1, p38 and DYRK2 induce HSF1 activity to a similar level but phosphorylate HSF1 primarily at S326 as well as S363."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MAP2K1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2."
+                    "bel_statement": "act(p(HGNC:MAP2K1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "This study indicates that mTORC1, MEK1, p38 and DYRK2 induce HSF1 activity to a similar level but phosphorylate HSF1 primarily at S326 as well as S363."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:p38), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2."
+                    "bel_statement": "act(p(FPLX:p38)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "This study indicates that mTORC1, MEK1, p38 and DYRK2 induce HSF1 activity to a similar level but phosphorylate HSF1 primarily at S326 as well as S363."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:DYRK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Phosphorylation at S326 has been shown to be mediated by several kinases, including mTORC1, AKT1, MEK1, p38 and DYRK2."
+                    "bel_statement": "act(p(HGNC:DYRK2)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "This study indicates that mTORC1, MEK1, p38 and DYRK2 induce HSF1 activity to a similar level but phosphorylate HSF1 primarily at S326 as well as S363."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "The PI3K pathway has been linked to HSF1 activity as far back as 2000 but whether this was an indirect regulation or a direct regulation was unclear until our previous study indicating AKT1 directly activates HSF1."
+                    "bel_statement": "act(p(HGNC:AKT2)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "The current study additionally indicates that AKT2 has the capability to phosphorylate S326."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "The current study extends our previous findings to identify precisely how AKT1 regulates HSF1 activity through phosphorylation."
                 }
             ],
             "annotations": [
@@ -4447,7 +4515,15 @@
             "text": "Upon heat stress, HSF1 can be observed to undergo hyperphosphorylation. Hyperphosphorylation was initially thought to be a part of the HSF1 activation process. A more recent study indicated that an HSF1 mutant wherein all of the serine residues within the regulatory domain are phospho-null has greater activity compared to WT-HSF1 and this mutant did not undergo classic hyperphosphorylation, suggesting that hyperphosphorylation is actually suppressive to HSF1 activity. There were also early indications that extensive phosphorylation can suppress HSF1 activity. However, results from the current study indicate that phosphorylation on specific residues enhance HSF1 transcriptional activity by mediating specific steps in the process of activation. Thus, it seems that the model for HSF1 activation involves phosphorylation at specific residues but then hyperphosphorylation leads to inactivation of HSF1. This model would presume that activation phosphorylation events occur prior to hyperphosphorylation, although there is currently no published evidence for this temporal relationship. This model is also supported by the numerous studies indicating that specific phosphorylation on S326 is important for HSF1 activity. While this model is intriguing as a potential negative feedback on HSF1, the mechanism for hyperphosphorylation, and associated kinases involved, remain to be uncovered.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326)) increases act(p(HGNC:HSF1))",
+                    "bel_statement": "act(p(HGNC:HSF1), ma(GO:\"phosphorylation\")) increases act(p(HGNC:HSF1))",
+                    "evidence": "Thus, it seems that the model for HSF1 activation involves phosphorylation at specific residues but then hyperphosphorylation leads to inactivation of HSF1."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1), ma(GO:\"hyperphosphorylation\")) directlyDecreases act(p(HGNC:HSF1))",
+                    "evidence": "This model would presume that activation phosphorylation events occur prior to hyperphosphorylation, although there is currently no published evidence for this temporal relationship."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1), ma(GO:\"phosphorylation\")) increases act(p(HGNC:HSF1))",
                     "evidence": "This model is also supported by the numerous studies indicating that specific phosphorylation on S326 is important for HSF1 activity."
                 }
             ],
@@ -4529,12 +4605,16 @@
             "text": "Phosphorylation at S326 has been used as a biomarker for transcriptionally active HSF1 in many studies since the identification of this post-translational modification. The current study confirms previous studies that multiple kinases can phosphorylate this residue, which was associated with increased HSF1 activity (Fig. 4). However, the current study also identified that AKT1 was a stronger inducer of HSF1 activity than the other kinases tested despite S326 being phosphorylated by all kinases tested. This apparent paradox prompts the question of whether S326 phosphorylation is a reliable marker for HSF1 activity. Other reports indicate several inhibitory phosphorylation sites on HSF1, most notably S303/307 and S363. Several of these studies provide evidence that phospho-null mutations at these inhibitory sites can increase HSF1 activity but S326 can presumably still be phosphorylated under these circumstances. The current study indicates that S326 phosphorylation actively participates in HSF1-induced gene transactivation giving support that it can serve as a marker for activity. Other studies have also observed that S326 phosphorylation can still be used as a marker in disease contexts, such as S326 phosphorylation serving as a biomarker for ovarian cancer. Thus, based on the current and previous studies, it is likely that S326 phosphorylation is a marker for transcriptionally competent HSF1 but may not fully indicate the intensity of activity.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases act(p(HGNC:HSF1))",
-                    "evidence": "However, the current study also identified that AKT1 was a stronger inducer of HSF1 activity than the other kinases tested despite S326 being phosphorylated by all kinases tested."
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:2000144)",
+                    "evidence": "The current study indicates that S326 phosphorylation actively participates in HSF1-induced gene transactivation giving support that it can serve as a marker for activity."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326)) increases act(p(HGNC:HSF1))",
-                    "evidence": "The current study indicates that S326 phosphorylation actively participates in HSF1-induced gene transactivation giving support that it can serve as a marker for activity."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "the current study also identified that AKT1 was a stronger inducer of HSF1 activity than the other kinases tested despite S326 being phosphorylated by all kinases tested."
+                },
+                {
+                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, S, 326)) hasActivity a(CHEBI:59163)",
+                    "evidence": "S326 phosphorylation can still be used as a marker in disease contexts, such as S326 phosphorylation serving as a biomarker for ovarian cancer."
                 }
             ],
             "annotations": [
@@ -4635,15 +4715,15 @@
             "text": "The potency for AKT1-mediated activation of HSF1 observed in the current study advances our understanding of this relationship in disease settings wherein HSF1 is dysregulated. In particular, HSF1 is well known to be hyperactivated in several cancer types. Hyperactivation of HSF1 in cancers likely stems from the presence of several cellular stressors in cancer cells and the tumour microenvironment. The kinases known to activate HSF1 and tested in this current study all have been shown to be dysregulated in several cancers. While AKT1, mTORC1, MEK1, p38 and DYRK2 can all activate HSF1, the current study indicates that activity of only AKT1 and mTORC1 maintains a strong association with HSF1 activity in tumours (Fig. 4). It is likely that AKT1 activity maintains a strong association with HSF1 activity due to the mechanisms uncovered in this study that AKT1 can phosphorylate multiple residues that promote HSF1 activity (Fig. 6, 7, 8, 9). While it is possible that AKT1 can increase mTORC1 activity, this study also indicates that AKT1-driven activation of HSF1 is independent of mTORC1 (Fig. 1). The more likely explanation for the association between HSF1 activity and mTORC1 activity in these cancer datasets is that HSF1 has been shown to enhance mTORC1 activity via suppression of JNK. This would likely explain the stronger association between HSF1 and mTORC1 if HSF1 is acting upstream of mTORC1.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "While AKT1, mTORC1, MEK1, p38 and DYRK2 can all activate HSF1, the current study indicates that activity of only AKT1 and mTORC1 maintains a strong association with HSF1 activity in tumours (Fig. 4)."
+                    "bel_statement": "act(p(HGNC:AKT1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "The potency for AKT1-mediated activation of HSF1 observed in the current study advances our understanding of this relationship in disease settings wherein HSF1 is dysregulated."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "It is likely that AKT1 activity maintains a strong association with HSF1 activity due to the mechanisms uncovered in this study that AKT1 can phosphorylate multiple residues that promote HSF1 activity (Fig. 6, 7, 8, 9)."
+                    "bel_statement": "act(p(FPLX:mTORC1)) directlyIncreases act(p(HGNC:HSF1))",
+                    "evidence": "While AKT1, mTORC1, MEK1, p38 and DYRK2 can all activate HSF1, the current study indicates that activity of only AKT1 and mTORC1 maintains a strong association with HSF1 activity in tumours."
                 },
                 {
-                    "bel_statement": "p(HGNC:HSF1) directlyIncreases act(p(FPLX:mTORC1))",
+                    "bel_statement": "act(p(HGNC:HSF1)) directlyIncreases act(p(FPLX:mTORC1))",
                     "evidence": "This would likely explain the stronger association between HSF1 and mTORC1 if HSF1 is acting upstream of mTORC1."
                 }
             ],
@@ -4865,27 +4945,27 @@
             "text": "We also observed an interesting phenomenon wherein rapamycin appeared to increase HSF1 protein levels (Fig. 1G), which could be mediated by one of several possible mechanisms. This result is particularly interesting when considering many of the known mechanisms that regulate HSF1 protein levels would be predicted to cause degradation of HSF1 in the presence of rapamycin. These degradation mechanisms include p300-mediated acetylation stabilizing HSF1, SIRT1-mediated de-acetylation of HSF1 stabilizing HSF1 and FBXW7-mediated ubiquitination and degradation of HSF1. One possibility for our observation could be because rapamycin has been shown to have varying effects on ERK1/2 activity depending on the dose. ERK1/2 (and GSK3beta)-mediated phosphorylation at S303/307 recruits the ubiquitin ligase FBXW7 to promote HSF1 degradation. Because of the dose-dependent effects of rapamycin on ERK1/2 activity, it is possible that rapamycin decreased ERK1/2 activity in these cells, thereby decreasing FBXW7-mediated degradation of HSF1 resulting in stabilization of HSF1. It is also possible that rapamycin promoted enough of a cellular stress response that resulted in feedback to promote HSF1 protein stability and/or expression. The current study also identified that mTOR can phosphorylate three additional residues aside from S326 that include S221, S241 and S344, all of which are in the HSF1 regulatory domain. Phosphorylation at S221 and S241 on HSF1 has never been reported and the specific role of S344 phosphorylation remains unclear. Therefore, it is possible that the rapamycin effect is a result of blocking phosphorylation at one of these sites that has a resulting effect to increase HSF1 protein levels. Ongoing studies are underway to identify the function of these residues on the expression and function of HSF1.",
             "Results": [
                 {
-                    "bel_statement": "a(CHEBI:sirolimus) increases p(HGNC:HSF1)",
+                    "bel_statement": "a(CHEBI:9168) directlyIncreases p(HGNC:5224)",
                     "evidence": "We also observed an interesting phenomenon wherein rapamycin appeared to increase HSF1 protein levels (Fig. 1G), which could be mediated by one of several possible mechanisms."
                 },
                 {
-                    "bel_statement": "act(p(FPLX:ERK)) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 303))",
+                    "bel_statement": "act(p(HGNC:5224)) directlyDecreases deg(p(HGNC:5224))",
+                    "evidence": "These degradation mechanisms include p300-mediated acetylation stabilizing HSF1, SIRT1-mediated de-acetylation of HSF1 stabilizing HSF1 and FBXW7-mediated ubiquitination and degradation of HSF1."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:5224)) directlyDecreases act(p(HGNC:16712))",
                     "evidence": "ERK1/2 (and GSK3beta)-mediated phosphorylation at S303/307 recruits the ubiquitin ligase FBXW7 to promote HSF1 degradation."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:GSK3B)) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 303))",
-                    "evidence": "ERK1/2 (and GSK3beta)-mediated phosphorylation at S303/307 recruits the ubiquitin ligase FBXW7 to promote HSF1 degradation."
+                    "bel_statement": "a(CHEBI:9168) directlyDecreases act(p(HGNC:4617))",
+                    "evidence": "Because of the dose-dependent effects of rapamycin on ERK1/2 activity, it is possible that rapamycin decreased ERK1/2 activity in these cells, thereby decreasing FBXW7-mediated degradation of HSF1 resulting in stabilization of HSF1."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MTOR)) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 221))",
-                    "evidence": "The current study also identified that mTOR can phosphorylate three additional residues aside from S326 that include S221, S241 and S344, all of which are in the HSF1 regulatory domain."
+                    "bel_statement": "act(p(HGNC:3942)) hasActivity act(p(HGNC:5224))",
+                    "evidence": "It is also possible that rapamycin promoted enough of a cellular stress response that resulted in feedback to promote HSF1 protein stability and/or expression."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:MTOR)) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 241))",
-                    "evidence": "The current study also identified that mTOR can phosphorylate three additional residues aside from S326 that include S221, S241 and S344, all of which are in the HSF1 regulatory domain."
-                },
-                {
-                    "bel_statement": "act(p(HGNC:MTOR)) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 344))",
+                    "bel_statement": "act(p(HGNC:3942)) hasActivity act(p(HGNC:5224))",
                     "evidence": "The current study also identified that mTOR can phosphorylate three additional residues aside from S326 that include S221, S241 and S344, all of which are in the HSF1 regulatory domain."
                 }
             ],
@@ -5102,24 +5182,24 @@
             "text": "These studies together indicate that HSF1 activity is regulated by phosphorylation at specific residues. In particular, phosphorylation at the canonical activation site of S326 promotes gene transactivation by enhancing the association between HSF1 and CDK9/TFIIB. Furthermore, AKT1 can phosphorylate additional residues that further enhance HSF1 activation, including T142, S230 and T527. Phosphorylation at T142 has been previously observed by CK2 and we show here that T142 phosphorylation enhances trimerization of HSF1 in response to AKT1 or CK2. Phosphorylation at S230 has been observed by CaMKII and we show here that S230 phosphorylation by AKT1 enhances HSF1 association with CDK9 to promote transcription. Phosphorylation at T527 has never been reported and we observed that AKT1-mediated phosphorylation of T527 enhances the association between HSF1 and CDK9/TFIIB to promote transcription. These studies illuminate further the complex regulation of HSF1 activation and, in concert with previous reports, likely indicate that HSF1 is activated by phosphorylation at a few specific residues, such as those reported here, but that hyperphosphorylation is likely suppressive. It will be important to identify the proteins involved in hyperphosphorylation-mediated inactivation of HSF1 as these could be therapeutic targets in HSF1-dysregulated diseases. Additionally, a greater understanding of HSF1 post-translational modifications in response to various cellular stressors would likely indicate key events required for consistent HSF1 activation.",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 142))",
-                    "evidence": "Furthermore, AKT1 can phosphorylate additional residues that further enhance HSF1 activation, including T142, S230 and T527."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "In particular, phosphorylation at the canonical activation site of S326 promotes gene transactivation by enhancing the association between HSF1 and CDK9/TFIIB."
                 },
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 230))",
-                    "evidence": "Furthermore, AKT1 can phosphorylate additional residues that further enhance HSF1 activation, including T142, S230 and T527."
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
+                    "evidence": "Phosphorylation at T142 has been previously observed by CK2 and we show here that T142 phosphorylation enhances trimerization of HSF1 in response to AKT1 or CK2."
                 },
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
-                    "evidence": "Furthermore, AKT1 can phosphorylate additional residues that further enhance HSF1 activation, including T142, S230 and T527."
-                },
-                {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases p(HGNC:HSF1, pmod(Ph, Ser, 230))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "Phosphorylation at S230 has been observed by CaMKII and we show here that S230 phosphorylation by AKT1 enhances HSF1 association with CDK9 to promote transcription."
                 },
                 {
-                    "bel_statement": "p(HGNC:AKT1) directlyIncreases p(HGNC:HSF1, pmod(Ph, Thr, 527))",
+                    "bel_statement": "act(p(HGNC:AKT1)) increases act(p(HGNC:HSF1))",
                     "evidence": "Phosphorylation at T527 has never been reported and we observed that AKT1-mediated phosphorylation of T527 enhances the association between HSF1 and CDK9/TFIIB to promote transcription."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:HSF1)) increases bp(GO:2000144)",
+                    "evidence": "These studies illuminate further the complex regulation of HSF1 activation and, in concert with previous reports, likely indicate that HSF1 is activated by phosphorylation at a few specific residues, such as those reported here, but that hyperphosphorylation is likely suppressive."
                 }
             ],
             "annotations": [
@@ -5393,7 +5473,32 @@
         {
             "Index": "41",
             "text": "The FLAG-HSF-1 plasmid was purchased from Addgene (ID 32537, RRID:Addgene_32537), which was originally established by Dr Stuart Calderwood. The pcDNA3 Flag HA plasmid was purchased from Addgene (ID 10792, RRID:Addgene_10792), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT1 plasmid was purchased from Addgene (ID 9008, RRID:Addgene_9008), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT2 plasmid was purchased from Addgene (ID 9016, RRID:Addgene_9016), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT3 plasmid was purchased from Addgene (ID 9017, RRID:Addgene_9017), which was originally established by Dr William Sellers. The pZW6 (CK2alpha) plasmid was purchased from Addgene (ID 27086, RRID:Addgene_27086), which was originally established by Dr David Litchfield. The pcDNA 3-CDK9 HA plasmid was purchased from Addgene (ID 14640, RRID:Addgene_14640), which was originally established by Dr Matija Peterlin. The pEGFP-C1-TFIIB plasmid was purchased from Addgene (ID 26675, RRID:Addgene_26675), which was originally established by Dr Sui Huang. The His-tagged DYRK2 plasmid was purchased from Addgene (ID 39031, RRID:Addgene_39031), which was originally established by Nicola Burgess-Brown.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "p(HGNC:AKT1) increases p(HGNC:AKT2)",
+                    "evidence": "The pcDNA3 Myr HA AKT1 plasmid was purchased from Addgene (ID 9008, RRID:Addgene_9008), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT2 plasmid was purchased from Addgene (ID 9016, RRID:Addgene_9016), which was originally established by Dr William Sellers."
+                },
+                {
+                    "bel_statement": "p(HGNC:AKT1) increases p(HGNC:AKT3)",
+                    "evidence": "The pcDNA3 Myr HA AKT1 plasmid was purchased from Addgene (ID 9008, RRID:Addgene_9008), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT3 plasmid was purchased from Addgene (ID 9017, RRID:Addgene_9017), which was originally established by Dr William Sellers."
+                },
+                {
+                    "bel_statement": "p(HGNC:AKT2) increases p(HGNC:AKT3)",
+                    "evidence": "The pcDNA3 Myr HA AKT2 plasmid was purchased from Addgene (ID 9016, RRID:Addgene_9016), which was originally established by Dr William Sellers. The pcDNA3 Myr HA AKT3 plasmid was purchased from Addgene (ID 9017, RRID:Addgene_9017), which was originally established by Dr William Sellers."
+                },
+                {
+                    "bel_statement": "p(HGNC:DYRK2) increases p(HGNC:AKT1)",
+                    "evidence": "The His-tagged DYRK2 plasmid was purchased from Addgene (ID 39031, RRID:Addgene_39031), which was originally established by Nicola Burgess-Brown."
+                },
+                {
+                    "bel_statement": "p(HGNC:DYRK2) increases p(HGNC:AKT2)",
+                    "evidence": "The His-tagged DYRK2 plasmid was purchased from Addgene (ID 39031, RRID:Addgene_39031), which was originally established by Nicola Burgess-Brown."
+                },
+                {
+                    "bel_statement": "p(HGNC:DYRK2) increases p(HGNC:AKT3)",
+                    "evidence": "The His-tagged DYRK2 plasmid was purchased from Addgene (ID 39031, RRID:Addgene_39031), which was originally established by Nicola Burgess-Brown."
+                }
+            ],
             "annotations": [
                 {
                     "db": "MESH",
@@ -5505,7 +5610,16 @@
         {
             "Index": "42",
             "text": "The heat shock element (HSE) firefly luciferase reporter was purchased from Promega (Madison, WI) and has two copies of the HSE promoter driving the luc2P gene. A Renilla luciferase expression vector, pRL-SV40P, was used to control for transfection efficiency. The pRL-SV40P was purchased from Addgene (ID 27163, RRID:Addgene_27163), which was originally established by Dr. Ron Prywes. Forty-eight hours after transfection, the cells were lysed and luciferase activity was measured using the Firefly and Renilla Luciferase Assay Kit (Promega). Relative promoter activity was computed by normalizing the Firefly luciferase activity against that of the Renilla luciferase.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "a(MESH:\"Luciferases, Firefly\") hasActivity a(GO:\"luciferin monooxygenase activity\")",
+                    "evidence": "The heat shock element (HSE) firefly luciferase reporter was purchased from Promega (Madison, WI) and has two copies of the HSE promoter driving the luc2P gene."
+                },
+                {
+                    "bel_statement": "a(MESH:\"Luciferases, Renilla\") hasActivity a(GO:\"luciferin monooxygenase activity\")",
+                    "evidence": "A Renilla luciferase expression vector, pRL-SV40P, was used to control for transfection efficiency."
+                }
+            ],
             "annotations": [
                 {
                     "db": "MESH",
@@ -5616,8 +5730,8 @@
             "text": "This was performed as we described previously. Briefly, protein was isolated using RIPA buffer (50 mm Tris, 150 mm NaCl, 1 mm EDTA, 1% NP-40, 1% sodium deoxycholate, 1% SDS) for immunoblotting or with IP lysis buffer (20 mm Tris, 150 mm NaCl, 1 mm EDTA, 1 mm EGTA, 1 mm sodium pyrophosphate, 1 mm beta-glycerophosphate, 1% Triton X-100) for lysate to be used for IP. Lysates were subjected to SDS/PAGE and subjected to immunoblotting with indicated antibodies. Antibodies used for immunoblotting included p-HSF1 (S326) (Abcam #76076, RRID:AB_1310328), HSF1 (CST #4356, RRID:AB_2120258), AKT1 (CST #2938, RRID:AB_915788), AKT2 (CST #3063, RRID:AB_2225186), AKT3 (CST #3788, RRID:AB_2242534), beta-actin (BD Biosciences #612656, RRID:AB_2289199), GAPDH (CST #2118, RRID:AB_561053), GST (CST #2625, RRID:AB_490796), Flag (Sigma #3165, RRID:AB_259529), CDK9 (CST #2316, RRID:AB_2291505), DYRK2 (CST# 11921, RRID:AB_2797768) and GFP (CST #2956, RRID:AB_1196615). Antibodies used for IP were FLAG resin beads (Sigma #A2220) and control mouse IgG beads (Sigma #A0919).",
             "Results": [
                 {
-                    "bel_statement": "p(HGNC:HSF1, pmod(Ph, Ser, 326))",
-                    "evidence": "Antibodies used for immunoblotting included p-HSF1 (S326) (Abcam #76076, RRID:AB_1310328), HSF1 (CST #4356, RRID:AB_2120258), AKT1 (CST #2938, RRID:AB_915788), AKT2 (CST #3063, RRID:AB_2225186), AKT3 (CST #3788, RRID:AB_2242534), beta-actin (BD Biosciences #612656, RRID:AB_2289199), GAPDH (CST #2118, RRID:AB_561053), GST (CST #2625, RRID:AB_490796), Flag (Sigma #3165, RRID:AB_259529), CDK9 (CST #2316, RRID:AB_2291505), DYRK2 (CST# 11921, RRID:AB_2797768) and GFP (CST #2956, RRID:AB_1196615)."
+                    "bel_statement": "complex(p(HGNC:HSF1), p(HGNC:AKT1), p(HGNC:AKT2), p(HGNC:AKT3), p(HGNC:CDK9), p(HGNC:DYRK2), p(HGNC:GAPDH), p(HGNC:ACTB), p(FPLX:GST))",
+                    "evidence": "Antibodies used for immunoblotting included p-HSF1 (S326) (Abcam #76076, RRID:AB_1310328), HSF1 (CST #4356, RRID:AB_2120258), AKT1 (CST #2938, RRID:AB_915788), AKT2 (CST #3063, RRID:AB_2225186), AKT3 (CST #3788, RRID:AB_2242534), beta-actin (BD Biosciences #612656, RRID:AB_2289199), GAPDH (CST #2118, RRID:AB_561053), GST (CST #2625, RRID:AB_490796), CDK9 (CST #2316, RRID:AB_2291505), DYRK2 (CST# 11921, RRID:AB_2797768) and GFP (CST #2956, RRID:AB_1196615)."
                 }
             ],
             "annotations": [
@@ -5866,7 +5980,12 @@
         {
             "Index": "45",
             "text": "Kinase assay and mass spectrometry",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "bp(MESH:D010770) hasActivity a(MESH:D013058)",
+                    "evidence": "Kinase assay and mass spectrometry"
+                }
+            ],
             "annotations": [
                 {
                     "db": "MESH",
@@ -5885,16 +6004,36 @@
             "text": "Recombinant AKT1, recombinant AKT2, recombinant HSF-1, recombinant p38, recombinant mTOR, recombinant MEK, recombinant DYRK2 and recombinant ERK were purchased from Sigma. Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30  C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2). Samples were then boiled and subjected to SDS/PAGE and WB with indicated antibodies or subjected to mass spectrometry for detection of post-translational modifications.",
             "Results": [
                 {
-                    "bel_statement": "act(p(HGNC:AKT1), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer."
+                    "bel_statement": "act(p(HGNC:HSF1)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:AKT2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer."
+                    "bel_statement": "act(p(HGNC:AKT1)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
                 },
                 {
-                    "bel_statement": "act(p(HGNC:DYRK2), ma(GO:\"kinase activity\")) directlyIncreases p(HGNC:HSF1)",
-                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer."
+                    "bel_statement": "act(p(HGNC:AKT2)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
+                },
+                {
+                    "bel_statement": "act(p(FPLX:p38)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:MTOR)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
+                },
+                {
+                    "bel_statement": "act(p(FPLX:MEK)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
+                },
+                {
+                    "bel_statement": "act(p(HGNC:DYRK2)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
+                },
+                {
+                    "bel_statement": "act(p(FPLX:ERK)) hasActivity a(CHEBI:CHEBI:15422)",
+                    "evidence": "Indicated amounts of recombinant GST-HSF-1 (0.1-0.4 mg) were incubated with or without 0.1 mg recombinant kinases for up to 120 min at 30 C in the presence of ATP in kinase assay buffer (100 mm HEPES, 50 mm MgCl2, 50 mm MnCl2)."
                 }
             ],
             "annotations": [
@@ -6013,7 +6152,52 @@
         {
             "Index": "47",
             "text": "Mass spectrometry for post-translational modifications was performed at the Laboratory for Biological Mass Spectrometry at Indiana University (Bloomington, IN). Protein samples were dissolved in 8 m urea, 100 mm ammonia bicarbonate (pH8.0) solution. Samples were incubated for 1 h at 56  C with 10 mm TCEP to reduce cysteine residue side chains. The alkylation of cysteine residue side chains was proceeded for 45 min at room temperature in the dark with 20 mm iodoacetamide. For chymotrypsin digestion, 1 mug of chymotrypsin was added to the diluted sample and the samples were digested at 25  C overnight. Desalted peptides were injected into an Easy-nLC 100 HPLC system coupled to an Orbitrap Fusion Lumos mass spectrometer (Thermo Scientific, Bremen, Germany). Peptide samples were loaded onto an Acclaim PepMapTM 100 C18 trap column (75 mum x 20 mm, 3 mum, 100 A) in 0.1% formic acid. The peptides were separated using an Acclaim PepMapTM RSLC C18 analytical column (75 mum x 150 mm, 2 mum, 100 A) using an acetonitrile-based gradient (Solvent A: 0% acetonitrile, 0.1% formic acid; Solvent B: 80% acetonitrile, 0.1% formic acid) at a flow rate of 300 nL min-1. A 30-min gradient was as follows: 0-0.5 min, 2-8% B; 0.5-24 min, 7-38% B; 24-26 min, 40-100% B; 26-30 min, 100% B, followed by re-equilibration to 2% B. The electrospray ionization was carried out with a nanoESI source at a 260  C capillary temperature and 1.8 kV spray voltage. The mass spectrometer was operated in data-dependent acquisition mode with mass range 350-2000 m z-1. The precursor ions were selected for tandem mass (MS/MS) analysis in Orbitrap with 3-sec cycle time using HCD at 30% collision energy. Intensity threshold was set at 2.5e4. The dynamic exclusion was set with a repeat count of 1 and exclusion duration of 30 s. The resulting data were searched in Protein Prospector (http://prospector.ucsf.edu/prospector/mshome.htm) against Human HSF1 sequence (Q00613). Carbamidomethylation of cysteine residues was set as a fixed modification. Protein N-terminal acetylation, oxidation of methionine, protein N-terminal methionine loss, pyroglutamine formation and phosphorylation on STY were set as variable modifications. A total of two variable modifications were allowed. Chymotrypsin digestion specificity with two missed cleavage was allowed. The mass tolerance for precursor and fragment ions was set to 5 p.p.m. and 10 p.p.m. respectively. Peptide and protein identification cut-off scores were set to 15 and 22 respectively.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "bp(GO:0043687) increases a(CHEBI:16199)",
+                    "evidence": "Mass spectrometry for post-translational modifications was performed at the Laboratory for Biological Mass Spectrometry at Indiana University (Bloomington, IN)."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16199) hasComponent a(CHEBI:16134)",
+                    "evidence": "Protein samples were dissolved in 8 m urea, 100 mm ammonia bicarbonate (pH8.0) solution."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16199) hasComponent a(CHEBI:17544)",
+                    "evidence": "Protein samples were dissolved in 8 m urea, 100 mm ammonia bicarbonate (pH8.0) solution."
+                },
+                {
+                    "bel_statement": "a(CHEBI:32460) hasActivity a(CHEBI:63213)",
+                    "evidence": "The alkylation of cysteine residue side chains was proceeded for 45 min at room temperature in the dark with 20 mm iodoacetamide."
+                },
+                {
+                    "bel_statement": "act(p(MESH:D002918)) increases bp(GO:0007586)",
+                    "evidence": "For chymotrypsin digestion, 1 mug of chymotrypsin was added to the diluted sample and the samples were digested at 25 C overnight."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16670) hasComponent a(CHEBI:30751)",
+                    "evidence": "Peptide samples were loaded onto an Acclaim PepMapTM 100 C18 trap column (75 mum x 20 mm, 3 mum, 100 A) in 0.1% formic acid."
+                },
+                {
+                    "bel_statement": "a(CHEBI:38472) hasComponent a(CHEBI:30751)",
+                    "evidence": "The peptides were separated using an Acclaim PepMapTM RSLC C18 analytical column (75 mum x 150 mm, 2 mum, 100 A) using an acetonitrile-based gradient."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16199) hasComponent a(CHEBI:38472)",
+                    "evidence": "The peptides were separated using an Acclaim PepMapTM RSLC C18 analytical column (75 mum x 150 mm, 2 mum, 100 A) using an acetonitrile-based gradient."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16199) hasComponent a(CHEBI:30751)",
+                    "evidence": "Peptide samples were loaded onto an Acclaim PepMapTM 100 C18 trap column (75 mum x 20 mm, 3 mum, 100 A) in 0.1% formic acid."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16670) hasComponent a(CHEBI:16199)",
+                    "evidence": "The resulting data were searched in Protein Prospector (http://prospector.ucsf.edu/prospector/mshome.htm) against Human HSF1 sequence (Q00613)."
+                },
+                {
+                    "bel_statement": "a(CHEBI:16199) hasComponent a(CHEBI:16670)",
+                    "evidence": "The resulting data were searched in Protein Prospector (http://prospector.ucsf.edu/prospector/mshome.htm) against Human HSF1 sequence (Q00613)."
+                }
+            ],
             "annotations": [
                 {
                     "db": "MESH",
@@ -6330,7 +6514,12 @@
         {
             "Index": "48",
             "text": "HSF1 trimerization and gel filtration chromatography",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "complex(p(HGNC:HSF1))",
+                    "evidence": "HSF1 trimerization and gel filtration chromatography"
+                }
+            ],
             "annotations": [
                 {
                     "db": "HGNC",
@@ -6349,8 +6538,12 @@
             "text": "Cells were transfected with HSF1-Flag for 48 h. Cells were then fixed by adding 1 mm ethylene glycol bis-succinimidylsuccinate (Thermo Scientific, Waltham, MA) for 30 min at room temperature (RT) for crosslinking. The crosslinking reaction was quenched by addition of 10 mm Tris, pH 7.5, for 15 min at RT. Protein was isolated using RIPA buffer and the resulting lysate underwent SDS/PAGE and subjected immunoblotting with antibodies to HSF1.",
             "Results": [
                 {
-                    "bel_statement": "a(CHEBI:30742) directlyIncreases p(HGNC:HSF1)",
+                    "bel_statement": "p(HGNC:HSF1) increases a(CHEBI:30742)",
                     "evidence": "Cells were transfected with HSF1-Flag for 48 h."
+                },
+                {
+                    "bel_statement": "a(CHEBI:9754) hasComponent a(CHEBI:30742)",
+                    "evidence": "The crosslinking reaction was quenched by addition of 10 mm Tris, pH 7.5, for 15 min at RT."
                 }
             ],
             "annotations": [
@@ -6409,7 +6602,12 @@
         {
             "Index": "50",
             "text": "Gel filtration chromatography was performed using fixed cells as described above for trimerization. Total protein was isolated using RIPA and the resulting lysate was loaded onto a Superdex 200 Increase 10/300 GL column (Cytivia, Marlborough, MA) that was pre-equilibrated in running buffer (50 mm Tris, pH 8.0, 150 mm NaCl and 1% NP-40). Proteins were eluted with 2 column volumes of running buffer and captured as 2-mL fractions. All chromatography steps were performed at 4  C, and the column was calibrated using running buffer and a Gel Filtration Markers Kit (Sigma). Samples (10 microL) of each fraction that eluted within the molecular standard range of 29-669 kDa were run on 4-15% Mini-PROTEAN TGX (Bio-Rad, Hercules, CA) SDS/PAGE gels at 15 V cm-1. The proteins were transferred to nitrocellulose membranes at 4  C and blocked with non-fat milk in TBST at room temperature. The blots were probed with 1:1000 anti-HSF1 antibody and visualized with IRDye 800CW Goat anti-Rabbit secondary antibody (LI-COR, Lincoln, NE) and a LI-COR Odyssey imager.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "p(HGNC:HSF1) hasActivity a(CHEBI:35225)",
+                    "evidence": "The blots were probed with 1:1000 anti-HSF1 antibody and visualized with IRDye 800CW Goat anti-Rabbit secondary antibody (LI-COR, Lincoln, NE) and a LI-COR Odyssey imager."
+                }
+            ],
             "annotations": [
                 {
                     "db": "MESH",
@@ -6662,7 +6860,16 @@
         {
             "Index": "54",
             "text": "For analysis of mRNA levels, total RNA was collected from cells using an RNA isolation kit (Zymo, Santa Cruz, CA). Total RNA underwent reverse transcription (RT) using an RT kit (Applied Biosystems, Foster City, CA) that uses a mixture of oligodT and random primers. The resulting cDNA underwent qPCR using gene-specific primers with the SYBR Green qPCR Assay system (Applied Biosystems). Primer sequences for qPCR are listed in Table 1. Relative mRNA levels were computed using the DeltaDeltaCt method.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "r(CHEBI:33699) transcribedTo r(EFO:0008481)",
+                    "evidence": "Total RNA underwent reverse transcription (RT) using an RT kit (Applied Biosystems, Foster City, CA) that uses a mixture of oligodT and random primers."
+                },
+                {
+                    "bel_statement": "r(EFO:0008481) translatedTo p(HGNC:6342)",
+                    "evidence": "Relative mRNA levels were computed using the DeltaDeltaCt method."
+                }
+            ],
             "annotations": [
                 {
                     "db": "CHEBI",
@@ -6775,7 +6982,36 @@
         {
             "Index": "56",
             "text": "GSEA was done as previously described. Gene Cluster Text file (.gct) was generated from the TCGA BRCA or TCGA COADREAD datasets. Categorical class file (.cls) was generated based on a signature for HSF1 activity. The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK. There is no published gene signature for DYRK2. Therefore, to estimate DYRK2 function, we utilized a previously published list of genes downregulated with DYRK2 knockdown (GSE75918). Genes with more than a 2-fold decrease in expression with knockdown of DYRK2 were utilized for the gene list representing DYRK2 activity. The number of permutations was set to 1000 and the chip platform for TCGA gene lists was used. Normalized enrichment scores (NES) and adjusted P-values are reported.",
-            "Results": [],
+            "Results": [
+                {
+                    "bel_statement": "g(HGNC:HSF1) increases g(HGNC:DYRK2)",
+                    "evidence": "Therefore, to estimate DYRK2 function, we utilized a previously published list of genes downregulated with DYRK2 knockdown (GSE75918)."
+                },
+                {
+                    "bel_statement": "g(HGNC:AKT1) increases g(HGNC:DYRK2)",
+                    "evidence": "The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK."
+                },
+                {
+                    "bel_statement": "g(HGNC:AKT2) increases g(HGNC:DYRK2)",
+                    "evidence": "The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK."
+                },
+                {
+                    "bel_statement": "complex(FPLX:BRCA, g(HGNC:HSF1))",
+                    "evidence": "Gene Cluster Text file (.gct) was generated from the TCGA BRCA or TCGA COADREAD datasets."
+                },
+                {
+                    "bel_statement": "complex(FPLX:p38, g(HGNC:HSF1))",
+                    "evidence": "The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK."
+                },
+                {
+                    "bel_statement": "complex(FPLX:mTORC1, g(HGNC:HSF1))",
+                    "evidence": "The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK."
+                },
+                {
+                    "bel_statement": "complex(FPLX:MEK, g(HGNC:HSF1))",
+                    "evidence": "The Gene Matrix file (.gmx) was generated using published gene signatures for AKT1, AKT2, p38, mTORC1 and MEK."
+                }
+            ],
             "annotations": [
                 {
                     "db": "CHEBI",

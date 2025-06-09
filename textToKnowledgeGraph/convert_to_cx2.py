@@ -66,6 +66,18 @@ def convert_to_cx2(extracted_results, style_path=None):
         text = entry.get("text")
         evidence = entry.get("evidence")
 
+        if source and interaction is None and target is None:
+            if source not in node_name_to_id:
+                node_name_to_id[source] = node_id_counter
+                node_id_counter += 1
+            continue
+
+        if target and interaction is None and source is None:
+            if target not in node_name_to_id:
+                node_name_to_id[target] = node_id_counter
+                node_id_counter += 1
+            continue
+
         if source and interaction and target:
             # Assign unique integer ID if node doesn't exist in mapping
             if source not in node_name_to_id:

@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
-from texttoKG_main_scripts.get_interactions import prompt
+from main_scripts.get_interactions import prompt
 warnings.filterwarnings("ignore")
 
 load_dotenv()

@@ -6,8 +6,8 @@ import time
 from dotenv import load_dotenv
 from typing import List
 from pydantic import BaseModel, Field
-from texttoKG_main_scripts.get_interactions import load_prompt
-from texttoKG_main_scripts.grounding_genes import annotate_paragraphs_in_json
+from main_scripts.get_interactions import load_prompt
+from main_scripts.grounding_genes import annotate_paragraphs_in_json
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 

@@ -11,10 +11,11 @@ def get_prompt(identifier, filepath):
     content = files("textToKnowledgeGraph").joinpath(filepath).read_text(encoding="utf-8")
 
     # Check for BOM and remove it
-    if content.startswith(b'\xef\xbb\xbf'):
-        content = content[3:]
+    if content.startswith("\ufeff"):
+        content = content.lstrip("\ufeff")
 
-    lines = content.decode('utf-8').splitlines()
+    # split into lines (no .decode needed)
+    lines = content.splitlines()
     prompt = []
     capture = False
     for line in lines:
@@ -28,7 +29,7 @@ def get_prompt(identifier, filepath):
     return ''.join(prompt)
 
 
-def load_prompt(prompt_file="prompt_file_v6.txt",
+def load_prompt(prompt_file="prompt_file_v7.txt",
                 prompt_identifier="general prompt") -> str:
     """Return just the system‑prompt text (one string)."""
     return get_prompt(prompt_identifier, prompt_file)

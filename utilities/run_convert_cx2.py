@@ -6,8 +6,8 @@
 import argparse
 import json
 
-from texttoKG_main_scripts.transform_bel_statements import process_llm_results
-from texttoKG_main_scripts.convert_to_cx2 import convert_to_cx2
+from main_scripts.transform_bel_statements import process_llm_results
+from main_scripts.convert_to_cx2 import convert_to_cx2
 
 
 def main():

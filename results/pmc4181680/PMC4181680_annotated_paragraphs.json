@@ -3,144 +3,200 @@
         "text": "Triple Negative Breast Cancer (TNBC) is a heterogeneous disease that based on immunohistochemistry (IHC) is estrogen receptor (ER) negative, progesterone receptor (PR) negative and human epidermal growth factor receptor 2 (HER2) negative. TNBC is typically observed in young AA women and Hispanic women who carry a mutation in the BRCA1 gene. TNBC is characterized by a distinct molecular profile, aggressive nature and lack of targeted therapies. The purpose of this article is to review the current and future novel signalling pathways as therapeutic approaches to TNBC. Recent Identification of a new BRCA1 trafficking pathway holds promise in the future for the development of targeted therapies for TNBC.",
         "annotations": [
             {
+                "matched_text": "Triple Negative Breast Cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "immunohistochemistry",
                 "db": "MESH",
                 "id": "D007150",
-                "entry_name": "Immunohistochemistry"
+                "entry_name": "Immunohistochemistry",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "estrogen receptor",
                 "db": "HGNC",
                 "id": "3467",
-                "entry_name": "ESR1"
+                "entry_name": "ESR1",
+                "score": 1.0
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "progesterone receptor",
                 "db": "HGNC",
                 "id": "8910",
-                "entry_name": "PGR"
+                "entry_name": "PGR",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "PR",
                 "db": "HGNC",
                 "id": "8910",
-                "entry_name": "PGR"
+                "entry_name": "PGR",
+                "score": 1.0
             },
             {
+                "matched_text": "human epidermal growth factor receptor 2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "AA",
                 "db": "FPLX",
                 "id": "SAA",
-                "entry_name": "SAA"
+                "entry_name": "SAA",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "mutation",
                 "db": "MESH",
                 "id": "D009154",
-                "entry_name": "Mutation"
+                "entry_name": "Mutation",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "BRCA1 gene",
                 "db": "MESH",
                 "id": "D019398",
-                "entry_name": "Genes, BRCA1"
+                "entry_name": "Genes, BRCA1",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "nature",
                 "db": "MESH",
                 "id": "D019368",
-                "entry_name": "Nature"
+                "entry_name": "Nature",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "review",
                 "db": "MESH",
                 "id": "D016454",
-                "entry_name": "Review"
+                "entry_name": "Review",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "signalling pathways",
                 "db": "GO",
                 "id": "GO:0007165",
-                "entry_name": "signal transduction"
+                "entry_name": "signal transduction",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "therapeutic",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -148,104 +204,144 @@
         "text": "Triple Negative Breast Cancer (TNBC) is a subtype of breast cancer that based on immunohistochemistry (IHC) is estrogens receptor (ER) negative, progesterone receptor (PR) negative and human epidermal growth factor receptor 2 (HER2) negative. TNBC is characterized by its unique molecular profile, aggressive nature, distinct metastatic patterns and lack of targeted therapies. It is estimated that out of the worldwide breast cancer burden, approximately 170,000 cases are TNBC and account for ~10-20% of invasive breast cancers.",
         "annotations": [
             {
+                "matched_text": "Triple Negative Breast Cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "immunohistochemistry",
                 "db": "MESH",
                 "id": "D007150",
-                "entry_name": "Immunohistochemistry"
+                "entry_name": "Immunohistochemistry",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "estrogens",
                 "db": "CHEBI",
                 "id": "CHEBI:50114",
-                "entry_name": "estrogen"
+                "entry_name": "estrogen",
+                "score": 1.0
             },
             {
+                "matched_text": "receptor",
                 "db": "GO",
                 "id": "GO:0038023",
-                "entry_name": "signaling receptor activity"
+                "entry_name": "signaling receptor activity",
+                "score": 1.0
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "progesterone receptor",
                 "db": "HGNC",
                 "id": "8910",
-                "entry_name": "PGR"
+                "entry_name": "PGR",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "PR",
                 "db": "HGNC",
                 "id": "8910",
-                "entry_name": "PGR"
+                "entry_name": "PGR",
+                "score": 1.0
             },
             {
+                "matched_text": "human epidermal growth factor receptor 2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "nature",
                 "db": "MESH",
                 "id": "D019368",
-                "entry_name": "Nature"
+                "entry_name": "Nature",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "metastatic",
                 "db": "EFO",
                 "id": "0006852",
-                "entry_name": "metastatic"
+                "entry_name": "metastatic",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "estimated",
                 "db": "EFO",
                 "id": "0009237",
-                "entry_name": "Estimated Platelets Measurement"
+                "entry_name": "Estimated Platelets Measurement",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "invasive breast cancers",
                 "db": "EFO",
                 "id": "1000307",
-                "entry_name": "Invasive Breast Carcinoma"
+                "entry_name": "Invasive Breast Carcinoma",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -253,9 +349,11 @@
         "text": "Molecular Profile and IHC Phenotype",
         "annotations": [
             {
+                "matched_text": "Phenotype",
                 "db": "MESH",
                 "id": "D010641",
-                "entry_name": "Phenotype"
+                "entry_name": "Phenotype",
+                "score": 0.7777777777777778
             }
         ]
     },
@@ -263,139 +361,193 @@
         "text": "Breast cancers are typically classified into seven subtypes (3): luminal A (ER positive and histologic low grade), luminal B (ER positive and histologic high grade), HER2 overexpressing, basal-like (2 types - BL1 and BL2), immunomodulatory (IM), mesenchymal (M), mesenchymal stem-like (MSL) and normal breast-like tumours. Majority of the TNBC are the basal-like subtype, and many basal-like breast cancers are triple negative; they are not equivalent in terms of gene expression signatures and IHC analysis. Basal-like breast cancer is a classification based on gene expression profiling. Although they appear to be synonymous, there is up to 30% discordance between the two groups. In addition to low expression of ER, PR and HER2, basal-like breast cancers are characterized by a high expression of CK5, CK14, caveolin-1, caix, p63, EGFR (Epidermal Growth Factor Receptor)/HER1, which reflects on the mammary gland basal/myoepithelial cell component.",
         "annotations": [
             {
+                "matched_text": "Breast cancers",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7715934858792002
             },
             {
+                "matched_text": "(3)",
                 "db": "CHEBI",
                 "id": "CHEBI:84603",
-                "entry_name": "all-trans-tridecaprenyl diphosphate(3-)"
+                "entry_name": "all-trans-tridecaprenyl diphosphate(3-)",
+                "score": 0.5553494124922697
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "BL1",
                 "db": "EFO",
                 "id": "0005173",
-                "entry_name": "Bl-1"
+                "entry_name": "Bl-1",
+                "score": 0.7707689136260565
             },
             {
+                "matched_text": "BL2",
                 "db": "EFO",
                 "id": "0005475",
-                "entry_name": "BL-2"
+                "entry_name": "BL-2",
+                "score": 0.7775716347144919
             },
             {
+                "matched_text": "IM",
                 "db": "CHEBI",
                 "id": "CHEBI:30366",
-                "entry_name": "imidazolide"
+                "entry_name": "imidazolide",
+                "score": 0.48381776953205524
             },
             {
+                "matched_text": "MSL",
                 "db": "DOID",
                 "id": "DOID:14116",
-                "entry_name": "multiple symmetric lipomatosis"
+                "entry_name": "multiple symmetric lipomatosis",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "basal-like breast cancers",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "Basal-like breast cancer",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "classification",
                 "db": "MESH",
                 "id": "D002965",
-                "entry_name": "Classification"
+                "entry_name": "Classification",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "PR",
                 "db": "HGNC",
                 "id": "8910",
-                "entry_name": "PGR"
+                "entry_name": "PGR",
+                "score": 1.0
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "basal-like breast cancers",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "CK5",
                 "db": "HGNC",
                 "id": "6442",
-                "entry_name": "KRT5"
+                "entry_name": "KRT5",
+                "score": 0.5553494124922697
             },
             {
+                "matched_text": "CK14",
                 "db": "HGNC",
                 "id": "6416",
-                "entry_name": "KRT14"
+                "entry_name": "KRT14",
+                "score": 0.5553494124922697
             },
             {
+                "matched_text": "caveolin-1",
                 "db": "HGNC",
                 "id": "1527",
-                "entry_name": "CAV1"
+                "entry_name": "CAV1",
+                "score": 1.0
             },
             {
+                "matched_text": "caix",
                 "db": "HGNC",
                 "id": "1383",
-                "entry_name": "CA9"
+                "entry_name": "CA9",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "p63",
                 "db": "HGNC",
                 "id": "15979",
-                "entry_name": "TP63"
+                "entry_name": "TP63",
+                "score": 1.0
             },
             {
+                "matched_text": "EGFR",
                 "db": "HGNC",
                 "id": "3236",
-                "entry_name": "EGFR"
+                "entry_name": "EGFR",
+                "score": 1.0
             },
             {
+                "matched_text": "Epidermal Growth Factor Receptor",
                 "db": "HGNC",
                 "id": "3236",
-                "entry_name": "EGFR"
+                "entry_name": "EGFR",
+                "score": 0.984539270253556
             },
             {
+                "matched_text": "mammary gland",
                 "db": "MESH",
                 "id": "D042361",
-                "entry_name": "Mammary Glands, Human"
+                "entry_name": "Mammary Glands, Human",
+                "score": 0.5400948258091115
             }
         ]
     },
@@ -403,84 +555,116 @@
         "text": "Additionally, several proteins integrally involved in DNA repair are aberrantly expressed in TNBC, which may have implications on sensitivity to chemotherapeutic agents like, platinum-based drugs. High p53 IHC expression is common in basal-like breast cancer. Several additional and targetable molecular pathways implicated in the pathogenesis of basal-like breast cancer include the mutagen activated protein (MAP) kinase pathway, the Akt pathway, and the poly ADP-ribose polymerase1 (PARP1) pathway.",
         "annotations": [
             {
+                "matched_text": "DNA repair",
                 "db": "GO",
                 "id": "GO:0006281",
-                "entry_name": "DNA repair"
+                "entry_name": "DNA repair",
+                "score": 1.0
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "drugs",
                 "db": "CHEBI",
                 "id": "CHEBI:23888",
-                "entry_name": "drug"
+                "entry_name": "drug",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "p53",
                 "db": "HGNC",
                 "id": "11998",
-                "entry_name": "TP53"
+                "entry_name": "TP53",
+                "score": 1.0
             },
             {
+                "matched_text": "basal-like breast cancer",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "pathogenesis",
                 "db": "GO",
                 "id": "GO:0001897",
-                "entry_name": "cytolysis by symbiont of host cells"
+                "entry_name": "cytolysis by symbiont of host cells",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "basal-like breast cancer",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "mutagen",
                 "db": "CHEBI",
                 "id": "CHEBI:25435",
-                "entry_name": "mutagen"
+                "entry_name": "mutagen",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "MAP",
                 "db": "MESH",
                 "id": "D019532",
-                "entry_name": "Map"
+                "entry_name": "Map",
+                "score": 0.761698618841476
             },
             {
+                "matched_text": "kinase",
                 "db": "MESH",
                 "id": "D010770",
-                "entry_name": "Phosphotransferases"
+                "entry_name": "Phosphotransferases",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "Akt",
                 "db": "FPLX",
                 "id": "AKT",
-                "entry_name": "AKT"
+                "entry_name": "AKT",
+                "score": 1.0
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "poly ADP-ribose",
                 "db": "CHEBI",
                 "id": "CHEBI:8288",
-                "entry_name": "Poly(ADPribose)"
+                "entry_name": "Poly(ADPribose)",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "PARP1",
                 "db": "HGNC",
                 "id": "270",
-                "entry_name": "PARP1"
+                "entry_name": "PARP1",
+                "score": 0.9997938569367142
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             }
         ]
     },
@@ -488,14 +672,18 @@
         "text": "Association with BRCA1 Mutation status",
         "annotations": [
             {
+                "matched_text": "Association",
                 "db": "MESH",
                 "id": "D001244",
-                "entry_name": "Association"
+                "entry_name": "Association",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "BRCA1 Mutation status",
                 "db": "EFO",
                 "id": "0011021",
-                "entry_name": "BRCA1 mutation carier status"
+                "entry_name": "BRCA1 mutation carier status",
+                "score": 0.549371263656978
             }
         ]
     },
@@ -503,44 +691,60 @@
         "text": "It has been observed that a high percentage of BRCA1- associated hereditary and sporadic breast cancers are triple negative and express a high proportion of basal like cytokeratins (CK5,14,17), as well as P-Cadherin and HER1/EGFR. Gene expression studies support this association among patients with BRCA1 mutations that breast tumours tend to cluster within the basal like category.",
         "annotations": [
             {
+                "matched_text": "BRCA1-",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "sporadic breast cancers",
                 "db": "DOID",
                 "id": "DOID:8029",
-                "entry_name": "sporadic breast cancer"
+                "entry_name": "sporadic breast cancer",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "P-Cadherin",
                 "db": "HGNC",
                 "id": "1762",
-                "entry_name": "CDH3"
+                "entry_name": "CDH3",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "association",
                 "db": "MESH",
                 "id": "D001244",
-                "entry_name": "Association"
+                "entry_name": "Association",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "mutations",
                 "db": "MESH",
                 "id": "D009154",
-                "entry_name": "Mutation"
+                "entry_name": "Mutation",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "breast tumours",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "cluster",
                 "db": "CHEBI",
                 "id": "CHEBI:33731",
-                "entry_name": "cluster"
+                "entry_name": "cluster",
+                "score": 0.7777777777777778
             }
         ]
     },
@@ -548,14 +752,18 @@
         "text": "Epidemiology and Risk Factors",
         "annotations": [
             {
+                "matched_text": "Epidemiology",
                 "db": "MESH",
                 "id": "D004813",
-                "entry_name": "Epidemiology"
+                "entry_name": "Epidemiology",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "Risk Factors",
                 "db": "MESH",
                 "id": "D012307",
-                "entry_name": "Risk Factors"
+                "entry_name": "Risk Factors",
+                "score": 0.7777777777777778
             }
         ]
     },
@@ -563,124 +771,172 @@
         "text": "Several large scale population based studies indicate that TNBC are up to three times more likely to occur among pre-menopausal women of African-American descent. Certain epidemiologic studies like the Carolina Breast Cancer Study illustrated that as compared to the luminal a tumours, basal-like tumours were more likely to arise among women with early menarche, higher parity, younger age at full term pregnancy, and shorter duration of breast feeding, higher body mass index, and higher waist to hip ratio, especially among pre-menopausal patients. Another study done by Bauer et al. found that younger, non-Hispanic black and Hispanic women diagnosed with TNBC, had tumours that were more aggressive, and these women had poorer survival regardless of stage. In addition, non-Hispanic black women with late stage TNBC had the poorest survival of any comparable group.",
         "annotations": [
             {
+                "matched_text": "large",
                 "db": "HGNC",
                 "id": "6511",
-                "entry_name": "LARGE1"
+                "entry_name": "LARGE1",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "population",
                 "db": "MESH",
                 "id": "D011153",
-                "entry_name": "Population"
+                "entry_name": "Population",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "epidemiologic studies",
                 "db": "MESH",
                 "id": "D016021",
-                "entry_name": "Epidemiologic Studies"
+                "entry_name": "Epidemiologic Studies",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "Breast Cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "menarche",
                 "db": "GO",
                 "id": "GO:0042696",
-                "entry_name": "menarche"
+                "entry_name": "menarche",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "parity",
                 "db": "MESH",
                 "id": "D010298",
-                "entry_name": "Parity"
+                "entry_name": "Parity",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "full",
                 "db": "HGNC",
                 "id": "26808",
-                "entry_name": "DYNAP"
+                "entry_name": "DYNAP",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "pregnancy",
                 "db": "MESH",
                 "id": "D011247",
-                "entry_name": "Pregnancy"
+                "entry_name": "Pregnancy",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "breast feeding",
                 "db": "MESH",
                 "id": "D001942",
-                "entry_name": "Breast Feeding"
+                "entry_name": "Breast Feeding",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "body mass index",
                 "db": "MESH",
                 "id": "D015992",
-                "entry_name": "Body Mass Index"
+                "entry_name": "Body Mass Index",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "waist to hip ratio",
                 "db": "MESH",
                 "id": "D049629",
-                "entry_name": "Waist-Hip Ratio"
+                "entry_name": "Waist-Hip Ratio",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "al",
                 "db": "CHEBI",
                 "id": "CHEBI:28984",
-                "entry_name": "aluminium atom"
+                "entry_name": "aluminium atom",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "survival",
                 "db": "MESH",
                 "id": "D013534",
-                "entry_name": "Survival"
+                "entry_name": "Survival",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "survival",
                 "db": "MESH",
                 "id": "D013534",
-                "entry_name": "Survival"
+                "entry_name": "Survival",
+                "score": 0.7623170480313337
             }
         ]
     },
@@ -692,94 +948,130 @@
         "text": "TNBC is well known for its aggressive behaviour and is characterized by onset at a younger age, high mean tumour size, higher grade tumours and sometimes, a higher rate of node positivity. Additionally, this group is also known for an early peak of recurrence between the first and third year after diagnosis, and more aggressive metastases which are more likely to occur in viscera particularly in the lungs and brain, and less likely to spread to the bone. Based upon histological findings the majority of the triple negative breast cancers are of ductal origin; however, several other aggressive phenotypes also appear to be over represented, including metaplastic, apocrine and adenoid cystic. A histological study of basal-like tumours, all being ER/HER2 negative, yielded marked increase in mitotic count, geographic necrosis, pushing borders of invasion and stromal lymphocytic response.",
         "annotations": [
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "aggressive behaviour",
                 "db": "EFO",
                 "id": "0003015",
-                "entry_name": "aggressive behavior"
+                "entry_name": "aggressive behavior",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "onset",
                 "db": "MESH",
                 "id": "D017668",
-                "entry_name": "Age of Onset"
+                "entry_name": "Age of Onset",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "tumour",
                 "db": "MESH",
                 "id": "D009369",
-                "entry_name": "Neoplasms"
+                "entry_name": "Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "recurrence",
                 "db": "MESH",
                 "id": "D012008",
-                "entry_name": "Recurrence"
+                "entry_name": "Recurrence",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "diagnosis",
                 "db": "MESH",
                 "id": "D003933",
-                "entry_name": "Diagnosis"
+                "entry_name": "Diagnosis",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "metastases",
                 "db": "MESH",
                 "id": "D009362",
-                "entry_name": "Neoplasm Metastasis"
+                "entry_name": "Neoplasm Metastasis",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "viscera",
                 "db": "MESH",
                 "id": "D014781",
-                "entry_name": "Viscera"
+                "entry_name": "Viscera",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "lungs",
                 "db": "MESH",
                 "id": "D008168",
-                "entry_name": "Lung"
+                "entry_name": "Lung",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "brain",
                 "db": "MESH",
                 "id": "D001921",
-                "entry_name": "Brain"
+                "entry_name": "Brain",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "triple negative breast cancers",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "phenotypes",
                 "db": "MESH",
                 "id": "D010641",
-                "entry_name": "Phenotype"
+                "entry_name": "Phenotype",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "apocrine",
                 "db": "HGNC",
                 "id": "8993",
-                "entry_name": "PIP"
+                "entry_name": "PIP",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "adenoid",
                 "db": "MESH",
                 "id": "D000234",
-                "entry_name": "Adenoids"
+                "entry_name": "Adenoids",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "necrosis",
                 "db": "GO",
                 "id": "GO:0070265",
-                "entry_name": null
+                "entry_name": null,
+                "score": 1.0
             },
             {
+                "matched_text": "invasion",
                 "db": "MESH",
                 "id": "D009361",
-                "entry_name": "Neoplasm Invasiveness"
+                "entry_name": "Neoplasm Invasiveness",
+                "score": 1.0
             }
         ]
     },
@@ -787,44 +1079,60 @@
         "text": "An inferior prognosis in the basal-like breast cancer, as compared to the luminal type, has been uniformly demonstrated by a variety of studies. Population based studies have also demonstrated similar results with reduced breast cancer specific survival among those with TNBC, as compared with the luminal subtype.",
         "annotations": [
             {
+                "matched_text": "prognosis",
                 "db": "MESH",
                 "id": "D011379",
-                "entry_name": "Prognosis"
+                "entry_name": "Prognosis",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "basal-like breast cancer",
                 "db": "EFO",
                 "id": "0000281",
-                "entry_name": "basal-like breast carcinoma"
+                "entry_name": "basal-like breast carcinoma",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "Population",
                 "db": "MESH",
                 "id": "D011153",
-                "entry_name": "Population"
+                "entry_name": "Population",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "survival",
                 "db": "MESH",
                 "id": "D013534",
-                "entry_name": "Survival"
+                "entry_name": "Survival",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             }
         ]
     },
@@ -832,124 +1140,172 @@
         "text": "A recently reported Canadian series evaluating prognosis in over 1,500 women, showed an increased likelihood of distant recurrence and death among women with triple negative breast cancer, as compared to the non triple negative disease. Studies have consistently shown that more aggressive visceral and soft tissue relapses are more common and bone relapses less common among those diagnosed with triple negative versus ER positive disease. An estimated 15% of all patients with breast cancer will develop brain metastasis. In a series of over 3,000 patients with brain metastasis arising from breast cancer treated from 1989 to 2006, multivariate analysis indicated that triple negative status was the greatest risk factor for the development of cerebral metastasis (odds ratio=4.16; p<0.001), above that of HER2 positive status (OR=3.43; p=0.005). In another study using patients with BRCA1 mutation, there was 82% complete pathologic response in those treated with Cisplatinum alone.",
         "annotations": [
             {
+                "matched_text": "prognosis",
                 "db": "MESH",
                 "id": "D011379",
-                "entry_name": "Prognosis"
+                "entry_name": "Prognosis",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "recurrence",
                 "db": "MESH",
                 "id": "D012008",
-                "entry_name": "Recurrence"
+                "entry_name": "Recurrence",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "death",
                 "db": "GO",
                 "id": "GO:0008219",
-                "entry_name": "cell death"
+                "entry_name": "cell death",
+                "score": 1.0
             },
             {
+                "matched_text": "women",
                 "db": "MESH",
                 "id": "D014930",
-                "entry_name": "Women"
+                "entry_name": "Women",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "triple negative breast cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "aggressive",
                 "db": "EFO",
                 "id": "0002752",
-                "entry_name": "aggressive"
+                "entry_name": "aggressive",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "estimated",
                 "db": "EFO",
                 "id": "0009237",
-                "entry_name": "Estimated Platelets Measurement"
+                "entry_name": "Estimated Platelets Measurement",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "brain",
                 "db": "MESH",
                 "id": "D001921",
-                "entry_name": "Brain"
+                "entry_name": "Brain",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "metastasis",
                 "db": "EFO",
                 "id": "0009708",
-                "entry_name": "metastasis"
+                "entry_name": "metastasis",
+                "score": 1.0
             },
             {
+                "matched_text": "brain",
                 "db": "MESH",
                 "id": "D001921",
-                "entry_name": "Brain"
+                "entry_name": "Brain",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "metastasis",
                 "db": "EFO",
                 "id": "0009708",
-                "entry_name": "metastasis"
+                "entry_name": "metastasis",
+                "score": 1.0
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "multivariate analysis",
                 "db": "MESH",
                 "id": "D015999",
-                "entry_name": "Multivariate Analysis"
+                "entry_name": "Multivariate Analysis",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "risk factor",
                 "db": "MESH",
                 "id": "D012307",
-                "entry_name": "Risk Factors"
+                "entry_name": "Risk Factors",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "metastasis",
                 "db": "EFO",
                 "id": "0009708",
-                "entry_name": "metastasis"
+                "entry_name": "metastasis",
+                "score": 1.0
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "mutation",
                 "db": "MESH",
                 "id": "D009154",
-                "entry_name": "Mutation"
+                "entry_name": "Mutation",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "Cisplatinum",
                 "db": "CHEBI",
                 "id": "CHEBI:27899",
-                "entry_name": "cisplatin"
+                "entry_name": "cisplatin",
+                "score": 0.5400948258091115
             }
         ]
     },
@@ -957,9 +1313,11 @@
         "text": "Therapeutic Strategies",
         "annotations": [
             {
+                "matched_text": "Therapeutic",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -967,139 +1325,193 @@
         "text": "Although triple negative breast cancers are associated with a generally poor breast cancer specific outcome, most are not resistant to chemotherapy. These patients have an extremely poor prognosis and relapse and die quickly. Several therapies are being developed that target specific biomarkers of TNBC or basal-like subtype. These strategies include EGFR-targeted agents, androgen receptor targeted agents, anti-antigenic agents, and PARP inhibitors are offering an option in triple negative disease; however, their uses as of date are limited to clinical trials and more work is needed to identify targets that yield high therapeutic ratios. TNBC with BRCA1 gene mutations may be more sensitive to agents that cause DNA damage, such as Cisplatin. Other, more recent promising therapeutic targets for TNBC include the NOTCH, Hedgehog and Wnt/b-Catenin signalling pathways. Studies have shown that these therapies alter the apoptotic pathway, inhibiting tumour progression.",
         "annotations": [
             {
+                "matched_text": "triple negative breast cancers",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "chemotherapy",
                 "db": "MESH",
                 "id": "D004358",
-                "entry_name": "Drug Therapy"
+                "entry_name": "Drug Therapy",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "prognosis",
                 "db": "MESH",
                 "id": "D011379",
-                "entry_name": "Prognosis"
+                "entry_name": "Prognosis",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "relapse",
                 "db": "EFO",
                 "id": "0004952",
-                "entry_name": "disease recurrence"
+                "entry_name": "disease recurrence",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "biomarkers",
                 "db": "CHEBI",
                 "id": "CHEBI:59163",
-                "entry_name": "biomarker"
+                "entry_name": "biomarker",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "androgen receptor",
                 "db": "HGNC",
                 "id": "644",
-                "entry_name": "AR"
+                "entry_name": "AR",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "PARP inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:62913",
-                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor"
+                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "clinical trials",
                 "db": "MESH",
                 "id": "D016430",
-                "entry_name": "Clinical Trial"
+                "entry_name": "Clinical Trial",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "work",
                 "db": "MESH",
                 "id": "D014937",
-                "entry_name": "Work"
+                "entry_name": "Work",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "therapeutic",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "BRCA1 gene",
                 "db": "MESH",
                 "id": "D019398",
-                "entry_name": "Genes, BRCA1"
+                "entry_name": "Genes, BRCA1",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "mutations",
                 "db": "MESH",
                 "id": "D009154",
-                "entry_name": "Mutation"
+                "entry_name": "Mutation",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "DNA damage",
                 "db": "MESH",
                 "id": "D004249",
-                "entry_name": "DNA Damage"
+                "entry_name": "DNA Damage",
+                "score": 0.7715934858792002
             },
             {
+                "matched_text": "Cisplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:27899",
-                "entry_name": "cisplatin"
+                "entry_name": "cisplatin",
+                "score": 1.0
             },
             {
+                "matched_text": "therapeutic",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "NOTCH",
                 "db": "FPLX",
                 "id": "Notch",
-                "entry_name": "Notch"
+                "entry_name": "Notch",
+                "score": 1.0
             },
             {
+                "matched_text": "Hedgehog",
                 "db": "FPLX",
                 "id": "Hedgehog",
-                "entry_name": "Hedgehog"
+                "entry_name": "Hedgehog",
+                "score": 1.0
             },
             {
+                "matched_text": "signalling pathways",
                 "db": "GO",
                 "id": "GO:0007165",
-                "entry_name": "signal transduction"
+                "entry_name": "signal transduction",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "tumour",
                 "db": "MESH",
                 "id": "D009369",
-                "entry_name": "Neoplasms"
+                "entry_name": "Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1107,144 +1519,200 @@
         "text": "Adjuvant chemotherapy has been shown to not only prolong disease-free survival in patients but overall survival as a whole; however, TNBC lacks the typical targeted receptors found in luminal or HER-2 disease and therefore cannot be treated with hormonal agents, such as SERMS, aromatise inhibitors or HER2 antagonists. To combat this issue several neoadjuvant studies have been done which accentuated the relationship between chemo sensitivity and outcome, revealing proportionally higher sensitivity to anthracycline or anthracycline/taxane-based chemotherapy such as Doxorubicin and Cyclophosphamide (standard chemotherapeutic agents), for basal like/ER negative breast cancers as compared to the luminal subtype. Highest response rates were noticed among those classified as basal like (85%) and HER2 positive (70%), as compared to luminal (47%, p<0.0001). Despite initial chemo sensitivity, disease free survival (p=0.04) and overall survival (p=0.02) remained poorest among those with basal like and HER2 positive tumours, compared to the luminal subtype. Although triple negative disease is highly responsive to Anthracycline/Taxane chemotherapy treatment, a high risk of relapse still remains if the tumour is not completely eradicated.",
         "annotations": [
             {
+                "matched_text": "Adjuvant chemotherapy",
                 "db": "MESH",
                 "id": "D017024",
-                "entry_name": "Chemotherapy, Adjuvant"
+                "entry_name": "Chemotherapy, Adjuvant",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "disease-free survival",
                 "db": "MESH",
                 "id": "D018572",
-                "entry_name": "Disease-Free Survival"
+                "entry_name": "Disease-Free Survival",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "overall survival",
                 "db": "EFO",
                 "id": "0000638",
-                "entry_name": "overall survival"
+                "entry_name": "overall survival",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "HER-2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "SERMS",
                 "db": "MESH",
                 "id": "D020845",
-                "entry_name": "Selective Estrogen Receptor Modulators"
+                "entry_name": "Selective Estrogen Receptor Modulators",
+                "score": 0.5209235209235209
             },
             {
+                "matched_text": "inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:35222",
-                "entry_name": "inhibitor"
+                "entry_name": "inhibitor",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "antagonists",
                 "db": "CHEBI",
                 "id": "CHEBI:48706",
-                "entry_name": "antagonist"
+                "entry_name": "antagonist",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "anthracycline",
                 "db": "CHEBI",
                 "id": "CHEBI:48120",
-                "entry_name": "anthracycline"
+                "entry_name": "anthracycline",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "chemotherapy",
                 "db": "MESH",
                 "id": "D004358",
-                "entry_name": "Drug Therapy"
+                "entry_name": "Drug Therapy",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "Doxorubicin",
                 "db": "CHEBI",
                 "id": "CHEBI:28748",
-                "entry_name": "doxorubicin"
+                "entry_name": "doxorubicin",
+                "score": 1.0
             },
             {
+                "matched_text": "Cyclophosphamide",
                 "db": "CHEBI",
                 "id": "CHEBI:4027",
-                "entry_name": "cyclophosphamide"
+                "entry_name": "cyclophosphamide",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "breast cancers",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "disease free survival",
                 "db": "MESH",
                 "id": "D018572",
-                "entry_name": "Disease-Free Survival"
+                "entry_name": "Disease-Free Survival",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "overall survival",
                 "db": "EFO",
                 "id": "0000638",
-                "entry_name": "overall survival"
+                "entry_name": "overall survival",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "HER2",
                 "db": "HGNC",
                 "id": "3430",
-                "entry_name": "ERBB2"
+                "entry_name": "ERBB2",
+                "score": 1.0
             },
             {
+                "matched_text": "luminal",
                 "db": "CHEBI",
                 "id": "CHEBI:8069",
-                "entry_name": "phenobarbital"
+                "entry_name": "phenobarbital",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "chemotherapy",
                 "db": "MESH",
                 "id": "D004358",
-                "entry_name": "Drug Therapy"
+                "entry_name": "Drug Therapy",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "risk",
                 "db": "MESH",
                 "id": "D012306",
-                "entry_name": "Risk"
+                "entry_name": "Risk",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "relapse",
                 "db": "EFO",
                 "id": "0004952",
-                "entry_name": "disease recurrence"
+                "entry_name": "disease recurrence",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "tumour",
                 "db": "MESH",
                 "id": "D009369",
-                "entry_name": "Neoplasms"
+                "entry_name": "Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1252,124 +1720,172 @@
         "text": "Additionally, pre-clinical and clinical studies indicate that tumours with BRCA1 dysfunction are sensitive to platinum agents such as Cisplatin, and Carboplatin which function by causing DNA damage and promote tumour cell apoptosis. Studies have shown that p63, a family member of p53, is responsible for controlling a survival pathway that directly mediates Cisplatin sensitivity in TNBC; it therefore, can possibly be used as a biomarker to predict response to platinum therapy in triple negative breast cancer. However, this finding warrants further investigation and currently platinum's are not recommended for the adjuvant treatment of TNBC.",
         "annotations": [
             {
+                "matched_text": "clinical studies",
                 "db": "MESH",
                 "id": "D000068397",
-                "entry_name": "Clinical Study"
+                "entry_name": "Clinical Study",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "platinum",
                 "db": "CHEBI",
                 "id": "CHEBI:33364",
-                "entry_name": "platinum"
+                "entry_name": "platinum",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "Cisplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:27899",
-                "entry_name": "cisplatin"
+                "entry_name": "cisplatin",
+                "score": 1.0
             },
             {
+                "matched_text": "Carboplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:31355",
-                "entry_name": "carboplatin"
+                "entry_name": "carboplatin",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "DNA damage",
                 "db": "MESH",
                 "id": "D004249",
-                "entry_name": "DNA Damage"
+                "entry_name": "DNA Damage",
+                "score": 0.7715934858792002
             },
             {
+                "matched_text": "tumour",
                 "db": "MESH",
                 "id": "D009369",
-                "entry_name": "Neoplasms"
+                "entry_name": "Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "apoptosis",
                 "db": "GO",
                 "id": "GO:0006915",
-                "entry_name": "apoptotic process"
+                "entry_name": "apoptotic process",
+                "score": 1.0
             },
             {
+                "matched_text": "p63",
                 "db": "HGNC",
                 "id": "15979",
-                "entry_name": "TP63"
+                "entry_name": "TP63",
+                "score": 1.0
             },
             {
+                "matched_text": "family",
                 "db": "MESH",
                 "id": "D005190",
-                "entry_name": "Family"
+                "entry_name": "Family",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "p53",
                 "db": "HGNC",
                 "id": "11998",
-                "entry_name": "TP53"
+                "entry_name": "TP53",
+                "score": 1.0
             },
             {
+                "matched_text": "controlling",
                 "db": "EFO",
                 "id": "0001461",
-                "entry_name": "control"
+                "entry_name": "control",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "survival",
                 "db": "MESH",
                 "id": "D013534",
-                "entry_name": "Survival"
+                "entry_name": "Survival",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "Cisplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:27899",
-                "entry_name": "cisplatin"
+                "entry_name": "cisplatin",
+                "score": 1.0
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "biomarker",
                 "db": "CHEBI",
                 "id": "CHEBI:59163",
-                "entry_name": "biomarker"
+                "entry_name": "biomarker",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "response to platinum",
                 "db": "GO",
                 "id": "GO:0070541",
-                "entry_name": "response to platinum ion"
+                "entry_name": "response to platinum ion",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "therapy",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "triple negative breast cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "finding",
                 "db": "MESH",
                 "id": "D012816",
-                "entry_name": "Signs and Symptoms"
+                "entry_name": "Signs and Symptoms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "platinum",
                 "db": "CHEBI",
                 "id": "CHEBI:33364",
-                "entry_name": "platinum"
+                "entry_name": "platinum",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "adjuvant",
                 "db": "CHEBI",
                 "id": "CHEBI:60809",
-                "entry_name": "adjuvant"
+                "entry_name": "adjuvant",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1377,49 +1893,67 @@
         "text": "EGFR expression is approximately seen in 60% of triple negative breast tumors, thus providing a reasonable targeted treatment approach. A phase II trial evaluating the combination of Cetuximab (a chimeric monoclonal antibody targeting EGFR) and Carboplatin, weekly for 3 to 4 weeks reported a response rate of 18% and overall clinical benefit of 27% among 102 patients with advanced TNBC.",
         "annotations": [
             {
+                "matched_text": "EGFR",
                 "db": "HGNC",
                 "id": "3236",
-                "entry_name": "EGFR"
+                "entry_name": "EGFR",
+                "score": 1.0
             },
             {
+                "matched_text": "breast tumors",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "II",
                 "db": "HGNC",
                 "id": "4204",
-                "entry_name": "GCNT2"
+                "entry_name": "GCNT2",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "Cetuximab",
                 "db": "MESH",
                 "id": "D000068818",
-                "entry_name": "Cetuximab"
+                "entry_name": "Cetuximab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "monoclonal antibody",
                 "db": "MESH",
                 "id": "D000911",
-                "entry_name": "Antibodies, Monoclonal"
+                "entry_name": "Antibodies, Monoclonal",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "EGFR",
                 "db": "HGNC",
                 "id": "3236",
-                "entry_name": "EGFR"
+                "entry_name": "EGFR",
+                "score": 1.0
             },
             {
+                "matched_text": "Carboplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:31355",
-                "entry_name": "carboplatin"
+                "entry_name": "carboplatin",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "overall",
                 "db": "MESH",
                 "id": "D016424",
-                "entry_name": "Overall"
+                "entry_name": "Overall",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1427,64 +1961,88 @@
         "text": "Another study evaluating the combination of Irinotecan and Carboplatin with or without Cetuximab reported response rates of 49% and 30% respectively, among 72 patients with pre-treated TNBC. EGFR inhibitor Panitumumab, when used in combination with standard chemotherapeutic agents for neoadjuvant therapy for inoperable TNBC was recently reported to have shown a pathological complete response rate of 65%. Other studies have recently demonstrated that EGFR inhibitors when used in combination with Texans or platinum's may increase the efficacy of the other agents. To date, the majority of data with EGFR inhibitors has generally been interpreted as negative.",
         "annotations": [
             {
+                "matched_text": "Irinotecan",
                 "db": "CHEBI",
                 "id": "CHEBI:80630",
-                "entry_name": "irinotecan"
+                "entry_name": "irinotecan",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "Carboplatin",
                 "db": "CHEBI",
                 "id": "CHEBI:31355",
-                "entry_name": "carboplatin"
+                "entry_name": "carboplatin",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "Cetuximab",
                 "db": "MESH",
                 "id": "D000068818",
-                "entry_name": "Cetuximab"
+                "entry_name": "Cetuximab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "EGFR inhibitor",
                 "db": "CHEBI",
                 "id": "CHEBI:62434",
-                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor"
+                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "Panitumumab",
                 "db": "MESH",
                 "id": "D000077544",
-                "entry_name": "Panitumumab"
+                "entry_name": "Panitumumab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "neoadjuvant therapy",
                 "db": "MESH",
                 "id": "D020360",
-                "entry_name": "Neoadjuvant Therapy"
+                "entry_name": "Neoadjuvant Therapy",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "pathological complete response",
                 "db": "EFO",
                 "id": "0009697",
-                "entry_name": "pathological complete response"
+                "entry_name": "pathological complete response",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "EGFR inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:62434",
-                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor"
+                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "platinum",
                 "db": "CHEBI",
                 "id": "CHEBI:33364",
-                "entry_name": "platinum"
+                "entry_name": "platinum",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "EGFR inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:62434",
-                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor"
+                "entry_name": "EC 2.7.10.1 (receptor protein-tyrosine kinase) inhibitor",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1492,104 +2050,144 @@
         "text": "PARP1, a gene that encodes an enzyme involved in the molecular events leading to cell recovery from DNA damage, when inhibited, leads to the accumulation of double-stranded DNA breaks. Cells deficient in BRCA1 and BRCA2 (required for normal homologous recombination), are exquisitely sensitive to PARP1 inhibition. Several PARP inhibitors Olaparib, Velaparib and PF-01367338 are currently in clinical trials and hold a promising future. The study demonstrated a statistically significant 50% reduction in the risk of death; however, phase III trials failed to show statistically significant benefit for this combination, hence, the drug has been discontinued but some biomarker analysis is still underway to determine if a specific subset of patient may benefit from the drug. This therefore highlights the need for continued research and clinical trials.",
         "annotations": [
             {
+                "matched_text": "PARP1",
                 "db": "HGNC",
                 "id": "270",
-                "entry_name": "PARP1"
+                "entry_name": "PARP1",
+                "score": 0.9997938569367142
             },
             {
+                "matched_text": "enzyme",
                 "db": "MESH",
                 "id": "D004798",
-                "entry_name": "Enzymes"
+                "entry_name": "Enzymes",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "DNA damage",
                 "db": "MESH",
                 "id": "D004249",
-                "entry_name": "DNA Damage"
+                "entry_name": "DNA Damage",
+                "score": 0.7715934858792002
             },
             {
+                "matched_text": "double-stranded DNA breaks",
                 "db": "MESH",
                 "id": "D053903",
-                "entry_name": "DNA Breaks, Double-Stranded"
+                "entry_name": "DNA Breaks, Double-Stranded",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "BRCA2",
                 "db": "HGNC",
                 "id": "1101",
-                "entry_name": "BRCA2"
+                "entry_name": "BRCA2",
+                "score": 1.0
             },
             {
+                "matched_text": "homologous recombination",
                 "db": "GO",
                 "id": "GO:0035825",
-                "entry_name": "homologous recombination"
+                "entry_name": "homologous recombination",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "PARP1",
                 "db": "HGNC",
                 "id": "270",
-                "entry_name": "PARP1"
+                "entry_name": "PARP1",
+                "score": 0.9997938569367142
             },
             {
+                "matched_text": "PARP inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:62913",
-                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor"
+                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "Olaparib",
                 "db": "CHEBI",
                 "id": "CHEBI:83766",
-                "entry_name": "olaparib"
+                "entry_name": "olaparib",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "clinical trials",
                 "db": "MESH",
                 "id": "D016430",
-                "entry_name": "Clinical Trial"
+                "entry_name": "Clinical Trial",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "hold",
                 "db": "CHEBI",
                 "id": "CHEBI:4471",
-                "entry_name": "dextromethorphan hydrobromide"
+                "entry_name": "dextromethorphan hydrobromide",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "risk",
                 "db": "MESH",
                 "id": "D012306",
-                "entry_name": "Risk"
+                "entry_name": "Risk",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "death",
                 "db": "GO",
                 "id": "GO:0008219",
-                "entry_name": "cell death"
+                "entry_name": "cell death",
+                "score": 1.0
             },
             {
+                "matched_text": "drug",
                 "db": "CHEBI",
                 "id": "CHEBI:23888",
-                "entry_name": "drug"
+                "entry_name": "drug",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "biomarker",
                 "db": "CHEBI",
                 "id": "CHEBI:59163",
-                "entry_name": "biomarker"
+                "entry_name": "biomarker",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "patient",
                 "db": "MESH",
                 "id": "D010361",
-                "entry_name": "Patients"
+                "entry_name": "Patients",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "drug",
                 "db": "CHEBI",
                 "id": "CHEBI:23888",
-                "entry_name": "drug"
+                "entry_name": "drug",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "research",
                 "db": "MESH",
                 "id": "D012106",
-                "entry_name": "Research"
+                "entry_name": "Research",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "clinical trials",
                 "db": "MESH",
                 "id": "D016430",
-                "entry_name": "Clinical Trial"
+                "entry_name": "Clinical Trial",
+                "score": 0.7623170480313337
             }
         ]
     },
@@ -1597,9 +2195,11 @@
         "text": "Antiangiogenic Agents",
         "annotations": [
             {
+                "matched_text": "Antiangiogenic Agents",
                 "db": "CHEBI",
                 "id": "CHEBI:48422",
-                "entry_name": "angiogenesis inhibitor"
+                "entry_name": "angiogenesis inhibitor",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1607,139 +2207,193 @@
         "text": "The antiangiogenic agent Bevacizumab, a monoclonal antibody that targets all forms of VEGF, has been evaluated in a number of large phase III trials as treatment of metastatic breast cancer. The landmark study E2100 illustrated improvement in progressionfree survival (11.8 vs. 5.9 months, HR=0.60, p<0.001) when adding Bevacizumab to Paclitaxel chemotherapy compared with single-agent Paclitaxel alone in first-line treatment of metastatic disease. This subsequently led to subgroup analysis that demonstrated similar progression free survival benefits in both patients with TNBC and non-TNBC with the use of Bevacizumab plus a taxane. Currently, the BEATRICE trial is prospectively investigating this combination as adjuvant therapy in TNBC. Additionally, several small-molecule inhibitors of the VEGF pathway appear to have activity in the subset of pre-treated triple-negative breast cancer and definitive studies showing overall survival benefit will be needed prior to re approval.",
         "annotations": [
             {
+                "matched_text": "antiangiogenic agent",
                 "db": "CHEBI",
                 "id": "CHEBI:48422",
-                "entry_name": "angiogenesis inhibitor"
+                "entry_name": "angiogenesis inhibitor",
+                "score": 0.5553494124922697
             },
             {
+                "matched_text": "Bevacizumab",
                 "db": "MESH",
                 "id": "D000068258",
-                "entry_name": "Bevacizumab"
+                "entry_name": "Bevacizumab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "monoclonal antibody",
                 "db": "MESH",
                 "id": "D000911",
-                "entry_name": "Antibodies, Monoclonal"
+                "entry_name": "Antibodies, Monoclonal",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "forms",
                 "db": "MESH",
                 "id": "D020478",
-                "entry_name": "Form"
+                "entry_name": "Form",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "VEGF",
                 "db": "FPLX",
                 "id": "VEGF",
-                "entry_name": "VEGF"
+                "entry_name": "VEGF",
+                "score": 1.0
             },
             {
+                "matched_text": "large",
                 "db": "HGNC",
                 "id": "6511",
-                "entry_name": "LARGE1"
+                "entry_name": "LARGE1",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "metastatic",
                 "db": "EFO",
                 "id": "0006852",
-                "entry_name": "metastatic"
+                "entry_name": "metastatic",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "breast cancer",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "progressionfree survival",
                 "db": "MESH",
                 "id": "D000077982",
-                "entry_name": "Progression-Free Survival"
+                "entry_name": "Progression-Free Survival",
+                "score": 0.7621109049680478
             },
             {
+                "matched_text": "Bevacizumab",
                 "db": "MESH",
                 "id": "D000068258",
-                "entry_name": "Bevacizumab"
+                "entry_name": "Bevacizumab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "Paclitaxel",
                 "db": "CHEBI",
                 "id": "CHEBI:45863",
-                "entry_name": "paclitaxel"
+                "entry_name": "paclitaxel",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "chemotherapy",
                 "db": "MESH",
                 "id": "D004358",
-                "entry_name": "Drug Therapy"
+                "entry_name": "Drug Therapy",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "Paclitaxel",
                 "db": "CHEBI",
                 "id": "CHEBI:45863",
-                "entry_name": "paclitaxel"
+                "entry_name": "paclitaxel",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "metastatic disease",
                 "db": "EFO",
                 "id": "0009709",
-                "entry_name": "metastatic neoplasm"
+                "entry_name": "metastatic neoplasm",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "led",
                 "db": "HGNC",
                 "id": "34499",
-                "entry_name": "SMIM10L2A"
+                "entry_name": "SMIM10L2A",
+                "score": 0.484436198721913
             },
             {
+                "matched_text": "progression free survival",
                 "db": "MESH",
                 "id": "D000077982",
-                "entry_name": "Progression-Free Survival"
+                "entry_name": "Progression-Free Survival",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "Bevacizumab",
                 "db": "MESH",
                 "id": "D000068258",
-                "entry_name": "Bevacizumab"
+                "entry_name": "Bevacizumab",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "taxane",
                 "db": "CHEBI",
                 "id": "CHEBI:36064",
-                "entry_name": "taxane"
+                "entry_name": "taxane",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "adjuvant",
                 "db": "CHEBI",
                 "id": "CHEBI:60809",
-                "entry_name": "adjuvant"
+                "entry_name": "adjuvant",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "therapy",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:35222",
-                "entry_name": "inhibitor"
+                "entry_name": "inhibitor",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "VEGF",
                 "db": "FPLX",
                 "id": "VEGF",
-                "entry_name": "VEGF"
+                "entry_name": "VEGF",
+                "score": 1.0
             },
             {
+                "matched_text": "pathway",
                 "db": "CHEBI",
                 "id": "CHEBI:34922",
-                "entry_name": "picloram"
+                "entry_name": "picloram",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "triple-negative breast cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "overall survival",
                 "db": "EFO",
                 "id": "0000638",
-                "entry_name": "overall survival"
+                "entry_name": "overall survival",
+                "score": 0.7777777777777778
             }
         ]
     },
@@ -1747,84 +2401,116 @@
         "text": "In conclusion, TNBC is a difficult and complex disease entity that is both confusing and frustrating for researchers, physicians and patients. To date there are multiple approaches attempting to improve care of triple negative breast cancer patients, including DNA damaging agents like platinum's, targeted EGFR and VEGF inhibitors, and, PARP inhibitors; however, none have been as clinically successful as anticipated and more targeted therapies need to be developed and explored. The Wnt/b-Catenin, NOTCH and Hedgehog signaling pathways are being considered as novel therapeutic targets for TNBC.",
         "annotations": [
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "complex disease",
                 "db": "MESH",
                 "id": "D020412",
-                "entry_name": "Multifactorial Inheritance"
+                "entry_name": "Multifactorial Inheritance",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "researchers",
                 "db": "MESH",
                 "id": "D012108",
-                "entry_name": "Research Personnel"
+                "entry_name": "Research Personnel",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "physicians",
                 "db": "MESH",
                 "id": "D010820",
-                "entry_name": "Physicians"
+                "entry_name": "Physicians",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "triple negative breast cancer",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "DNA",
                 "db": "CHEBI",
                 "id": "CHEBI:16991",
-                "entry_name": "deoxyribonucleic acid"
+                "entry_name": "deoxyribonucleic acid",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "platinum",
                 "db": "CHEBI",
                 "id": "CHEBI:33364",
-                "entry_name": "platinum"
+                "entry_name": "platinum",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "EGFR",
                 "db": "HGNC",
                 "id": "3236",
-                "entry_name": "EGFR"
+                "entry_name": "EGFR",
+                "score": 1.0
             },
             {
+                "matched_text": "VEGF",
                 "db": "FPLX",
                 "id": "VEGF",
-                "entry_name": "VEGF"
+                "entry_name": "VEGF",
+                "score": 1.0
             },
             {
+                "matched_text": "inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:35222",
-                "entry_name": "inhibitor"
+                "entry_name": "inhibitor",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "PARP inhibitors",
                 "db": "CHEBI",
                 "id": "CHEBI:62913",
-                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor"
+                "entry_name": "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "NOTCH",
                 "db": "FPLX",
                 "id": "Notch",
-                "entry_name": "Notch"
+                "entry_name": "Notch",
+                "score": 1.0
             },
             {
+                "matched_text": "Hedgehog signaling pathways",
                 "db": "GO",
                 "id": "GO:0007224",
-                "entry_name": "smoothened signaling pathway"
+                "entry_name": "smoothened signaling pathway",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "therapeutic",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     },
@@ -1832,134 +2518,186 @@
         "text": "The key to developing targeted therapies for TNBC will depend on understanding the molecular mechanism for the development of these cancers. There are seminal studies by Hosey et al. and by our group (unpublished results) on the possible molecular mechanisms of BRCA1 dysfunction which could result in ER negative breast cancers. Recently Ubc9, a sole SUMO-E2-conjugating enzyme for sumoylation was found to bind BRCA1 proteins and ferry it to the nucleus unlike disease associated mutant BRCA1 proteins. Over expression of Ubc9 was observed in breast tumours and TNBC cell lines. BRCA1 function-based cellular assays have been designed to detect loss of binding to Ubc9 by BRCA1 mutants (Patent number US 8,372,580). These assays not only predict the risk for developing TNBC but may also lead to the development of targeted therapies for hereditary and sporadic TNBC.",
         "annotations": [
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "understanding",
                 "db": "MESH",
                 "id": "D032882",
-                "entry_name": "Comprehension"
+                "entry_name": "Comprehension",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "al",
                 "db": "CHEBI",
                 "id": "CHEBI:28984",
-                "entry_name": "aluminium atom"
+                "entry_name": "aluminium atom",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "ER",
                 "db": "FPLX",
                 "id": "ESR",
-                "entry_name": "ESR"
+                "entry_name": "ESR",
+                "score": 1.0
             },
             {
+                "matched_text": "breast cancers",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "Ubc9",
                 "db": "HGNC",
                 "id": "12485",
-                "entry_name": "UBE2I"
+                "entry_name": "UBE2I",
+                "score": 0.5023706452277881
             },
             {
+                "matched_text": "enzyme",
                 "db": "MESH",
                 "id": "D004798",
-                "entry_name": "Enzymes"
+                "entry_name": "Enzymes",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "sumoylation",
                 "db": "GO",
                 "id": "GO:0016925",
-                "entry_name": "protein sumoylation"
+                "entry_name": "protein sumoylation",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "BRCA1 proteins",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "nucleus",
                 "db": "GO",
                 "id": "GO:0005634",
-                "entry_name": "nucleus"
+                "entry_name": "nucleus",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "disease",
                 "db": "MESH",
                 "id": "D004194",
-                "entry_name": "Disease"
+                "entry_name": "Disease",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "BRCA1 proteins",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 0.549371263656978
             },
             {
+                "matched_text": "Ubc9",
                 "db": "HGNC",
                 "id": "12485",
-                "entry_name": "UBE2I"
+                "entry_name": "UBE2I",
+                "score": 0.5023706452277881
             },
             {
+                "matched_text": "breast tumours",
                 "db": "MESH",
                 "id": "D001943",
-                "entry_name": "Breast Neoplasms"
+                "entry_name": "Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "Ubc9",
                 "db": "HGNC",
                 "id": "12485",
-                "entry_name": "UBE2I"
+                "entry_name": "UBE2I",
+                "score": 0.5023706452277881
             },
             {
+                "matched_text": "BRCA1",
                 "db": "HGNC",
                 "id": "1100",
-                "entry_name": "BRCA1"
+                "entry_name": "BRCA1",
+                "score": 1.0
             },
             {
+                "matched_text": "Patent",
                 "db": "MESH",
                 "id": "D020490",
-                "entry_name": "Patent"
+                "entry_name": "Patent",
+                "score": 0.7777777777777778
             },
             {
+                "matched_text": "risk",
                 "db": "MESH",
                 "id": "D012306",
-                "entry_name": "Risk"
+                "entry_name": "Risk",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             },
             {
+                "matched_text": "therapies",
                 "db": "MESH",
                 "id": "D013812",
-                "entry_name": "Therapeutics"
+                "entry_name": "Therapeutics",
+                "score": 0.5400948258091115
             },
             {
+                "matched_text": "sporadic",
                 "db": "HP",
                 "id": "HP:0003745",
-                "entry_name": "Sporadic"
+                "entry_name": "Sporadic",
+                "score": 0.7623170480313337
             },
             {
+                "matched_text": "TNBC",
                 "db": "MESH",
                 "id": "D064726",
-                "entry_name": "Triple Negative Breast Neoplasms"
+                "entry_name": "Triple Negative Breast Neoplasms",
+                "score": 0.5555555555555556
             }
         ]
     }

@@ -158,6 +158,7 @@ dmypy.json
 cython_debug/
 
 junk/
+main_scripts/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

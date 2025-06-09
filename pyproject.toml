@@ -4,10 +4,10 @@ requires      = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name            = "textToKnowledgeGraph"
-version         = "0.2.8"
+name            = "texttoknowledgegraph"
+version         = "0.3.3"
 description     = "A Python package to generate BEL statements and CX2 networks."
-readme          = { file = "textToKnowledgeGraph/README.md", content-type = "text/markdown" }
+readme          = "textToKnowledgeGraph/README.md"
 requires-python = ">=3.11"
 
 authors = [
@@ -21,6 +21,7 @@ dependencies = [
   "lxml==5.2.1",
   "ndex2>=3.8.0,<4.0.0",
   "pandas",
+  "openai==1.79.0",
   "pydantic==2.11.4",
   "pytest==7.4.4",
   "python-dotenv==1.1.0",
@@ -44,7 +45,7 @@ Homepage = "https://github.com/ndexbio/llm-text-to-knowledge-graph"
 # ────────── setuptools-specific knobs ──────────
 [tool.setuptools]
 packages             = { find = {} }
-include-package-data = false       # we list data files explicitly
+include-package-data = true       
 
 [tool.setuptools.package-data]
 "textToKnowledgeGraph" = ["*.txt", "*.json"]

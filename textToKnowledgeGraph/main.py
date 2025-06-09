@@ -9,7 +9,7 @@ from .convert_to_cx2 import convert_to_cx2
 from .pub import get_pubtator_paragraphs, download_pubtator_xml, fetch_metadata_via_eutils
 from .process_text_file import process_paper
 from .grounding_genes import annotate_paragraphs_in_json, process_annotations
-from .sentence_level_extraction import llm_ann_processing
+from .sentence_level_extraction import llm_bel_processing
 from .indra_download_extract import save_to_json, setup_output_directory
 from .transform_bel_statements import process_llm_results
 
@@ -24,7 +24,14 @@ def validate_pmc_id(pmc_id):
         raise ValueError("Invalid PMC ID format. It should start with 'PMC' followed by digits.")
 
 
-def process_pmc_document(pmc_id, api_key, ndex_email=None, ndex_password=None, style_path=None, upload_to_ndex=False):
+def process_pmc_document(pmc_id, 
+                         api_key, 
+                         ndex_email=None, 
+                         ndex_password=None, 
+                         style_path=None, 
+                         upload_to_ndex=False,
+                         prompt_file="prompt_file_v7.txt",
+                         prompt_identifier="general prompt"):
     """
     Process a document given a PMC ID.
     Steps:
@@ -56,7 +63,8 @@ def process_pmc_document(pmc_id, api_key, ndex_email=None, ndex_password=None, s
         save_to_json(annotated_paragraphs, annotated_filename, output_dir)
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
-        llm_results = llm_ann_processing(annotated_paragraphs, api_key)
+        llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
+                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
 
@@ -107,6 +115,8 @@ def process_pmc_document(pmc_id, api_key, ndex_email=None, ndex_password=None, s
 def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=None, 
                           ndex_email=None, 
                           ndex_password=None, 
+                          prompt_file="prompt_file_v7.txt",
+                          prompt_identifier="general prompt",
                           style_path=None, upload_to_ndex=False):
     """
     Process a document given a file path (PDF or TXT).
@@ -134,7 +144,8 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
         save_to_json(annotated_paragraphs, annotated_filename, output_dir)
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
-        llm_results = llm_ann_processing(annotated_paragraphs, api_key)
+        llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
+                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
 
@@ -198,6 +209,8 @@ def main(
     ndex_password=None,
     style_path=None,
     upload_to_ndex=False,
+    prompt_file="prompt_file_v7.txt",
+    prompt_identifier="general prompt",
     custom_name=None,
     pmid_for_file=None
 ):
@@ -225,7 +238,9 @@ def main(
             ndex_email=ndex_email,
             ndex_password=ndex_password,
             style_path=style_path,
-            upload_to_ndex=upload_to_ndex
+            upload_to_ndex=upload_to_ndex,
+            prompt_file=prompt_file,
+            prompt_identifier=prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -243,7 +258,9 @@ def main(
             style_path=style_path,
             upload_to_ndex=upload_to_ndex,
             custom_name=custom_name,
-            pmid_or_pmcid=pmid_for_file
+            pmid_or_pmcid=pmid_for_file,
+            prompt_file=prompt_file,
+            prompt_identifier=prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for file: {pdf_path}")
@@ -261,7 +278,9 @@ def main(
             style_path=style_path,
             upload_to_ndex=upload_to_ndex,
             custom_name=custom_name,
-            pmid_or_pmcid=pmid_for_file
+            pmid_or_pmcid=pmid_for_file,
+            prompt_file=prompt_file,
+            prompt_identifier=prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for file: {txt_path}")
@@ -324,6 +343,16 @@ def cli() -> None:
         help="Set this flag to upload the CX2 network to NDEx."
     )
     parser.add_argument(
+        "--prompt_file",
+        type=str,
+        default="prompt_file_v7.txt",
+        help="Path to a custom LLM prompt file (defaults to prompt_file_v7.txt)")
+    parser.add_argument(
+        "--prompt_id",
+        type=str,
+        default="general prompt",
+        help="Block identifier inside the prompt file.")
+    parser.add_argument(
         "--style_path",
         type=str,
         default=default_style_path,
@@ -382,7 +411,9 @@ def cli() -> None:
             style_path=args.style_path,
             upload_to_ndex=args.upload_to_ndex,
             custom_name=args.custom_name,
-            pmid_for_file=args.pmid_for_file
+            pmid_for_file=args.pmid_for_file,
+            prompt_file=args.prompt_file,
+            prompt_identifier=args.prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for PDF: {pdf_path}")
@@ -399,7 +430,9 @@ def cli() -> None:
             style_path=args.style_path,
             upload_to_ndex=args.upload_to_ndex,
             custom_name=args.custom_name,
-            pmid_for_file=args.pmid_for_file
+            pmid_for_file=args.pmid_for_file,
+            prompt_file=args.prompt_file,
+            prompt_identifier=args.prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for TXT: {txt_path}")
