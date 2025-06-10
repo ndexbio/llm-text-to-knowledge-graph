@@ -70,65 +70,65 @@ def process_pmc_document(
       5. Process annotations to generate node URLs.
       6. Convert results to a CX2 network and optionally upload to NDEx.
     """
-    try:
-        validate_pmc_id(pmc_id)
-        logger.info(f"Setting up output directory for {pmc_id}")
-        output_dir = setup_output_directory(pmc_id)
 
-        file_path = download_pubtator_xml(pmc_id, output_dir)
-        if not file_path:
-            logger.error("Aborting process due to download failure.")
-            return None
+    validate_pmc_id(pmc_id)
+    logger.info(f"Setting up output directory for {pmc_id}")
+    output_dir = setup_output_directory(pmc_id)
 
-        logger.info("Processing xml file to get text paragraphs")
-        paragraphs = get_pubtator_paragraphs(file_path)
-        annotated_paragraphs = annotate_paragraphs_in_json(paragraphs)
-        # json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
+    file_path = download_pubtator_xml(pmc_id, output_dir)
+    if not file_path:
+        logger.error("Aborting process due to download failure.")
+        return None
 
-        logger.info("Processing paragraphs with LLM-BEL model")
-        llm_results = llm_bel_processing(annotated_paragraphs, prompt_file=prompt_file,
-                                         prompt_identifier=prompt_identifier, api_key=api_key)
-        # json.dump({'action': 'llmResults', 'data': llm_results}, sys.stdout, indent=2)
+    logger.info("Processing xml file to get text paragraphs")
+    paragraphs = get_pubtator_paragraphs(file_path)
+    annotated_paragraphs = annotate_paragraphs_in_json(paragraphs)
+    # json.dump({'action': 'paragraphs', 'data': paragraphs}, sys.stdout, indent=2)
 
-        logging.info("Processing annotations to extract node URLs")
-        processed_annotations = process_annotations(llm_results)
+    logger.info("Processing paragraphs with LLM-BEL model")
+    llm_results = llm_bel_processing(annotated_paragraphs, prompt_file=prompt_file,
+                                     prompt_identifier=prompt_identifier, api_key=api_key)
+    # json.dump({'action': 'llmResults', 'data': llm_results}, sys.stdout, indent=2)
 
-        logger.info("Processing LLM results to generate CX2 network")
-        extracted_results = process_llm_results(llm_results)
-        cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
+    logging.info("Processing annotations to extract node URLs")
+    processed_annotations = process_annotations(llm_results)
 
-        # cytoscape web fails if network lacks network attributes so adding name
-        # Fetch metadata for the publication
-        metadata = fetch_metadata_via_eutils(pmc_id)
-        first_author_last = "Unknown"
-        if metadata['authors']:
-            # Use the last token of the first author's name (e.g. "Lu" from "Wen‐Cheng Lu")
-            first_author_last = metadata['authors'][0].split()[-1]
-        pmid_str = metadata['pmid'] or "UnknownPMID"
+    logger.info("Processing LLM results to generate CX2 network")
+    extracted_results = process_llm_results(llm_results)
+    cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
 
-        # Build description with a blank line between title and abstract
-        description_val = f"{metadata['title']}\n\n{metadata['abstract']}"
+    # cytoscape web fails if network lacks network attributes so adding name
+    # Fetch metadata for the publication
+    metadata = fetch_metadata_via_eutils(pmc_id)
+    first_author_last = "Unknown"
+    if metadata['authors']:
+        # Use the last token of the first author's name (e.g. "Lu" from "Wen‐Cheng Lu")
+        first_author_last = metadata['authors'][0].split()[-1]
+    pmid_str = metadata['pmid'] or "UnknownPMID"
 
-        # Build reference: if DOI is available, create an HTML snippet with a clickable DOI; otherwise, just show PMID.
-        doi_str = metadata.get('doi')
-        journal_str = metadata.get('journal', 'Unknown Journal')
-        if doi_str:
-            reference_val = (
-                f"<div>{first_author_last} et al.</div>"
-                f"<div><b>{journal_str}</b></div>"
-                f"<div><span><a href=\"https://doi.org/{doi_str}\" target=\"_blank\">doi: {doi_str}</a></span></div>"
-            )
-        else:
-            reference_val = f"PMID: {pmid_str}"
+    # Build description with a blank line between title and abstract
+    description_val = f"{metadata['title']}\n\n{metadata['abstract']}"
 
-        # Set network attributes accordingly:
-        cx2_network.set_network_attributes({
-            "name": f"{first_author_last} et al.: {pmid_str}",
-            "description": description_val,
-            "reference": reference_val
-        })
-        logger.info(f"Processing completed successfully for {pmc_id}.")
-        return cx2_network
+    # Build reference: if DOI is available, create an HTML snippet with a clickable DOI; otherwise, just show PMID.
+    doi_str = metadata.get('doi')
+    journal_str = metadata.get('journal', 'Unknown Journal')
+    if doi_str:
+        reference_val = (
+            f"<div>{first_author_last} et al.</div>"
+            f"<div><b>{journal_str}</b></div>"
+            f"<div><span><a href=\"https://doi.org/{doi_str}\" target=\"_blank\">doi: {doi_str}</a></span></div>"
+        )
+    else:
+        reference_val = f"PMID: {pmid_str}"
+
+    # Set network attributes accordingly:
+    cx2_network.set_network_attributes({
+        "name": f"{first_author_last} et al.: {pmid_str}",
+        "description": description_val,
+        "reference": reference_val
+    })
+    logger.info(f"Processing completed successfully for {pmc_id}.")
+    return cx2_network
 
 
 def main(pmc_ids, api_key, tempdir='/tmp', style_path=None,
