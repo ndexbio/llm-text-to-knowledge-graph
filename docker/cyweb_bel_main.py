@@ -94,7 +94,7 @@ def process_pmc_document(
     processed_annotations = process_annotations(llm_results)
 
     logger.info("Processing LLM results to generate CX2 network")
-    extracted_results = process_llm_results(llm_results)
+    extracted_results = process_llm_results(processed_annotations)
     cx2_network = convert_to_cx2(extracted_results, style_path=style_path)
 
     # cytoscape web fails if network lacks network attributes so adding name
