@@ -52,10 +52,18 @@ def llm_bel_processing(paragraphs, api_key,
     for index, paragraph_info in paragraphs.items():
         sentence = paragraph_info['text']
         annotations = paragraph_info.get('annotations', [])  # Default to empty list if no annotations
+        # Clean annotations to ensure they have 'db' and 'entry_name'
+        clean_annotations = [
+            {"db": ann["db"], "entry_name": ann["entry_name"]}
+            for ann in annotations
+            if "db" in ann and "entry_name" in ann
+        ]
+        # Invoke the BEL extraction chain with the sentence and cleaned annotations
         results = bel_extraction_chain.invoke({
             "text": sentence,
-            "annotations": annotations
+            "annotations": clean_annotations
         })
+
         llm_results["LLM_extractions"].append({
             "Index": index,
             "text": sentence,
@@ -66,5 +74,5 @@ def llm_bel_processing(paragraphs, api_key,
     end_time = time.time()
     elapsed_time = end_time - start_time
     elapsed_minutes = elapsed_time / 60
-    logger.info(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
+    print(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
     return llm_results

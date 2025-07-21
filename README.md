@@ -2,6 +2,8 @@
 
 A Python package to generate BEL statements and CX2 networks from scientific text.
 
+textToKnowledgeGraph is also available as a service-based App for Cytoscape Web! [How-To for Cytoscape Web](cytoscape_web_how_to.md) 
+
 ## Table of Contents
 
 - [Project Description](#project-description)

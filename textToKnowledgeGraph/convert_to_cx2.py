@@ -8,12 +8,35 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def extract_label(bel_expression):
+def extract_label(bel_expression: str) -> str:
     """
-    Extracts the core name from a BEL expression.
+    Extract a human-friendly label from a BEL expression.
+    Handles nested functions: multiple terms, modifications, locations.
+    Joins all found names with commas.
     """
-    match = re.search(r':[\"\']?([^\"\']+)[\"\']?\)', bel_expression)
-    return match.group(1) if match else bel_expression
+    # Find all namespace:value terms, with or without quotes
+    ns_terms = re.findall(r':[\"\']?([^\"\')]+)[\"\']?', bel_expression)
+
+    # Find protein modifications, if any
+    mods = re.findall(r'pmod\(([a-zA-Z]+)', bel_expression)
+
+    # Find location names, if any
+    locs = re.findall(r'loc\([a-zA-Z]+:([^\)]+)\)', bel_expression)
+    locs = [loc.replace('"', '').replace("'", "") for loc in locs]
+
+    # Collect parts
+    parts = []
+    if ns_terms:
+        parts.extend([t.strip() for t in ns_terms])
+    if mods:
+        parts.extend(mods)
+    if locs:
+        parts.extend(locs)
+
+    # Join all parts with commas
+    if parts:
+        return ', '.join(parts)
+    return bel_expression
 
 
 def extract_type(bel_expression):

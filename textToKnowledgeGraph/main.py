@@ -348,7 +348,7 @@ def cli() -> None:
         default="prompt_file_v7.txt",
         help="Path to a custom LLM prompt file (defaults to prompt_file_v7.txt)")
     parser.add_argument(
-        "--prompt_id",
+        "--prompt_identifier",
         type=str,
         default="general prompt",
         help="Block identifier inside the prompt file.")
@@ -394,7 +394,9 @@ def cli() -> None:
             ndex_email=args.ndex_email,
             ndex_password=args.ndex_password,
             style_path=args.style_path,
-            upload_to_ndex=args.upload_to_ndex
+            upload_to_ndex=args.upload_to_ndex,
+            prompt_file=args.prompt_file,
+            prompt_identifier=args.prompt_identifier
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -411,7 +413,7 @@ def cli() -> None:
             style_path=args.style_path,
             upload_to_ndex=args.upload_to_ndex,
             custom_name=args.custom_name,
-            pmid_for_file=args.pmid_for_file,
+            pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
             prompt_identifier=args.prompt_identifier
         )
@@ -430,7 +432,7 @@ def cli() -> None:
             style_path=args.style_path,
             upload_to_ndex=args.upload_to_ndex,
             custom_name=args.custom_name,
-            pmid_for_file=args.pmid_for_file,
+            pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
             prompt_identifier=args.prompt_identifier
         )

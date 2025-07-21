@@ -1,0 +1,3877 @@
+{
+    "1": {
+        "text": "Vascular leakage is one of the salient characteristics of severe dengue. Nonstructural protein 1 (NS1) of dengue virus (DENV) can stimulate endothelial cells to secrete endothelial hyperpermeability factor, macrophage migration inhibitory factor (MIF), and the glycocalyx degradation factor heparanase 1 (HPA-1). However, it is unclear whether MIF is directly involved in NS1-induced glycocalyx degradation. In this study, we observed that among NS1, MIF and glycocalyx degradation-related molecules, the HPA-1, metalloproteinase 9 (MMP-9) and syndecan 1 (CD138) serum levels were all increased in dengue patients, and only NS1 and MIF showed a positive correlation with the CD138 level in severe patients. To further characterize and clarify the relationship between MIF and CD138, we used recombinant NS1 to stimulate human cells in vitro and challenge mice in vivo. Our tabulated results suggested that NS1 stimulation could induce human endothelial cells to secrete HPA-1 and immune cells to secrete MMP-9, resulting in endothelial glycocalyx degradation and hyperpermeability. Moreover, HPA-1, MMP-9, and CD138 secretion after NS1 stimulation was blocked by MIF inhibitors or antibodies both in vitro and in mice. Taken together, these results suggest that MIF directly engages in dengue NS1-induced glycocalyx degradation and that targeting MIF may represent a possible therapeutic approach for preventing dengue-induced vascular leakage.",
+        "annotations": [
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D003716",
+                "entry_name": "Dengue Virus"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25367",
+                "entry_name": "molecule"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "MESH",
+                "id": "D045726",
+                "entry_name": "Metalloproteases"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012828",
+                "entry_name": "Severe"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D006801",
+                "entry_name": "Humans"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D006801",
+                "entry_name": "Humans"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:91214",
+                "entry_name": "macrophage migration inhibitory factor inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D013812",
+                "entry_name": "Therapeutics"
+            }
+        ]
+    },
+    "2": {
+        "text": "Dengue virus (DENV) is a flavivirus that infects approximately 390 million people and causes 500,000 infections requiring hospitalization every year, with an associated mortality rate of 2.5%. DENV infection usually causes a flu-like illness, known as dengue fever (DF), which is associated with high-grade fever and joint pain. Most dengue patients recover without hospitalization, but in some cases, patients develop potentially deadly complications called dengue hemorrhagic fever or dengue shock syndrome (DHF/DSS). According to the latest guidelines from the World Health Organization (WHO), dengue severity can be classified into dengue with or without warning signs and severe dengue. One of the main characteristics of DHF/DSS or severe dengue is plasma leakage. The increase in vascular permeability is the primary cause of plasma leakage, which finally causes hypotension and circulatory collapse. Because the mechanism underlying vascular hyperpermeability during DENV infection is not yet fully understood, and no specific approved treatments are available; only supporting treatments, such as fluid therapy, are available.",
+        "annotations": [
+            {
+                "db": "MESH",
+                "id": "D003716",
+                "entry_name": "Dengue Virus"
+            },
+            {
+                "db": "MESH",
+                "id": "D005416",
+                "entry_name": "Flavivirus"
+            },
+            {
+                "db": "EFO",
+                "id": "0000544",
+                "entry_name": "infection"
+            },
+            {
+                "db": "MESH",
+                "id": "D006760",
+                "entry_name": "Hospitalization"
+            },
+            {
+                "db": "MESH",
+                "id": "D009026",
+                "entry_name": "Mortality"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "2771",
+                "entry_name": "CFD"
+            },
+            {
+                "db": "MESH",
+                "id": "D005334",
+                "entry_name": "Fever"
+            },
+            {
+                "db": "MESH",
+                "id": "D018771",
+                "entry_name": "Arthralgia"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D006760",
+                "entry_name": "Hospitalization"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "DOID",
+                "id": "DOID:0050125",
+                "entry_name": "dengue shock syndrome"
+            },
+            {
+                "db": "MESH",
+                "id": "D014944",
+                "entry_name": "World Health Organization"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012824",
+                "entry_name": "Severity"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D010949",
+                "entry_name": "Plasma"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "MESH",
+                "id": "D010949",
+                "entry_name": "Plasma"
+            },
+            {
+                "db": "MESH",
+                "id": "D007022",
+                "entry_name": "Hypotension"
+            },
+            {
+                "db": "MESH",
+                "id": "D012769",
+                "entry_name": "Shock"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D013812",
+                "entry_name": "Therapeutics"
+            },
+            {
+                "db": "MESH",
+                "id": "D013812",
+                "entry_name": "Therapeutics"
+            },
+            {
+                "db": "MESH",
+                "id": "D005440",
+                "entry_name": "Fluid Therapy"
+            }
+        ]
+    },
+    "3": {
+        "text": "An increase in endothelial permeability is frequently associated with the degradation of the endothelial glycocalyx. Under normal physiological conditions, the glycocalyx acts as a barrier that controls numerous physiological processes, especially preventing the adhesion of leucocytes and platelets to the vessel walls. Degradation of the endothelial glycocalyx correlates to several vascular pathologies, including sepsis. Shedding of the endothelial glycocalyx is related to the activation of a heparan sulfate-specific heparanase, HPA-1. Activated HPA-1 enhances shedding of the transmembrane heparan sulfate proteoglycan syndecan-1 (CD138) and elevates the level of CD138 in the bloodstream. In addition, matrix metalloproteinases (MMPs) are capable of digesting many types of extracellular matrix, including the endothelial glycocalyx. Glycocalyx degradation is strongly associated with severe plasma leakage in dengue patients. However, the mechanisms causing glycocalyx degradation during DENV infection are not fully understood.",
+        "annotations": [
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0008150",
+                "entry_name": "biological_process"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0007155",
+                "entry_name": "cell adhesion"
+            },
+            {
+                "db": "MESH",
+                "id": "D001792",
+                "entry_name": "Blood Platelets"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "MESH",
+                "id": "D010336",
+                "entry_name": "Pathology"
+            },
+            {
+                "db": "MESH",
+                "id": "D018805",
+                "entry_name": "Sepsis"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:24500",
+                "entry_name": "heparan"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0016020",
+                "entry_name": "membrane"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:24499",
+                "entry_name": "heparan sulfate proteoglycan"
+            },
+            {
+                "db": "MESH",
+                "id": "D053668",
+                "entry_name": "Syndecan-1"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D045726",
+                "entry_name": "Metalloproteases"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0031012",
+                "entry_name": "extracellular matrix"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012828",
+                "entry_name": "Severe"
+            },
+            {
+                "db": "MESH",
+                "id": "D010949",
+                "entry_name": "Plasma"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            }
+        ]
+    },
+    "4": {
+        "text": "Recently, DENV nonstructural protein 1 (NS1) was found to play an important role in the pathogenesis of DENV-induced vascular leakage. In addition, NS1 can induce the expression and activation of HPA-1, leading to endothelial glycocalyx degradation and hyperpermeability. In our previous study, we found that DENV NS1 can increase vascular permeability through macrophage migration inhibitory factor (MIF)-induced autophagy. MIF is a chemokine-like inflammatory cytokine that binds to cell surface receptors (CD74 and/or CXCR2/4/7) and activates downstream signals, such as MAPK/ERK, to modulate inflammatory and immune responses. DENV infection can induce MIF secretion, and the concentration of MIF is positively correlated with dengue severity. Furthermore, DENV infection-induced disease was found to be less severe in MIF knockout (Mif-/-) mice than in normal mice. However, it is unclear whether MIF is directly involved in NS1-induced glycocalyx degradation. To address this question, we studied the effects of NS1 on the secretion of MIF, HPA-1, MMP-9, and CD138 both in vitro and in vivo. We found that the levels of MIF, HPA-1, MMP-9, and CD138 were all increased in the serum of dengue patients. Similar results were found both in vitro and in vivo after recombinant NS1 challenge. Most importantly, the NS1-induced increases in HPA-1, MMP-9, and CD138 were all inhibited in the presence of MIF inhibitors or antibodies both in vitro and in vivo, indicating that NS1-induced MIF secretion may play an important role in the pathogenesis of DENV NS1-induced glycocalyx degradation and vascular leakage.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0001897",
+                "entry_name": "cytolysis by symbiont of host cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0006914",
+                "entry_name": "autophagy"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D016207",
+                "entry_name": "Cytokines"
+            },
+            {
+                "db": "HGNC",
+                "id": "1697",
+                "entry_name": "CD74"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0006955",
+                "entry_name": "immune response"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012824",
+                "entry_name": "Severity"
+            },
+            {
+                "db": "MESH",
+                "id": "D004194",
+                "entry_name": "Disease"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012828",
+                "entry_name": "Severe"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "MESH",
+                "id": "D019484",
+                "entry_name": "Address"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:91214",
+                "entry_name": "macrophage migration inhibitory factor inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0001897",
+                "entry_name": "cytolysis by symbiont of host cells"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            }
+        ]
+    },
+    "5": {
+        "text": "The concentrations of NS1 and glycocalyx degradation-related molecules in serum samples from healthy donors and dengue patients were measured by ELISA. The concentrations of NS1 and HPA-1 were increased in both dengue patients with warning signs and severe dengue patients. The concentrations of MMP-9 were also significantly elevated in dengue patients with warning signs but not in severe dengue patients. The concentrations of CD138 and MIF were significantly elevated in the serum of severe dengue patients compared to dengue patients with warning signs. To further elucidate the correlation between CD138 and the other molecules, the serum concentrations of NS1, MIF, HPA-1 and MMP-9 in severe dengue patients were plotted against the concentration of CD138. Only NS1 and MIF showed a positive correlation with CD138 in the sera of severe dengue patients. Additionally, the viral load of severe dengue patients did not show a significantly positive correlation with any factor mentioned above. These results suggest that NS1 and MIF may play important roles in CD138 shedding in severe dengue patients.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25367",
+                "entry_name": "molecule"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0032322",
+                "entry_name": "Healthy"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D004797",
+                "entry_name": "Enzyme-Linked Immunosorbent Assay"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25367",
+                "entry_name": "molecule"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "8923",
+                "entry_name": "PHGDH"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019562",
+                "entry_name": "Viral Load"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:50906",
+                "entry_name": "role"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            }
+        ]
+    },
+    "6": {
+        "text": "According to a previous study, NS1 can induce endothelial cells to secrete HPA-1 to disrupt the endothelial glycocalyx, and this disruption is characterized by CD138 shedding. To further investigate the underlying mechanism of NS1-induced HPA-1 secretion, human umbilical vein endothelial cells (HUVECs) were stimulated with NS1 for various durations. The results show that CD138 was significantly increased in cell culture medium after 24 h of NS1 treatment. To confirm that this effect was induced by NS1, anti-NS1 monoclonal antibody (mAb) was used to block the effect of NS1. Anti-NS1 mAb 2E8, which can inhibit NS1-induced vascular leakage, was able to inhibit NS1-induced CD138 shedding. In contrast, another anti-NS1 mAb (DN5C6), which was used as a negative control, failed to inhibit NS1-induced CD138 shedding from endothelial cells. NS1 stimulation also increased the active HPA-1 level in endothelial cell lysates, which was abolished by mAb 2E8 but not control mouse IgG. To confirm that HPA-1 is involved in NS1-induced endothelial hyperpermeability and CD138 shedding, recombinant HPA-1 protein and the HPA-1 inhibitor OGT 2115 were used. Inoculating the mice with native but not heat-denatured recombinant HPA-1 directly induced vascular leakage. Furthermore, cotreatment with OGT 2115 attenuated NS1-induced endothelial hyperpermeability and reduced CD138 release to levels similar to those of the phosphate-buffered saline (PBS) control in vitro.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D061307",
+                "entry_name": "Human Umbilical Vein Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D000911",
+                "entry_name": "Antibodies, Monoclonal"
+            },
+            {
+                "db": "EFO",
+                "id": "0005067",
+                "entry_name": "block"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D051379",
+                "entry_name": "Mice"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0071735",
+                "entry_name": "IgG immunoglobulin complex"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:64955",
+                "entry_name": "EC 3.2.1.166 (heparanase) inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "8127",
+                "entry_name": "OGT"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "8127",
+                "entry_name": "OGT"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "EFO",
+                "id": "0002677",
+                "entry_name": "saline"
+            }
+        ]
+    },
+    "7": {
+        "text": "In addition to HPA-1, MIF is also capable of inducing endothelial hyperpermeability. As a result, the MIF concentration in the conditioned medium obtained from NS1-stimulated HUVECs was measured. The result shows that 10 \u03bcg/ml NS1 was sufficient to induce MIF secretion. Furthermore, the conditioned medium obtained from NS1-stimulated HUVECs could induce endothelial hyperpermeability and CD138 shedding after incubation with another HUVEC monolayer. To clarify which protein mediates NS1-induced endothelial hyperpermeability and CD138 shedding, MIF-blocking antibodies, the HPA-1 inhibitor OGT 2115 and NS1-blocking antibodies were used. The results show that both the anti-MIF antibodies and OGT 2115 attenuated NS1-stimulated conditioned medium-induced HUVEC hyperpermeability and CD138 shedding. Interestingly, the NS1-blocking antibody 2E8 only partially diminished the conditioned medium-induced HUVEC hyperpermeability but not the conditioned medium-induced HUVEC CD138 shedding. Cotreatment with MIF inhibitors (anti-MIF antibodies, ISO-1, and p425) and NS1 also attenuated the NS1-induced HPA-1 secretion and CD138 shedding of endothelial cells. In addition, we also visualized the HPA-1 expression, CD138 deposition and sialic acid expression using immunofluorescence with anti-HPA antibodies, anti-CD138 antibodies and wheat germ agglutinin (WGA) lectin which can bind to sialic acids and other sugars such as N-acetylglucosamine. NS1-induced HPA-1 expression, CD138 deposition and sialic acid degradation could also be rescued by MIF inhibition. However, the HPA-1 inhibitor OGT 2115 failed to affect MIF secretion, suggested that MIF is the upstream effector of HPA-1. To further clarify this hypothesis, recombinant MIF was used. The results show that MIF increased CD138 shedding and the active HPA-1 level in HUVECs. The increased HPA-1 expression and CD138 deposition after MIF stimulation could also be observed by immunofluorescence. These results indicate that NS1 can induce the MIF-mediated secretion of active HPA-1, leading to endothelial glycocalyx degradation.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D017077",
+                "entry_name": "Culture Media, Conditioned"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D017077",
+                "entry_name": "Culture Media, Conditioned"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D061307",
+                "entry_name": "Human Umbilical Vein Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:64955",
+                "entry_name": "EC 3.2.1.166 (heparanase) inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "8127",
+                "entry_name": "OGT"
+            },
+            {
+                "db": "HGNC",
+                "id": "8127",
+                "entry_name": "OGT"
+            },
+            {
+                "db": "MESH",
+                "id": "D061307",
+                "entry_name": "Human Umbilical Vein Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D061307",
+                "entry_name": "Human Umbilical Vein Endothelial Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D061307",
+                "entry_name": "Human Umbilical Vein Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:91214",
+                "entry_name": "macrophage migration inhibitory factor inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "14398",
+                "entry_name": "SRR"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:26667",
+                "entry_name": "sialic acid"
+            },
+            {
+                "db": "MESH",
+                "id": "D014909",
+                "entry_name": "Wheat Germ Agglutinins"
+            },
+            {
+                "db": "MESH",
+                "id": "D037102",
+                "entry_name": "Lectins"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:26667",
+                "entry_name": "sialic acid"
+            },
+            {
+                "db": "MESH",
+                "id": "D000073893",
+                "entry_name": "Sugars"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:59640",
+                "entry_name": "N-acetylglucosamine"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:26667",
+                "entry_name": "sialic acid"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:64955",
+                "entry_name": "EC 3.2.1.166 (heparanase) inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "8127",
+                "entry_name": "OGT"
+            },
+            {
+                "db": "MESH",
+                "id": "D000339",
+                "entry_name": "Affect"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:35224",
+                "entry_name": "effector"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            }
+        ]
+    },
+    "8": {
+        "text": "Since MMPs can degrade the endothelial glycocalyx and several MMPs are upregulated during DENV infection, we speculated that MMPs are involved in NS1-induced glycocalyx degradation. Because a previous study has indicated that an increase in circulating MMP-9 levels is associated with dengue disease severity, we first examined whether NS1 induces MMP-9 secretion. However, we found that NS1 barely induced MMP-9 secretion in HUVECs. Since MMPs are primarily secreted by leukocytes (white blood cells, WBCs), including neutrophils and monocytes, we tested whether NS1 could induce MMP secretion in human leukocytes, peripheral blood mononuclear cells (PBMCs), and THP-1 human monocytes. We found that NS1 induced MMP-9 secretion in freshly isolated leukocytes after 3 h of stimulation, an effect that was attenuated by the NS1-blocking antibody 2E8. Similarly, NS1 induced phorbol myristate acetate (PMA)-activated THP-1 cells to secrete MMP-9 after incubation for 3 h. However, neither MIF nor MMP-9 secretion was significantly induced in NS1-stimulated PBMCs compared to the controls. To obtain the secretion profile of MMPs, we used an MMP antibody array to analyze which MMPs were increased by NS1 in PMA-activated THP-1 cells and leukocytes. The results show that MMP-8, MMP-9, and TIMP-1 were increased in the culture medium of NS1-treated THP-1 cells and leukocytes. To confirm the activity of MMP-9, cell culture medium from NS1-treated PMA-activated THP-1 cells and leukocytes were analyzed using a gelatin zymography assay, which showed that NS1 induced both THP-1 cells and leukocytes to secrete pro-MMP-9 and activated MMP-9.",
+        "annotations": [
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012824",
+                "entry_name": "Severity"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D001773",
+                "entry_name": "Blood Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "MESH",
+                "id": "D009000",
+                "entry_name": "Monocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:1990773",
+                "entry_name": "matrix metallopeptidase secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D006801",
+                "entry_name": "Humans"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0030646",
+                "entry_name": "Peripheral"
+            },
+            {
+                "db": "MESH",
+                "id": "D001769",
+                "entry_name": "Blood"
+            },
+            {
+                "db": "EFO",
+                "id": "0001253",
+                "entry_name": "THP-1"
+            },
+            {
+                "db": "MESH",
+                "id": "D006801",
+                "entry_name": "Humans"
+            },
+            {
+                "db": "MESH",
+                "id": "D009000",
+                "entry_name": "Monocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:37537",
+                "entry_name": "phorbol 13-acetate 12-myristate"
+            },
+            {
+                "db": "EFO",
+                "id": "0008864",
+                "entry_name": "PMA"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "EFO",
+                "id": "0002698",
+                "entry_name": "array"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "7175",
+                "entry_name": "MMP8"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:5291",
+                "entry_name": "gelatin"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "C120487",
+                "entry_name": "pro-matrix metalloproteinase 9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            }
+        ]
+    },
+    "9": {
+        "text": "To test whether the NS1-induced MMP-9 secretion of THP-1 cells causes endothelial hyperpermeability, the supernatant from NS1-treated THP-1 cells was incubated with HUVECs, and both permeability and CD138 shedding were examined. The results show that after 3 h of treatment, the supernatant from NS1-treated THP-1 cells increased endothelial permeability. This phenomenon was attenuated in the presence of the MMP-2/MMP-9 inhibitor SB-3CT and the MMP-9-specific inhibitor MMP-9 inhibitor I. The supernatant from untreated or PBS-treated THP-1 cells did not alter endothelial permeability. Similarly, the supernatant from NS1-treated THP-1 cells also induced CD138 shedding from HUVECs, and this effect was diminished by SB-3CT and MMP-9 inhibitor I. Similar results were found for the supernatant obtained from NS1-stimulated leukocytes. The NS1-blocking antibody 2E8 was used to block NS1 remaining in the supernatant, and it did not alter the endothelial permeability induced by the supernatant, showing that the effect of NS1 remaining in the supernatant is negligible. These results indicate that NS1 can induce MMP-9 secretion in leukocytes, leading to endothelial barrier dysfunction.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "MESH",
+                "id": "C429533",
+                "entry_name": "SB 3CT compound"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:79088",
+                "entry_name": "EC 3.4.24.35 (gelatinase B) inhibitor"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "C429533",
+                "entry_name": "SB 3CT compound"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:79088",
+                "entry_name": "EC 3.4.24.35 (gelatinase B) inhibitor"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "EFO",
+                "id": "0005067",
+                "entry_name": "block"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            }
+        ]
+    },
+    "10": {
+        "text": "As MIF is a crucial mediator of NS1-induced vascular leakage and an upstream regulator of MMP-9, we tested whether NS1-induced MMP-9 secretion in leukocytes is also MIF dependent. First, we wanted to confirm whether NS1 induces the secretion of MIF from leukocytes and THP-1 cells. Since a previous study has shown that NS1 increases the expression of IL-6 and IL-8 in PBMCs, we also measured the concentrations of IL-6 and IL-8 after NS1 stimulation. The secretion of MIF from NS1-stimulated leukocytes steadily accumulated up to 2000 pg/ml. NS1 could also enhance the secretion of IL-6 and IL-8 from leukocytes, but the concentrations dropped rapidly after 3 h. However, in THP-1 cells, NS1 only enhanced the secretion of MIF, not IL-6 or IL-8. These results suggest that MIF is the major cytokine induced by the DENV NS1 stimulation of leukocytes and monocytes.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D016207",
+                "entry_name": "Cytokines"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D009000",
+                "entry_name": "Monocytes"
+            }
+        ]
+    },
+    "11": {
+        "text": "To clarify whether NS1-induced MMP-9 secretion is mediated by MIF, the MIF inhibitor p425 and MIF short-hairpin RNA (shRNA) were used. The ELISA results show that inhibiting MIF with its inhibitor p425 abolished NS1-induced MMP-9 secretion, while p425 alone did not affect MMP-9 secretion. Next, we used shRNA to knockdown MIF expression in THP-1 cells. Western blot analysis showed that the expression of MIF was diminished by shMIF compared to the shLuc scrambled control. Furthermore, the knockdown of MIF decreased NS1-induced MMP-9 secretion from THP-1 cells, and the culture supernatant from shMIF THP-1 cells failed to increase endothelial permeability or CD138 shedding. We also knocked down MIF expression in HUVECs and measured the permeability under NS1 stimulation as a comparison. Consistent with our previous study, the knockdown of MIF in HUVECs diminished NS1-induced endothelial hyperpermeability. These results suggest that MIF acts on both endothelial cells and leukocytes to mediate NS1-induced endothelial hyperpermeability.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:91214",
+                "entry_name": "macrophage migration inhibitory factor inhibitor"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:33697",
+                "entry_name": "ribonucleic acid"
+            },
+            {
+                "db": "MESH",
+                "id": "D004797",
+                "entry_name": "Enzyme-Linked Immunosorbent Assay"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D000339",
+                "entry_name": "Affect"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D000074084",
+                "entry_name": "THP-1 Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D010539",
+                "entry_name": "Permeability"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            }
+        ]
+    },
+    "12": {
+        "text": "To further confirm that NS1 can induce MIF, HPA-1, MMP-9 and CD138 secretion in vivo, we injected 50 \u03bcg of NS1 into the tail veins of mice, and blood samples were collected every 24 h. The concentrations of NS1, MIF, HPA-1, and MMP-9 were measured by ELISA. The results show that the peak concentration of NS1 in the plasma of mice after injection was approximately 0.75 \u03bcg/ml, which falls in the range of NS1 circulating in the bloodstream of DENV-infected patients, estimated as 0.01\u201350 \u03bcg/ml. The concentration of circulating NS1 in mice gradually decreased after the injection and was cleared from the plasma after 96 h. The MIF concentration increased 24 h after the injection, peaked at 72 h, and then dropped to basal levels after 96 h. The upregulation of HPA-1 occurred later than that of MIF, as it was significantly elevated after 48 h, but it also peaked at 72 h and then dropped to basal levels after 96 h. The secretion of MMP-9 did not increase until 72 h, and then it returned to basal levels at 96 h, exhibiting an increase over a relatively short period.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D013623",
+                "entry_name": "Tail"
+            },
+            {
+                "db": "MESH",
+                "id": "D014680",
+                "entry_name": "Veins"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "MESH",
+                "id": "D001769",
+                "entry_name": "Blood"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D004797",
+                "entry_name": "Enzyme-Linked Immunosorbent Assay"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D010949",
+                "entry_name": "Plasma"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "MESH",
+                "id": "D007267",
+                "entry_name": "Injections"
+            },
+            {
+                "db": "EFO",
+                "id": "0009631",
+                "entry_name": "fall"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "EFO",
+                "id": "0009237",
+                "entry_name": "Estimated Platelets Measurement"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "MESH",
+                "id": "D007267",
+                "entry_name": "Injections"
+            },
+            {
+                "db": "MESH",
+                "id": "D010949",
+                "entry_name": "Plasma"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D007267",
+                "entry_name": "Injections"
+            },
+            {
+                "db": "MESH",
+                "id": "D015854",
+                "entry_name": "Up-Regulation"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            }
+        ]
+    },
+    "13": {
+        "text": "To further investigate whether NS1 causes endothelial glycocalyx degradation in mice, the skin tissues of mice after two sequential subcutaneous injections of NS1 were fixed for immunohistochemical (IHC) staining. Costaining with the endothelial marker \u03b1-SMA revealed CD138 only in the samples with two injections of PBS, E or prM. After two sequential injections of NS1, endothelial cells lost their CD138 staining. In addition, the intraperitoneal injection of NS1 significantly induced HPA-1, MMP-9, and CD138 secretion, and coinjection of ISO-1 significantly abolished the secretion of MMP-9 and CD138 but not HPA-1 found by the peritoneal lavage. Furthermore, the inhibition of MIF and MMP-9 also attenuated NS1-induced vascular leakage in mice. These results suggest that MMP-9 induced by NS1-stimulated leukocytes may play an important role in endothelial glycocalyx degradation.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "MESH",
+                "id": "D012867",
+                "entry_name": "Skin"
+            },
+            {
+                "db": "MESH",
+                "id": "D014024",
+                "entry_name": "Tissues"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "MESH",
+                "id": "D007279",
+                "entry_name": "Injections, Subcutaneous"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D007267",
+                "entry_name": "Injections"
+            },
+            {
+                "db": "MESH",
+                "id": "D007267",
+                "entry_name": "Injections"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25434",
+                "entry_name": "bis(2-chloroethyl) sulfide"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D007274",
+                "entry_name": "Injections, Intraperitoneal"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "14398",
+                "entry_name": "SRR"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "MESH",
+                "id": "D010533",
+                "entry_name": "Peritoneal Lavage"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            }
+        ]
+    },
+    "14": {
+        "text": "In this study, we first observed that the concentrations of NS1, MIF, HPA-1, MMP-9 and CD138 in the serum of dengue patients were increased. However, only the concentrations of NS1 and MIF showed a positive correlation with CD138 in severe dengue patients. Next, we showed that the DENV NS1 stimulation of endothelial cells and leukocytes could induce HPA-1 and MMP-9 secretion, respectively, causing endothelial glycocalyx degradation and hyperpermeability. Most importantly, both in vitro and in vivo data showed that dengue NS1-induced HPA-1 and MMP-9 secretion was MIF dependent. Therefore, these results suggest that MIF is a central modulator of both direct and indirect dengue NS1-induced endothelial glycocalyx degradation.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0030645",
+                "entry_name": "Central"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            }
+        ]
+    },
+    "15": {
+        "text": "Previously, Puerta-Guardo et al. showed that HPA-1 is involved in NS1-induced glycocalyx degradation and hyperpermeability. However, MMPs were not discussed in the mechanism, even though they are the main enzymes that degrade endothelial glycocalyx. It is known that DENV infection induces dendritic cells to secrete MMP-9. In this study, we further demonstrated that the NS1 stimulation of leukocytes but not endothelial cells nor PBMCs could induce MMP-9 secretion. It is known that DENV NS1 can induce neutrophil extracellular traps, which results in the release of tertiary granules containing MMP-9. A previous study has also shown that MIF can mediate the secretion of MMP-9 from neutrophils. Since neutrophils are a major population of leukocytes, taken together, these results suggest that NS1-stimulated neutrophils may represent the main contributors to MMP-9 secretion in the blood. Therefore, even though neutrophils are not the primary target of DENV infection, the secretion of MMP-9 from neutrophils induced by NS1 may also contribute to vascular leakage during DENV infection.",
+        "annotations": [
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:28984",
+                "entry_name": "aluminium atom"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "D004798",
+                "entry_name": "Enzymes"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D003713",
+                "entry_name": "Dendritic Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0140644",
+                "entry_name": "neutrophil extracellular trap"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0070820",
+                "entry_name": "tertiary granule"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "MESH",
+                "id": "D011153",
+                "entry_name": "Population"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D001769",
+                "entry_name": "Blood"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            }
+        ]
+    },
+    "16": {
+        "text": "Interestingly, although it has been shown in previous studies that the concentrations of MMPs are increased in dengue patients and MMP-9 upregulation is positively correlated with the disease severity and vascular leakage of dengue, we observed a significant increase in the serum level of MMP-9 only in dengue patients with warning signs, not in severe dengue patients. From the in vivo mouse study, we noticed that the secretion of MMP-9 occurred within a smaller time window than that of HPA-1 in mice after NS1 challenge. Therefore, it is possible that the discrepancy in the MMP-9 level in dengue patients between this and previous studies may be due to differences in the timing of sample collection. Because the specific day post-onset of symptoms that samples were collected was not available in the records of our dengue patients, we could not exclude the possibility of variation arising from different sampling times. Further study monitoring the sequential changes in the serum levels of MMP-9 and other glycocalyx-related molecules along with disease development is required to clarify their roles in dengue pathogenesis.",
+        "annotations": [
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D015854",
+                "entry_name": "Up-Regulation"
+            },
+            {
+                "db": "MESH",
+                "id": "D004194",
+                "entry_name": "Disease"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0012824",
+                "entry_name": "Severity"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D051379",
+                "entry_name": "Mice"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "MESH",
+                "id": "D020471",
+                "entry_name": "Collection"
+            },
+            {
+                "db": "MESH",
+                "id": "D011996",
+                "entry_name": "Records"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "EFO",
+                "id": "0000689",
+                "entry_name": "sampling time"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25367",
+                "entry_name": "molecule"
+            },
+            {
+                "db": "MESH",
+                "id": "D004194",
+                "entry_name": "Disease"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:50906",
+                "entry_name": "role"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0001897",
+                "entry_name": "cytolysis by symbiont of host cells"
+            }
+        ]
+    },
+    "17": {
+        "text": "From the results of the MMP antibody array, we also found that MMP-8 and tissue inhibitor of metalloproteinases 1 (TIMP-1) were upregulated by NS1-stimulated leukocytes. TIMP-1, which is a potent inhibitor of MMPs, can form a complex with pro-MMP-9 at a 1:1 stoichiometric relationship to inhibit its activation. However, neutrophil elastase can inactivate TIMP-1 in the complex to free pro-MMP-9, such that it can be activated by MMP-3. In addition, myeloperoxidase, which is most abundantly expressed by neutrophils, can also inactivate TIMP-1 via generating hypochlorous acid. These possible mechanisms may explain why MMP-9 activity was not abrogated in the presence of TIMP-1 in NS1-stimulated leukocytes.",
+        "annotations": [
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "EFO",
+                "id": "0002698",
+                "entry_name": "array"
+            },
+            {
+                "db": "HGNC",
+                "id": "7175",
+                "entry_name": "MMP8"
+            },
+            {
+                "db": "MESH",
+                "id": "D045726",
+                "entry_name": "Metalloproteases"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "C120487",
+                "entry_name": "pro-matrix metalloproteinase 9"
+            },
+            {
+                "db": "HGNC",
+                "id": "3309",
+                "entry_name": "ELANE"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "MESH",
+                "id": "C120487",
+                "entry_name": "pro-matrix metalloproteinase 9"
+            },
+            {
+                "db": "HGNC",
+                "id": "7173",
+                "entry_name": "MMP3"
+            },
+            {
+                "db": "HGNC",
+                "id": "7218",
+                "entry_name": "MPO"
+            },
+            {
+                "db": "MESH",
+                "id": "D009504",
+                "entry_name": "Neutrophils"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:24757",
+                "entry_name": "hypochlorous acid"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "11820",
+                "entry_name": "TIMP1"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            }
+        ]
+    },
+    "18": {
+        "text": "A previous study has shown that NS1 can induce PBMCs to secrete IL-6 and IL-8 via Toll-like receptor 4 (TLR4), leading to vascular leakage. However, in this study, we found that the secretion of IL-6 and IL-8 dropped rapidly after 3 h of NS1-stimulation in leukocytes. In contrast, MIF steadily accumulated in the supernatant of leukocyte cultures after NS1 treatment, and the concentration of MIF was higher than that of IL-6 and IL-8. As NS1 needs at least 24 h to induce endothelial glycocalyx degradation, we speculated that IL-6 and IL-8 are not very involved in NS1-induced endothelial glycocalyx degradation. This speculation is consistent with a recent study performed by Glasner et al., which found that DENV NS1 does not induce HMEC-1 human endothelial cells to secrete TNF-\u03b1, IL-6 or IL-8 and that blocking these cytokines does not affect DENV NS1-induced endothelial hyperpermeability. On the other hand, the same study found that inhibition of HPA-1 prevents DENV NS1-induced endothelial hyperpermeability; however, MIF was not measured. In our previous study and in this study, we demonstrated that NS1 induced HMEC-1 cells or HUMECs to secrete MIF, causing endothelial hyperpermeability. In addition, we further demonstrated that both the secretion of HPA-1 and the shedding of CD138 induced by NS1-stimulation of endothelial cells are mediated by MIF.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "HGNC",
+                "id": "11850",
+                "entry_name": "TLR4"
+            },
+            {
+                "db": "HGNC",
+                "id": "11850",
+                "entry_name": "TLR4"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0120239",
+                "entry_name": "vascular endothelial glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "EFO",
+                "id": "0005383",
+                "entry_name": "HMEC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D006801",
+                "entry_name": "Humans"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "11892",
+                "entry_name": "TNF"
+            },
+            {
+                "db": "HGNC",
+                "id": "6018",
+                "entry_name": "IL6"
+            },
+            {
+                "db": "HGNC",
+                "id": "6025",
+                "entry_name": "CXCL8"
+            },
+            {
+                "db": "MESH",
+                "id": "D016207",
+                "entry_name": "Cytokines"
+            },
+            {
+                "db": "MESH",
+                "id": "D000339",
+                "entry_name": "Affect"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "EFO",
+                "id": "0005383",
+                "entry_name": "HMEC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            }
+        ]
+    },
+    "19": {
+        "text": "Due to MIF regulating the secretion of both MMP-9 and HPA-1 and because CD138 shedding was also directly affected by MIF signaling, MIF may be an upstream regulator of DENV NS1-induced glycocalyx degradation. However, the mechanism of how MIF causes HPA-1 and MMP-9 secretion is still unclear. A previous study has shown that MIF induces MMP-9 expression in macrophages via the MAPK pathway. MIF is also known to activate NF-\u03baB signaling through binding to CD74. Additionally, HPA-1 mRNA expression is elevated in an NF-\u03baB-dependent manner during hypoxia. Therefore, it is possible that MIF contributes to the secretion of HPA-1 and MMP-9 via the MAPK/NF-\u03baB pathway. However, from our in vivo study, we also noticed that NS1-induced MMP-9 secretion and CD138 shedding were significantly attenuated by MIF inhibition, whereas the attenuation of HPA-1 secretion was not as significant. Serum samples from severe dengue patients also showed no linear relationship between the concentrations of MIF and HPA-1. These results may suggest that in addition to MIF, other factors may participate in the regulation of HPA-1 secretion in vivo.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HP",
+                "id": "HP:0032320",
+                "entry_name": "Affected"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0023052",
+                "entry_name": "signaling"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "MESH",
+                "id": "D008264",
+                "entry_name": "Macrophages"
+            },
+            {
+                "db": "FPLX",
+                "id": "MAPK",
+                "entry_name": "MAPK"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:34922",
+                "entry_name": "picloram"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "FPLX",
+                "id": "NFkappaB",
+                "entry_name": "NFkappaB"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0023052",
+                "entry_name": "signaling"
+            },
+            {
+                "db": "HGNC",
+                "id": "1697",
+                "entry_name": "CD74"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:33699",
+                "entry_name": "messenger RNA"
+            },
+            {
+                "db": "MESH",
+                "id": "D000860",
+                "entry_name": "Hypoxia"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:34922",
+                "entry_name": "picloram"
+            },
+            {
+                "db": "HGNC",
+                "id": "7176",
+                "entry_name": "MMP9"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "10658",
+                "entry_name": "SDC1"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D044967",
+                "entry_name": "Serum"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            }
+        ]
+    },
+    "20": {
+        "text": "Taken together, our results suggest that NS1 may contribute to vascular leakage through different mechanisms during DENV infection. DENV NS1 may bind to the TLR4 of leukocytes, inducing the secretion of cytokines and MMPs, or it may directly bind to endothelial cells, inducing the secretion of HPA-1, both of which can cause glycocalyx degradation and subsequent vascular leakage. Consequently, NS1 may represent an important viral factor that causes vascular leakage and glycocalyx degradation during DENV infection. Indeed, antibodies against NS1 have been shown to be protective against DENV infection in mice. Furthermore, MIF may represent the primary host factor that mediates NS1-induced glycocalyx degradation. Studies focusing on the development of neutralizing antibodies or small molecules against MIF may facilitate the development of drugs to prevent or treat severe dengue.",
+        "annotations": [
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "HGNC",
+                "id": "11850",
+                "entry_name": "TLR4"
+            },
+            {
+                "db": "MESH",
+                "id": "D007962",
+                "entry_name": "Leukocytes"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "MESH",
+                "id": "D016207",
+                "entry_name": "Cytokines"
+            },
+            {
+                "db": "FPLX",
+                "id": "MMP",
+                "entry_name": "MMP"
+            },
+            {
+                "db": "MESH",
+                "id": "D042783",
+                "entry_name": "Endothelial Cells"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0046903",
+                "entry_name": "secretion"
+            },
+            {
+                "db": "HGNC",
+                "id": "5164",
+                "entry_name": "HPSE"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "16951",
+                "entry_name": "IVNS1ABP"
+            },
+            {
+                "db": "EFO",
+                "id": "0022481",
+                "entry_name": "decreased risk"
+            },
+            {
+                "db": "MESH",
+                "id": "D003715",
+                "entry_name": "Dengue"
+            },
+            {
+                "db": "HGNC",
+                "id": "7094",
+                "entry_name": "MICE"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "EFO",
+                "id": "0000532",
+                "entry_name": "host"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0030112",
+                "entry_name": "glycocalyx"
+            },
+            {
+                "db": "GO",
+                "id": "GO:0009056",
+                "entry_name": "catabolic process"
+            },
+            {
+                "db": "MESH",
+                "id": "D057134",
+                "entry_name": "Antibodies, Neutralizing"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:25367",
+                "entry_name": "molecule"
+            },
+            {
+                "db": "HGNC",
+                "id": "7097",
+                "entry_name": "MIF"
+            },
+            {
+                "db": "CHEBI",
+                "id": "CHEBI:23888",
+                "entry_name": "drug"
+            },
+            {
+                "db": "MESH",
+                "id": "D019595",
+                "entry_name": "Severe Dengue"
+            }
+        ]
+    }
+}

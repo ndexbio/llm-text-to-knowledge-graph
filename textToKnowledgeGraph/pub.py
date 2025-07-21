@@ -131,7 +131,8 @@ def fetch_metadata_via_eutils(article_id):
         # PMID
         pmid_elem = pubmed_article.find(".//PMID")
         if pmid_elem is not None and pmid_elem.text:
-            metadata['pmid'] = pmid_elem.text.strip()
+            raw = pmid_elem.text.strip()
+            metadata['pmid'] = f"pmid{raw}"
 
         # Title
         title_elem = pubmed_article.find(".//ArticleTitle")
@@ -170,8 +171,9 @@ def fetch_metadata_via_eutils(article_id):
         # Extract the PMID from <article-id pub-id-type="pmid">
         for article_id_elem in article_elem.findall(".//article-id"):
             id_type = article_id_elem.get("pub-id-type")
-            if id_type == "pmid":
-                metadata['pmid'] = article_id_elem.text.strip() if article_id_elem.text else None
+            if id_type == "pmid" and article_id_elem.text:
+                raw = article_id_elem.text.strip()
+                metadata['pmid'] = f"pmid{raw}" 
             elif id_type == "doi":  
                 metadata['doi'] = article_id_elem.text.strip() if article_id_elem.text else None
 

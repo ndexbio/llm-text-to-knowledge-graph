@@ -451,18 +451,24 @@ class BELComparator:
         """Add LLM similarity ratings for all statement pairs"""
         print("Getting LLM similarity ratings for all paired statements...")
 
-        # Count how many will need LLM rating
-        paired_statements = [row for row in comparison_data if row['indra_statement'] is not None]
-        print(f"Found {len(paired_statements)} paired statements (out of {len(comparison_data)} total)")
+        # Only those rows with both an INDRA _and_ an LLM statement
+        paired_statements = [
+            row for row in comparison_data
+            if row.get('indra_statement') and row.get('llm_statement')
+        ]
+        print(f"Found {len(paired_statements)} fully paired statements "
+            f"(out of {len(comparison_data)} total)")
 
-        for i, row in enumerate(comparison_data):
-            if row['indra_statement'] is not None:
-                print(f"Processing {i+1}/{len(comparison_data)} (LLM rating needed)")
-                rating = self.get_llm_similarity_rating(row['llm_statement'], row['indra_statement'])
-                row['similarity_rating'] = rating
-                time.sleep(1)  # Rate limiting
-            # For rows without pairs, similarity_rating is already set in create_best_match_plus_orphans
+        for i, row in enumerate(paired_statements, 1):
+            print(f"Processing {i}/{len(paired_statements)} (LLM rating needed)")
+            rating = self.get_llm_similarity_rating(
+                row['llm_statement'],
+                row['indra_statement']
+            )
+            row['similarity_rating'] = rating
+            time.sleep(1)  # Rate limiting
 
+        # Rows without both an INDRA and LLM statement keep whatever similarity_rating they already have
         return comparison_data
 
     def save_results(self, comparison_data: List[Dict], output_file: str):
@@ -513,8 +519,8 @@ def main():
 
     # Load data
     print("Loading data...")
-    llm_data, indra_data = comparator.load_data('evaluation_tests/indra_vs_texttoKG_tests/texttoKG_cleaned.json',
-                                                'evaluation_tests/indra_vs_texttoKG_tests/indra_bel_cleaned.json')
+    llm_data, indra_data = comparator.load_data('evaluation_tests_and_analysis/indra_vs_texttoKG_tests/indra_bel_cleaned.json',
+                                                'evaluation_tests_and_analysis/indra_vs_texttoKG_tests/texttoKG_cleaned.json')
 
     # Normalize data structures
     print("Normalizing data structures...")
