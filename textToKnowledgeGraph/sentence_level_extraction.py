@@ -41,7 +41,7 @@ llm_results = {}
 
 
 #Extracting BEL interactions from sentences with annotations using llm
-def llm_bel_processing(paragraphs, api_key, 
+def llm_bel_processing(paragraphs, api_key,
                        prompt_file="prompt_file_v7.txt",
                        prompt_identifier="general prompt"):
     bel_extraction_chain = _build_chain(prompt_file, prompt_identifier, api_key)
@@ -59,10 +59,12 @@ def llm_bel_processing(paragraphs, api_key,
             if "db" in ann and "entry_name" in ann
         ]
         # Invoke the BEL extraction chain with the sentence and cleaned annotations
-        results = bel_extraction_chain.invoke({
+        prompt_content = {
             "text": sentence,
             "annotations": clean_annotations
-        })
+        }
+        logging.info(f"LLM Content: {prompt_content}")
+        results = bel_extraction_chain.invoke(prompt_content)
 
         llm_results["LLM_extractions"].append({
             "Index": index,
@@ -74,5 +76,5 @@ def llm_bel_processing(paragraphs, api_key,
     end_time = time.time()
     elapsed_time = end_time - start_time
     elapsed_minutes = elapsed_time / 60
-    print(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
+    logging.info(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
     return llm_results
