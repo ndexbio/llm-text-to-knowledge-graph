@@ -1,12 +1,30 @@
 import os
 import json
+from json import JSONDecodeError
 import time
 import logging
 from .get_interactions import build_bel_extraction_chain, load_prompt
 from functools import lru_cache
 from importlib import resources
+from pydantic import BaseModel, Field, ValidationError
+from typing import List
 
 logger = logging.getLogger(__name__)
+
+
+# Updated model schema for BEL extraction
+class BELInteraction(BaseModel):
+    """BEL interaction extracted from the sentence."""
+    bel_statement: str = Field(..., description="A BEL formatted statement representing an interaction.")
+    evidence: str = Field(
+        ...,
+        description="The exact sentence from which the interacting subject and object is taken from"
+    )
+
+
+class BELInteractions(BaseModel):
+    """BEL interaction collection for a sentence."""
+    interactions: List[BELInteraction]
 
 
 def load_json_data(filepath):
@@ -41,7 +59,7 @@ llm_results = {}
 
 
 #Extracting BEL interactions from sentences with annotations using llm
-def llm_bel_processing(paragraphs, api_key, 
+def llm_bel_processing(paragraphs, api_key,
                        prompt_file="prompt_file_v7.txt",
                        prompt_identifier="general prompt"):
     bel_extraction_chain = _build_chain(prompt_file, prompt_identifier, api_key)
@@ -59,20 +77,60 @@ def llm_bel_processing(paragraphs, api_key,
             if "db" in ann and "entry_name" in ann
         ]
         # Invoke the BEL extraction chain with the sentence and cleaned annotations
-        results = bel_extraction_chain.invoke({
+        prompt_content = {
             "text": sentence,
             "annotations": clean_annotations
-        })
+        }
+        logging.info(f"LLM Content: {prompt_content}")
+        # results = bel_extraction_chain.invoke(prompt_content)
+
+        # raw_json = getattr(results, "content", results)
+
+        # interactions = []
+        # parsed = BELInteractions(interactions=[])
+
+        # try:
+        #     parsed = BELInteractions.model_validate_json(raw_json)
+        #     interactions = [i.model_dump() for i in parsed.interactions]
+        # except (ValidationError, TypeError, ValueError):
+        #     # swallow the error and keep interactions as []
+        #     pass
+
+        interactions = []
+        parsed = BELInteractions(interactions=[])
+
+        try:
+            results = bel_extraction_chain.invoke(prompt_content)
+            raw_json = getattr(results, "content", results)
+
+            # Only attempt to parse if it *looks* like JSON.
+            if isinstance(raw_json, str) and raw_json.lstrip().startswith("{"):
+                try:
+                    parsed = BELInteractions.model_validate_json(raw_json)
+                    interactions = [i.model_dump() for i in parsed.interactions]
+                except (ValidationError, JSONDecodeError, TypeError, ValueError):
+                    # Keep interactions as []
+                    pass
+            # else: model returned prose; keep interactions as []
+
+        except Exception:
+            # Upstream/proxy failure—still keep interactions as []
+            pass
+
+        # FIXME
+        from pprint import pprint
+        logging.info("DEBUG")
+        pprint(interactions)
 
         llm_results["LLM_extractions"].append({
             "Index": index,
             "text": sentence,
-            "Results": results,
+            "Results": interactions,
             "annotations": annotations
         })
 
     end_time = time.time()
     elapsed_time = end_time - start_time
     elapsed_minutes = elapsed_time / 60
-    print(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
+    logging.info(f"Time taken: {elapsed_time:.2f} seconds ({elapsed_minutes:.2f} minutes)")
     return llm_results

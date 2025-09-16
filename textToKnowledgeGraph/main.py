@@ -24,11 +24,11 @@ def validate_pmc_id(pmc_id):
         raise ValueError("Invalid PMC ID format. It should start with 'PMC' followed by digits.")
 
 
-def process_pmc_document(pmc_id, 
-                         api_key, 
-                         ndex_email=None, 
-                         ndex_password=None, 
-                         style_path=None, 
+def process_pmc_document(pmc_id,
+                         api_key,
+                         ndex_email=None,
+                         ndex_password=None,
+                         style_path=None,
                          upload_to_ndex=False,
                          prompt_file="prompt_file_v7.txt",
                          prompt_identifier="general prompt"):
@@ -63,7 +63,7 @@ def process_pmc_document(pmc_id,
         save_to_json(annotated_paragraphs, annotated_filename, output_dir)
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
-        llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
+        llm_results = llm_bel_processing(annotated_paragraphs, api_key,
                                          prompt_file=prompt_file, prompt_identifier=prompt_identifier)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
@@ -78,7 +78,7 @@ def process_pmc_document(pmc_id,
         # Fetch metadata for the publication
         metadata = fetch_metadata_via_eutils(pmc_id)
         first_author_last = "Unknown"
-        if metadata['authors']:  
+        if metadata['authors']:
             # e.g. if authors[0] == "Wen‐Cheng Lu", last name is "Lu"
             first_author_last = metadata['authors'][0].split()[-1]
         pmid_str = metadata['pmid'] or "UnknownPMID"
@@ -112,9 +112,9 @@ def process_pmc_document(pmc_id,
         return False
 
 
-def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=None, 
-                          ndex_email=None, 
-                          ndex_password=None, 
+def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=None,
+                          ndex_email=None,
+                          ndex_password=None,
                           prompt_file="prompt_file_v7.txt",
                           prompt_identifier="general prompt",
                           style_path=None, upload_to_ndex=False):
@@ -134,7 +134,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
         output_dir = setup_output_directory(output_name)
 
         logging.info("Processing file to extract paragraphs")
-        paragraphs = process_paper(file_path)
+        paragraphs = process_paper(api_key, file_path)
         paragraphs_filename = "processed_paragraphs.json"
         save_to_json(paragraphs, paragraphs_filename, output_dir)
 
@@ -144,7 +144,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
         save_to_json(annotated_paragraphs, annotated_filename, output_dir)
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
-        llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
+        llm_results = llm_bel_processing(annotated_paragraphs, api_key,
                                          prompt_file=prompt_file, prompt_identifier=prompt_identifier)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
@@ -160,7 +160,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
             # use E-Utilities to get metadata -> "FirstAuthor et al.: PMID"
             metadata = fetch_metadata_via_eutils(pmid_or_pmcid)
             first_author_last = "Unknown"
-            if metadata['authors']:  
+            if metadata['authors']:
                 # e.g. if authors[0] == "Wen‐Cheng Lu", last name is "Lu"
                 first_author_last = metadata['authors'][0].split()[-1]
             pmid_str = metadata['pmid'] or "UnknownPMID"
@@ -176,7 +176,10 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
             timestamp_str = time.strftime("%Y%m%d_%H%M")
             cx2_network.set_name(f"LLM Text to Knowledge Graph: {timestamp_str}")
 
-        cx2_filename = 'cx2_network.cx'
+        cx_filename = 'cx2_network.cx'
+        save_to_json(cx2_network.to_cx2(), cx_filename, output_dir)
+
+        cx2_filename = 'cx2_network.cx2'
         save_to_json(cx2_network.to_cx2(), cx2_filename, output_dir)
 
         if upload_to_ndex:
@@ -221,7 +224,7 @@ def main(
     if style_path is None:
         style_path = os.path.join(os.path.dirname(__file__), "cx_style.json")
 
-    logging.info(f"Using CX style file: {style_path}") 
+    logging.info(f"Using CX style file: {style_path}")
     # Default empty lists if None
     pmc_ids = pmc_ids or []
     pdf_paths = pdf_paths or []
@@ -363,13 +366,13 @@ def cli() -> None:
         help="Path to the JSON file containing the Cytoscape visual style."
     )
     parser.add_argument(
-        "--custom_name", 
-        type=str, 
+        "--custom_name",
+        type=str,
         help="If provided (and you're processing a file, not a PMC ID), "
         "use this name for the network instead of timestamp."
     )
     parser.add_argument(
-        "--pmid_for_file", 
+        "--pmid_for_file",
         type=str,
         help="If you're processing a file, and it corresponds to a known article, "
         "supply a PMID or PMCID so we can fetch metadata for naming."

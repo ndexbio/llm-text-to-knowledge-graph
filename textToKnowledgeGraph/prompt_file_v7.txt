@@ -1,7 +1,7 @@
 # general prompt
 
 Instructions:
-You will receive a scientific text with paragraphs along with a list of annotated molecular entities detailing biological interactions between the annotated molecular entities. Extract interactions strictly based on the information given in each paragraph and its corresponding annotations. Do not reuse entities or interactions from previous examples unless they are explicitly mentioned in the current paragraph. As an expert in bioinformatics with deep knowledge of genes, proteins, the Biological Expression Language, and biological terms, identify and resolve each molecular entity to standard identifiers (e.g., HGNC gene symbols, GO terms). Record interactions between pairs of entities, skipping sentences without interactions, and represent the interactions in the BEL (Biological Expression Language) format. Don't repeat the examples that are provided, they are just giving to you as guidance. 
+You will receive a scientific text with paragraphs along with a list of annotated molecular entities detailing biological interactions between the annotated molecular entities. Extract interactions strictly based on the information given in each paragraph and its corresponding annotations. Do not reuse entities or interactions from previous examples unless they are explicitly mentioned in the current paragraph. As an expert in bioinformatics with deep knowledge of genes, proteins, the Biological Expression Language, and biological terms, identify and resolve each molecular entity to standard identifiers (e.g., HGNC gene symbols, GO terms). Record interactions between pairs of entities, skipping sentences without interactions, and represent the interactions in the BEL (Biological Expression Language) format. Don't repeat the examples that are provided, they are just giving to you as guidance.
 
 Important Guidelines to Note:
 1. Only Extract BEL Statements: Your task is to return the correct BEL statements only when there is a REASONABLE statement to be extracted based solely on the provided paragraph that is passed to you.
@@ -29,7 +29,7 @@ Tasks:
 Step 1. Process the Sentences: For each sentence provided, extract relevant interactions and convert them into BEL format, ensuring that the extracted entities and interactions align with the sentence's content.
 Step 2. Use BEL Format: Use the BEL Biological Functions and relations provided below for extracting the BEL statements. Use only the shortforms for function names when giving the result for the BEL statement.
 
-BEL Biological Functions: 
+BEL Biological Functions:
 - abundance: Long form: abundance() Short form: a()
 abundance(ns:v) or a(ns:v) denotes the abundance of the entity designated by the value v in the namespace ns. abundance is a general abundance term that can be used for chemicals or other molecules not defined by a more specific abundance function. Gene, RNA, protein, and microRNA abundances should be represented using the appropriate specific abundance function.
 Examples: a(CHEBI:"oxygen atom"), a(CHEBI:thapsigargin)
@@ -100,7 +100,7 @@ Examples: p(HGNC:AKT1), p(SFAM:"AKT Family")
 
 - proteinModification: Long form: proteinModification() Short form: pmod()
 The proteinModification() or pmod() function can be used only as an argument within a proteinAbundance() function to indicate modification of the specified protein. Multiple modifications can be applied to the same protein abundance. Modified protein abundance term expressions have the general form:
-p(ns:protein_value, pmod(ns:type_value, <code>, <pos>)). 
+p(ns:protein_value, pmod(ns:type_value, <code>, <pos>)).
 type_value (required) is a namespace value for the type of modification ,
 * (optional) is a single-letter or three-letter code for one of the twenty standard amino acids, and  (optional) is the position at which the modification occurs based on the reference sequence for the protein. If ** is omitted, then the position of the modification is unspecified. If both ** and ** are omitted, then the residue and position of the modification are unspecified. NOTE - the default BEL namespace includes commonly used protein modification types.
 
@@ -133,7 +133,7 @@ Protein Modification Default Namespace
 | UbMono    | monoubiquitination                                                                                  |
 | UbPoly    | polyubiquitination                                                                                  |
 
-Examples: 
+Examples:
 default BEL namespace and 1-letter amino acid code
 p(HGNC:AKT1, pmod(Ph, S, 473))
 
@@ -190,6 +190,22 @@ Output Format:
 For each sentence provided, extract the relevant interactions and return them directly in BEL format along with the exact sentence from which the interactions were extracted. Do not include any other metadata or explanations, only the BEL interaction statements and the sentence.
 
 Example Formats: Use these examples to understand the desired output format but do not replicate these examples unless explicitly required by the text.
+
+You must return JSON. This is the correct format:
+
+{{"interactions:" [
+    {{
+        "bel_statement": "a(CHEBI:pevonedistat) directlyDecreases bp(GO:\"catabolic process\")",
+        "evidence": "Hence, neddylation inhibition by MLN-4924 leads to the accumulation of CRL substrates through the inhibition of their proteasome-dependent degradation."
+    }},
+    {{
+        "bel_statement": "a(CHEBI:pevonedistat) increases p(HGNC:CDT1)",
+        "evidence": "Among the CRL substrates stabilized by MLN-4924, CDT1 (Chromatin Licensing and DNA Replication Factor 1), an essential factor of origin firing, is a major effector for the cytotoxic effects of MLN-4924."
+    }}
+]}}
+
+Additional extraction examples below; these may not be in correct JSON:
+
 1. "text": "Arterial cells are highly susceptible to oxidative stress, which can induce both necrosis and apoptosis (programmed cell death)"
     "Results": [
         [   "bel_statement": "bp(GOBP:\"response to oxidative stress\") increases bp(GOBP:\"apoptotic process\")",
