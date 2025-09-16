@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name            = "texttoknowledgegraph"
-version         = "0.4.9"
+version         = "0.4.57"
 description     = "A Python package to generate BEL statements and CX2 networks."
 readme          = "textToKnowledgeGraph/README.md"
 requires-python = ">=3.11"
@@ -15,23 +15,22 @@ authors = [
 ]
 
 dependencies = [
-  "langchain==0.3.25",
-  "langchain_core==0.3.60",
-  "langchain_openai==0.3.17",
+  "langchain==0.3.27",
+  "langchain_core",
+  "langchain_openai==0.3.33",
   "lxml==5.2.1",
   "ndex2>=3.8.0,<4.0.0",
   "pandas",
-  "openai==1.79.0",
-  "pydantic==2.11.4",
+  "openai==1.104.2",
+  "pydantic==2.11.7",
   "pytest==7.4.4",
   "python-dotenv==1.1.0",
   "Requests==2.32.3",
   "gilda==1.4.0",
   "markitdown[all]",
   "nltk",
-  "litellm==1.75.2",
-  "langchain-community==0.3.24",
-  "litellm[proxy]"
+  "langchain-litellm==0.2.2",
+  "litellm[proxy]==1.77.0"
 ]
 
 classifiers = [

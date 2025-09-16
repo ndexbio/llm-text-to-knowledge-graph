@@ -1,6 +1,5 @@
 import os
 import re
-import litellm
 from dotenv import load_dotenv
 from markitdown import MarkItDown
 from openai import OpenAI
@@ -45,12 +44,13 @@ def process_text_with_llm(text: str, api_key: str, model="gpt-4o") -> dict:
     # Choose between litellm (for "none" API key) and direct OpenAI API
     if api_key == "none":
         # Load from .env in current directory
-        print("Using API key from .env file in current directory")
-        load_dotenv(override=False)
+        #print("Using API key from .env file in current directory")
+        #load_dotenv(override=False)
 
         # Use litellm for completion
-        response = litellm.completion(
-            model=os.getenv("MODEL_NAME", model),
+        client = OpenAI(api_key="none", base_url="http://0.0.0.0:4000")
+        response = client.chat.completions.create(
+            model="none",
             messages=[
                 {"role": "system", "content": "You are an AI that processes text."},
                 {"role": "user", "content": prompt}
@@ -98,7 +98,7 @@ def process_paper(api_key: str, pdf_path: str = None, txt_path: str = None) -> s
         raise ValueError(f"File '{file_path}' does not exist.")
 
     file_extension = os.path.splitext(file_path)[1].lower()
-    if file_extension not in [".pdf", ".txt"]:
+    if file_extension not in [".pdf", ".txt", ".pptx", ".xlsx", ".html"]:
         raise ValueError("Unsupported file format. Only .txt and .pdf are allowed.")
 
     #Extract text using MarkItDown
