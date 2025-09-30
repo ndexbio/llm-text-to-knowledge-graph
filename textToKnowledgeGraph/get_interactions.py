@@ -1,6 +1,7 @@
 import warnings
 from langchain_core.prompts import ChatPromptTemplate
-from langchain.output_parsers.openai_functions import JsonKeyOutputFunctionsParser 
+#from typing import List, Optional
+#from langchain_core.output_parsers.openai_tools import JsonOutputKeyToolsParser
 from .bel_model import get_bel_extraction_model
 from importlib.resources import files
 warnings.filterwarnings("ignore")
@@ -31,7 +32,7 @@ def get_prompt(identifier, filepath):
 
 def load_prompt(prompt_file="prompt_file_v7.txt",
                 prompt_identifier="general prompt") -> str:
-    """Return just the system‑prompt text (one string)."""
+    """Return just the system‑prompt text (one string). The prompt file must say JSON as output"""
     return get_prompt(prompt_identifier, prompt_file)
 
 
@@ -61,4 +62,9 @@ def build_bel_extraction_chain(prompt_text: str, api_key: str = None):
         raise ValueError("BEL extraction model could not be loaded. Please check your API key or model configuration.")
     else:
         print("BEL extraction model loaded successfully.")
-    return ann_prompt | bel_extraction_model | JsonKeyOutputFunctionsParser(key_name="interactions")
+
+    output = ann_prompt | bel_extraction_model
+    # FIXME
+    #output = ann_prompt | bel_extraction_model | JsonOutputKeyToolsParser(key_name="BELInteractions", first_tool_only=True)
+
+    return output
