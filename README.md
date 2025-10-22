@@ -1,6 +1,6 @@
 # textToKnowledgeGraph
 
-A Python package to generate BEL statements and CX2 networks from scientific text.
+A Python package to generate Biological Expression Language (BEL) statements and Cytoscape CX2 networks from scientific text.
 
 textToKnowledgeGraph is also available as a service-based App for Cytoscape Web! [How-To for Cytoscape Web](cytoscape_web_how_to.md) 
 
@@ -266,4 +266,3 @@ vis_prop = style_network.get_visual_properties()
 my_network.set_visual_properties(vis_prop)
 my_network.write_as_raw_cx2(my_network_restyled_path)
 ```
-

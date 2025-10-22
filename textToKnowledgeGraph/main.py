@@ -13,6 +13,10 @@ from .sentence_level_extraction import llm_bel_processing
 from .indra_download_extract import save_to_json, setup_output_directory
 from .transform_bel_statements import process_llm_results
 
+import nltk
+
+# Install needed NLTK data
+nltk.download('stopwords')
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -31,7 +35,8 @@ def process_pmc_document(pmc_id,
                          style_path=None, 
                          upload_to_ndex=False,
                          prompt_file="prompt_file_v7.txt",
-                         prompt_identifier="general prompt"):
+                         prompt_identifier="general prompt",
+                         model="gpt-4o-mini"):
     """
     Process a document given a PMC ID.
     Steps:
@@ -64,7 +69,8 @@ def process_pmc_document(pmc_id,
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
         llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
-                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier)
+                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier,
+                                         model=model)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
 
@@ -88,7 +94,7 @@ def process_pmc_document(pmc_id,
             "description": f"{metadata['title']}, {metadata['abstract']}",
             "reference": f"PMID: {pmid_str}"
         })
-        cx2_filename = 'cx2_network.cx'
+        cx2_filename = 'cx2_network.cx2'
         save_to_json(cx2_network.to_cx2(), cx2_filename, output_dir)
 
         if upload_to_ndex:
@@ -244,7 +250,8 @@ def main(
             style_path=style_path,
             upload_to_ndex=upload_to_ndex,
             prompt_file=prompt_file,
-            prompt_identifier=prompt_identifier
+            prompt_identifier=prompt_identifier,
+            model="gpt-4o-mini"
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -264,7 +271,8 @@ def main(
             custom_name=custom_name,
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
-            prompt_identifier=prompt_identifier
+            prompt_identifier=prompt_identifier,
+            model="gpt-4o-mini"
         )
         if not success:
             logging.error(f"Processing failed for file: {pdf_path}")
@@ -284,7 +292,8 @@ def main(
             custom_name=custom_name,
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
-            prompt_identifier=prompt_identifier
+            prompt_identifier=prompt_identifier,
+            model="gpt-4o-mini"
         )
         if not success:
             logging.error(f"Processing failed for file: {txt_path}")
@@ -374,6 +383,12 @@ def cli() -> None:
         help="If you're processing a file, and it corresponds to a known article, "
         "supply a PMID or PMCID so we can fetch metadata for naming."
     )
+    parser.add_argument(
+        "--model", 
+        type=str,
+        default="gpt-4o-mini",
+        help="The model to use for processing."
+    )
 
     args = parser.parse_args()
 
@@ -400,7 +415,8 @@ def cli() -> None:
             style_path=args.style_path,
             upload_to_ndex=args.upload_to_ndex,
             prompt_file=args.prompt_file,
-            prompt_identifier=args.prompt_identifier
+            prompt_identifier=args.prompt_identifier,
+            model=args.model
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -419,7 +435,8 @@ def cli() -> None:
             custom_name=args.custom_name,
             pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
-            prompt_identifier=args.prompt_identifier
+            prompt_identifier=args.prompt_identifier,
+            model=args.model
         )
         if not success:
             logging.error(f"Processing failed for PDF: {pdf_path}")
@@ -438,7 +455,8 @@ def cli() -> None:
             custom_name=args.custom_name,
             pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
-            prompt_identifier=args.prompt_identifier
+            prompt_identifier=args.prompt_identifier,
+            model=args.model
         )
         if not success:
             logging.error(f"Processing failed for TXT: {txt_path}")

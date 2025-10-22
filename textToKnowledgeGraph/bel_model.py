@@ -39,11 +39,11 @@ bel_extraction_function = [
 ]
 
 
-def initialize_model(api_key):
+def initialize_model(api_key, model="gpt-4o-mini"):
     """Initialize the model with the provided API key."""
     model = delayed_completion(
         delay_in_seconds=delay, 
-        model="gpt-4o-mini",
+        model=model,
         temperature=0, 
         openai_api_key=api_key
     )
@@ -51,8 +51,8 @@ def initialize_model(api_key):
 
 
 # Ensure bel_extraction_model is initialized with the provided key
-def get_bel_extraction_model(api_key):
-    return initialize_model(api_key).bind(
+def get_bel_extraction_model(api_key, model="gpt-4o-mini"):
+    return initialize_model(api_key, model).bind(
         functions=bel_extraction_function,
         function_call={"name": "BELInteractions"}
     )

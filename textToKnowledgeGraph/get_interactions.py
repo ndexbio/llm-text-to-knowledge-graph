@@ -35,7 +35,7 @@ def load_prompt(prompt_file="prompt_file_v7.txt",
     return get_prompt(prompt_identifier, prompt_file)
 
 
-def build_bel_extraction_chain(prompt_text: str, api_key: str = None):
+def build_bel_extraction_chain(prompt_text: str, api_key: str = None, model: str = "gpt-4o-mini"):
     """
     Creates and returns a BEL (Biological Expression Language) extraction processing chain.
 
@@ -56,7 +56,7 @@ def build_bel_extraction_chain(prompt_text: str, api_key: str = None):
         ("human", "{text} | Annotations: {annotations}")
     ])
 
-    bel_extraction_model = get_bel_extraction_model(api_key)
+    bel_extraction_model = get_bel_extraction_model(api_key, model)
     if bel_extraction_model is None:
         raise ValueError("BEL extraction model could not be loaded. Please check your API key or model configuration.")
     else:

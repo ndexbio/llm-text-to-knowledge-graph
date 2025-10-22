@@ -16,24 +16,23 @@ def load_json_data(filepath):
 
 
 @lru_cache(maxsize=6)
-def _build_chain_cached(prompt_file, prompt_identifier, api_key, prompt_mtime):
+def _build_chain_cached(prompt_file, prompt_identifier, api_key, model="gpt-4o-mini"):
     """
     Real chain builder wrapped by lru_cache.
     `prompt_mtime` is only used to make the cache key unique when the
     file changes; we never use its value inside the function body.
     """
     prompt_txt = load_prompt(prompt_file, prompt_identifier)
-    return build_bel_extraction_chain(prompt_txt, api_key)
+    return build_bel_extraction_chain(prompt_txt, api_key, model)
 
 
-def _build_chain(prompt_file, prompt_identifier, api_key):
+def _build_chain(prompt_file, prompt_identifier, api_key, model="gpt-4o-mini"):
     # locate the file that lives in textToKnowledgeGraph/…
     data = resources.files("textToKnowledgeGraph").joinpath(prompt_file)
 
     # convert to a real on-disk path (works for wheels/zip-imports)
     with resources.as_file(data) as abs_path:
-        mtime = os.path.getmtime(abs_path)
-        return _build_chain_cached(abs_path, prompt_identifier, api_key, mtime)
+        return _build_chain_cached(abs_path, prompt_identifier, api_key, model)
 
 
 # Initialize dictionaries to store the results
@@ -43,8 +42,9 @@ llm_results = {}
 #Extracting BEL interactions from sentences with annotations using llm
 def llm_bel_processing(paragraphs, api_key, 
                        prompt_file="prompt_file_v7.txt",
-                       prompt_identifier="general prompt"):
-    bel_extraction_chain = _build_chain(prompt_file, prompt_identifier, api_key)
+                       prompt_identifier="general prompt",
+                       model="gpt-4o-mini"):
+    bel_extraction_chain = _build_chain(prompt_file, prompt_identifier, api_key, model)
     llm_results = {"LLM_extractions": []}
     start_time = time.time()
 
