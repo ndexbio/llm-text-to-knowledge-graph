@@ -6,16 +6,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def setup_output_directory(pmc_id=None, file_path=None):
+def setup_output_directory(pmc_id=None, file_path=None, base_path=None):
     if pmc_id and file_path:
         raise ValueError("Please provide only pmc_id or file_path, not both.")
     if not pmc_id and not file_path:
         raise ValueError("Either pmc_id or file_path must be provided.")
 
     # Get the absolute path to the directory where the script is running
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    # Navigate to the main project directory (assuming the script is in a subdirectory of the main project directory)
-    project_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
+    if not base_path:
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        # Navigate to the main project directory (assuming the script is in a subdirectory of the main project directory)
+        base_path = os.path.abspath(os.path.join(script_dir, os.pardir))
 
     # Determine the folder name
     if pmc_id:
@@ -26,9 +27,8 @@ def setup_output_directory(pmc_id=None, file_path=None):
         folder_name = file_base
 
     # Set up the output directory within the 'results' directory of the project
-    output_dir = os.path.join(project_dir, 'results', folder_name)
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    output_dir = os.path.join(base_path, 'results', folder_name)
+    os.makedirs(output_dir, exist_ok=True)
 
     return output_dir
 

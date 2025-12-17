@@ -36,7 +36,8 @@ def process_pmc_document(pmc_id,
                          upload_to_ndex=False,
                          prompt_file="prompt_file_v7.txt",
                          prompt_identifier="general prompt",
-                         model="gpt-4o-mini"):
+                         model="gpt-4o-mini",
+                         output_base_path=None):
     """
     Process a document given a PMC ID.
     Steps:
@@ -50,7 +51,7 @@ def process_pmc_document(pmc_id,
     try:
         validate_pmc_id(pmc_id)
         logging.info(f"Setting up output directory for {pmc_id}")
-        output_dir = setup_output_directory(pmc_id)
+        output_dir = setup_output_directory(pmc_id, base_path=output_base_path)
 
         file_path = download_pubtator_xml(pmc_id, output_dir)
         if not file_path:
@@ -123,7 +124,8 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
                           ndex_password=None, 
                           prompt_file="prompt_file_v7.txt",
                           prompt_identifier="general prompt",
-                          style_path=None, upload_to_ndex=False):
+                          style_path=None, upload_to_ndex=False,
+                          output_base_path=None):
     """
     Process a document given a file path (PDF or TXT).
     Steps:
@@ -137,7 +139,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
     try:
         output_name = os.path.splitext(os.path.basename(file_path))[0]
         logging.info(f"Setting up output directory for file: {output_name}")
-        output_dir = setup_output_directory(output_name)
+        output_dir = setup_output_directory(output_name, base_path=output_base_path)
 
         logging.info("Processing file to extract paragraphs")
         paragraphs = process_paper(file_path)
