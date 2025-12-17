@@ -220,7 +220,8 @@ def main(
     prompt_file="prompt_file_v7.txt",
     prompt_identifier="general prompt",
     custom_name=None,
-    pmid_for_file=None
+    pmid_for_file=None,
+    output_base_path=None
 ):
     """
     Determines the input type (PMC ID or file path) and routes to the appropriate processing function.
@@ -253,7 +254,8 @@ def main(
             upload_to_ndex=upload_to_ndex,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini"
+            model="gpt-4o-mini",
+            output_base_path=output_base_path
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -274,7 +276,8 @@ def main(
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini"
+            model="gpt-4o-mini",
+            output_base_path=output_base_path
         )
         if not success:
             logging.error(f"Processing failed for file: {pdf_path}")
@@ -295,7 +298,8 @@ def main(
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini"
+            model="gpt-4o-mini",
+            output_base_path=output_base_path
         )
         if not success:
             logging.error(f"Processing failed for file: {txt_path}")
@@ -391,6 +395,12 @@ def cli() -> None:
         default="gpt-4o-mini",
         help="The model to use for processing."
     )
+    parser.add_argument(
+        "--output_base_path",
+        type=str,
+        help="The base folder for creating output files. Default is a 'results' "
+             "folder placed inside the repository path."
+    )
 
     args = parser.parse_args()
 
@@ -418,7 +428,8 @@ def cli() -> None:
             upload_to_ndex=args.upload_to_ndex,
             prompt_file=args.prompt_file,
             prompt_identifier=args.prompt_identifier,
-            model=args.model
+            model=args.model,
+            output_base_path=args.output_base_path
         )
         if not success:
             logging.error(f"Processing failed for PMC ID: {pmc_id}")
@@ -438,7 +449,8 @@ def cli() -> None:
             pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
             prompt_identifier=args.prompt_identifier,
-            model=args.model
+            model=args.model,
+            output_base_path=args.output_base_path
         )
         if not success:
             logging.error(f"Processing failed for PDF: {pdf_path}")
@@ -458,7 +470,8 @@ def cli() -> None:
             pmid_or_pmcid=args.pmid_for_file,
             prompt_file=args.prompt_file,
             prompt_identifier=args.prompt_identifier,
-            model=args.model
+            model=args.model,
+            output_base_path=args.output_base_path
         )
         if not success:
             logging.error(f"Processing failed for TXT: {txt_path}")
