@@ -125,7 +125,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
                           prompt_file="prompt_file_v7.txt",
                           prompt_identifier="general prompt",
                           style_path=None, upload_to_ndex=False,
-                          model="gpt-4o-mini"):
+                          model="gpt-4o-mini",
                           output_base_path=None):
     """
     Process a document given a file path (PDF or TXT).

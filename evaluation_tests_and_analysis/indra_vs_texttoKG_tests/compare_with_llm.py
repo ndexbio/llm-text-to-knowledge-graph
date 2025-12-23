@@ -8,7 +8,7 @@ import json
 import os
 import sys
 from collections import defaultdict
-from dataclasses import dataclass
+# from dataclasses import dataclass
 from typing import Dict, List, Optional
 
 from dotenv import load_dotenv
@@ -22,19 +22,6 @@ except ImportError as exc:  # pragma: no cover - dependency issue should be expl
 
 
 SCORE_TO_RATING = {0: "low", 2: "partial", 4: "good"}
-
-
-@dataclass
-class SimilarityDecision:
-    index: Optional[int]
-    score: Optional[int]
-    explanation: str
-
-    @property
-    def rating(self) -> str:
-        if self.score is None:
-            return "none_comparable"
-        return SCORE_TO_RATING.get(self.score, "none_comparable")
 
 
 def parse_args() -> argparse.Namespace:
@@ -55,7 +42,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="comparison_output.json",
+        default="comparison_output.csv",
         help="Path to write the comparison JSON output",
     )
     parser.add_argument(
@@ -134,21 +121,40 @@ def call_openai(
     model: str,
     llm_statement: str,
     indra_statements: List[str],
-) -> SimilarityDecision:
+) -> List[Dict[str, object]]:
+    """
+    Compare one LLM statement against all INDRA statements.
+    Returns a list of dicts containing semantic and sentence meaning similarity scores.
+    """
+
     numbered_candidates = "\n".join(
         f"{idx}. {candidate}" for idx, candidate in enumerate(indra_statements)
     )
+
     user_prompt = (
         "You will receive one query statement followed by numbered candidate statements. "
-        "Choose the single candidate that is most semantically similar to the query. "
-        "If none are comparable, respond accordingly. Return only JSON with fields: "
-        '\"match_index\" (integer index of the best candidate or null), '
-        '\"similarity\" (one of 0, 2, 4 for low/partial/good similarity or "none"), '
-        '\"explanation\" (1-2 sentences describing why the similarity rating was assigned). '
-        "Respect the following mapping: 0 -> low similarity, 2 -> partial similarity, 4 -> good similarity. "
-        "Use \"similarity\": \"none\" and \"match_index\": null if none are comparable.\n\n"
-        f"Query statement:\n{llm_statement}\n\n"
-        f"Candidate statements:\n{numbered_candidates}"
+        "For each candidate, evaluate two aspects:\n"
+        "1. **Semantic similarity** — check whether the BEL structures share the same biological entities "
+        "and relationship (e.g., same genes/proteins and causal direction).\n"
+        "2. **Biological similarity** — check whether both statements describe the same "
+        "biological interaction or event, even if represented differently.\n\n"
+        "Rate each candidate for both dimensions using:\n"
+        "0 = low, 2 = partial, 4 = good, or 'none' if not comparable.\n\n"
+        "Respect the following mapping strictly:\n"
+        "0 -> low similarity, 2 -> partial similarity, 4 -> good similarity.\n"
+        "If a statement is not comparable, use \"semantic\": \"none\" and \"meaning\": \"none\".\n\n"
+        "Each entry must include an \"explanation\" (1–2 sentences) describing why those ratings were assigned.\n\n"
+        "Return only valid JSON in this exact format:\n"
+        "[\n"
+        "  {\"index\": <candidate_index>, "
+        "   \"semantic\": <0|2|4|\"none\">, "
+        "   \"meaning\": <0|2|4|\"none\">, "
+        "   \"explanation\": \"<brief reason>\"}, ...\n"
+        "]\n\n"
+        "Query statement:\n"
+        f"{llm_statement}\n\n"
+        "Candidate statements:\n"
+        f"{numbered_candidates}"
     )
 
     response = client.chat.completions.create(
@@ -156,52 +162,46 @@ def call_openai(
         messages=[
             {
                 "role": "system",
-                "content": (
-                    "You are an expert analyst. Respond with valid JSON only, without commentary or markdown."
-                ),
+                "content": "You are an expert in biological knowledge representation. "
+                           "Respond strictly with valid JSON as specified, no commentary."
             },
             {"role": "user", "content": user_prompt},
         ],
         temperature=0,
-        max_tokens=200,
+        max_tokens=500,
     )
+
     message = response.choices[0].message.content or ""
-    payload = extract_json_object(message)
-    raw_index = payload.get("match_index")
-    raw_score = payload.get("similarity")
-    explanation = str(payload.get("explanation", "")).strip()
 
-    index: Optional[int]
-    if raw_index is None:
-        index = None
-    else:
+    # Try to extract JSON list safely
+    start = message.find("[")
+    end = message.rfind("]")
+    if start == -1 or end == -1 or end < start:
+        raise ValueError("No valid JSON list found in model response.")
+    parsed = json.loads(message[start:end + 1])
+
+    # Validate and normalize structure
+    results = []
+    for item in parsed:
         try:
-            index = int(raw_index)
-        except (TypeError, ValueError) as exc:
-            raise ValueError(f"Invalid match_index in response: {raw_index!r}") from exc
+            idx = int(item["index"])
+            sem = item.get("semantic")
+            mean = item.get("meaning")
+            expl = str(item.get("explanation", "")).strip()
 
-    score: Optional[int]
-    if isinstance(raw_score, str):
-        raw_score_lower = raw_score.lower()
-        if raw_score_lower in {"none", "none_comparable"}:
-            score = None
-        else:
-            try:
-                score = int(raw_score)
-            except ValueError as exc:
-                raise ValueError(f"Invalid similarity score in response: {raw_score!r}") from exc
-    else:
-        score = int(raw_score) if raw_score is not None else None
+            # Normalize numeric fields
+            sem_score = None if sem in ("none", None) else int(sem)
+            mean_score = None if mean in ("none", None) else int(mean)
 
-    if index is not None and (index < 0 or index >= len(indra_statements)):
-        raise ValueError(
-            f"OpenAI selected index {index}, which is outside 0..{len(indra_statements) - 1}"
-        )
-
-    if score is not None and score not in SCORE_TO_RATING:
-        raise ValueError(f"Unexpected similarity score: {score}")
-
-    return SimilarityDecision(index=index, score=score, explanation=explanation)
+            results.append({
+                "match_index": idx,
+                "semantic_score": sem_score,
+                "similarity_score": mean_score,
+                "explanation": expl,
+            })
+        except Exception as e:
+            print(f"[warning] Skipped invalid item in response: {item} ({e})")
+    return results
 
 
 def group_rows(rows: List[Dict[str, str]]) -> Dict[str, Dict[str, object]]:
@@ -231,16 +231,17 @@ def main() -> None:
     args = parse_args()
     load_dotenv()
 
-    rows = rows = load_json_files(args.llm, args.indra)
+    rows = load_json_files(args.llm, args.indra)
     grouped = group_rows(rows)
 
     # Prepare result placeholders per row.
     augmented: List[Dict[str, str]] = [dict(row) for row in rows]
     row_annotations = [
         {
-            "similarity_rating": "none_comparable",
             "match_type": "not_compared",
             "similarity_rating_reason": "",
+            "semantic_score": None,
+            "similarity_score": None,
         }
         for _ in rows
     ]
@@ -286,7 +287,15 @@ def main() -> None:
 
         for llm_statement, indices in structures["llm_rows"].items():
             if args.dry_run or client is None:
-                decision = SimilarityDecision(index=None, score=None, explanation="dry_run")
+                decision = [
+                    {
+                        "match_index": i,
+                        "semantic_score": None,
+                        "similarity_score": None,
+                        "explanation": "dry_run"
+                    }
+                    for i in range(len(indra_candidates))
+                ]
             else:
                 try:
                     decision = call_openai(client, args.model, llm_statement, indra_candidates)
@@ -295,43 +304,66 @@ def main() -> None:
                         f"[warning] Failed to obtain similarity for evidence '{evidence}': {exc}",
                         file=sys.stderr,
                     )
-                    decision = SimilarityDecision(index=None, score=None, explanation="Model request failed.")
+                    decision = []
 
-            if decision.index is None:
-                reason = (
-                    decision.explanation
-                    if decision.explanation
-                    else "Model reported no comparable INDRA statements."
+            decision_map = {d["match_index"]: d for d in decision}
+            if decision:
+                best_decision = max(
+                    decision,
+                    key=lambda d: (d["similarity_score"] or 0)
                 )
-                for idx in indices:
-                    if row_annotations[idx]["match_type"] not in {"llm_only", "indra_only"}:
-                        row_annotations[idx]["match_type"] = "not_compared"
-                        row_annotations[idx]["similarity_rating"] = "none_comparable"
-                        row_annotations[idx]["similarity_rating_reason"] = reason
-                continue
+                best_sim = best_decision.get("similarity_score") or 0
+                if best_sim > 0:
+                    best_index = best_decision["match_index"]
+                else:
+                    best_index = None
+            else:
+                best_index = None
 
-            chosen_indra = indra_candidates[decision.index]
-            fallback_reason = (
-                "A different INDRA statement was selected as the closest match."
-            )
-            for idx in indices:
-                row_indra = sanitize(rows[idx].get("indra_statement"))
-                if row_indra == chosen_indra:
-                    row_annotations[idx]["match_type"] = "most_similar"
-                    row_annotations[idx]["similarity_rating"] = decision.rating
-                    row_annotations[idx]["similarity_rating_reason"] = (
-                        decision.explanation or "Model selected this pair as most similar."
-                    )
-                elif row_annotations[idx]["match_type"] not in {"llm_only", "indra_only"}:
-                    row_annotations[idx]["match_type"] = "not_compared"
-                    row_annotations[idx]["similarity_rating"] = "none_comparable"
-                    row_annotations[idx]["similarity_rating_reason"] = fallback_reason
+            for i, indra_stmt in enumerate(indra_candidates):
+                for idx in indices:
+                    row_indra = sanitize(rows[idx].get("indra_statement"))
+                    if row_indra == indra_stmt:
+                        d = decision_map.get(i)
+                        if d:
+                            sim_score = d["similarity_score"]
+                            sem_score = d["semantic_score"]
+
+                            row_annotations[idx]["match_index"] = i
+                            row_annotations[idx]["similarity_rating_reason"] = d["explanation"]
+                            row_annotations[idx]["semantic_score"] = sem_score
+                            row_annotations[idx]["similarity_score"] = sim_score
+
+                            # Add human-readable ratings
+                            row_annotations[idx]["semantic_rating"] = SCORE_TO_RATING.get(sem_score, "none_comparable")
+                            row_annotations[idx]["similarity_rating"] = SCORE_TO_RATING.get(sim_score, "none_comparable")
+
+                            # Assign match_type intelligently
+                            if sim_score is None or sim_score == 0:
+                                row_annotations[idx]["match_type"] = "not_similar"
+                            elif i == best_index:
+                                row_annotations[idx]["match_type"] = "most_similar"
+                            else:
+                                row_annotations[idx]["match_type"] = "rated"
+
+                        else:
+                            # No decision data available for this candidate
+                            row_annotations[idx]["match_index"] = i
+                            row_annotations[idx]["match_type"] = "not_comparable"
+                            row_annotations[idx]["similarity_rating_reason"] = "No comparison available."
+                            row_annotations[idx]["semantic_score"] = None
+                            row_annotations[idx]["similarity_score"] = None
 
     fieldnames = list(rows[0].keys()) + [
+        "match_index",
+        "semantic_score",
+        "semantic_rating",
+        "similarity_score",
         "similarity_rating",
         "match_type",
         "similarity_rating_reason",
     ]
+
     try:
         with open(args.output, "w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=fieldnames)
