@@ -335,8 +335,12 @@ def main() -> None:
                             row_annotations[idx]["similarity_score"] = sim_score
 
                             # Add human-readable ratings
-                            row_annotations[idx]["semantic_rating"] = SCORE_TO_RATING.get(sem_score, "none_comparable")
-                            row_annotations[idx]["similarity_rating"] = SCORE_TO_RATING.get(sim_score, "none_comparable")
+                            row_annotations[idx]["semantic_rating"] = SCORE_TO_RATING.get(
+                                sem_score, "none_comparable"
+                            )
+                            row_annotations[idx]["similarity_rating"] = SCORE_TO_RATING.get(
+                                sim_score, "none_comparable"
+                            )
 
                             # Assign match_type intelligently
                             if sim_score is None or sim_score == 0:
