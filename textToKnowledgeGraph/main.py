@@ -13,10 +13,20 @@ from .sentence_level_extraction import llm_bel_processing
 from .indra_download_extract import save_to_json, setup_output_directory
 from .transform_bel_statements import process_llm_results
 
-import nltk
 
 # Install needed NLTK data
-nltk.download('stopwords')
+def ensure_nltk_stopwords() -> None:
+    """
+    Ensure NLTK stopwords are available.
+    Only downloads if missing.
+    """
+    try:
+        from nltk.corpus import stopwords
+        stopwords.words("english")
+    except Exception:
+        import nltk
+        nltk.download("stopwords", quiet=True)
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
@@ -111,12 +121,10 @@ def process_pmc_document(pmc_id,
 
     except ValueError as ve:
         logging.error(ve)
-        sys.exit(1)
         return False
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
-        sys.exit(1)
-        return False
+        return False 
 
 
 def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=None, 
@@ -186,7 +194,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
             timestamp_str = time.strftime("%Y%m%d_%H%M")
             cx2_network.set_name(f"LLM Text to Knowledge Graph: {timestamp_str}")
 
-        cx2_filename = 'cx2_network.cx'
+        cx2_filename = 'cx2_network.cx2'
         save_to_json(cx2_network.to_cx2(), cx2_filename, output_dir)
 
         if upload_to_ndex:
@@ -202,11 +210,9 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
 
     except ValueError as ve:
         logging.error(ve)
-        sys.exit(1)
         return False
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
-        sys.exit(1)
         return False
 
 
@@ -223,7 +229,8 @@ def main(
     prompt_identifier="general prompt",
     custom_name=None,
     pmid_for_file=None,
-    output_base_path=None
+    output_base_path=None,
+    model="gpt-4o-mini"
 ):
     """
     Determines the input type (PMC ID or file path) and routes to the appropriate processing function.
@@ -256,7 +263,7 @@ def main(
             upload_to_ndex=upload_to_ndex,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini",
+            model=model,
             output_base_path=output_base_path
         )
         if not success:
@@ -278,7 +285,7 @@ def main(
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini",
+            model=model,
             output_base_path=output_base_path
         )
         if not success:
@@ -300,7 +307,7 @@ def main(
             pmid_or_pmcid=pmid_for_file,
             prompt_file=prompt_file,
             prompt_identifier=prompt_identifier,
-            model="gpt-4o-mini",
+            model=model,
             output_base_path=output_base_path
         )
         if not success:
@@ -405,6 +412,7 @@ def cli() -> None:
     )
 
     args = parser.parse_args()
+    ensure_nltk_stopwords()
 
     # Configure logging & measure start time
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
