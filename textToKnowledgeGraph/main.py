@@ -125,6 +125,7 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
                           prompt_file="prompt_file_v7.txt",
                           prompt_identifier="general prompt",
                           style_path=None, upload_to_ndex=False,
+                          model="gpt-4o-mini"):
                           output_base_path=None):
     """
     Process a document given a file path (PDF or TXT).
@@ -153,7 +154,8 @@ def process_file_document(file_path, api_key, pmid_or_pmcid=None, custom_name=No
 
         logging.info("Processing annotated paragraphs with the LLM-BEL model")
         llm_results = llm_bel_processing(annotated_paragraphs, api_key, 
-                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier)
+                                         prompt_file=prompt_file, prompt_identifier=prompt_identifier,
+                                         model=model)
         llm_filename = 'llm_results.json'
         save_to_json(llm_results, llm_filename, output_dir)
 
