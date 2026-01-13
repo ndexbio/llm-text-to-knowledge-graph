@@ -1,5 +1,8 @@
 # textToKnowledgeGraph
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18235138.svg)](https://doi.org/10.5281/zenodo.18235138)
+
+
 A Python package to generate Biological Expression Language (BEL) statements and Cytoscape CX2 networks from scientific text.
 
 textToKnowledgeGraph is also available as a service-based App for Cytoscape Web! [How-To for Cytoscape Web](cytoscape_web_how_to.md) 
