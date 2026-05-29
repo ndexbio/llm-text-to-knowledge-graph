@@ -2,10 +2,10 @@ gilda==1.4.0
 langchain==0.3.25
 langchain_core==0.3.60
 langchain_openai==0.3.17
-libdeeplake==0.0.96
+libdeeplake==0.0.164
 lxml==5.2.1
 markitdown==0.1.1
-matplotlib==3.8.4
+matplotlib==3.10.3
 ndex2>=3.8.0,<4.0.0
 openai==1.79.0
 pydantic==2.11.4
